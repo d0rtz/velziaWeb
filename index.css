@@ -1,0 +1,799 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+button {
+  cursor: pointer;
+}
+::selection{
+  background-color: #101010;
+  color: #f1f1f1;
+}
+
+/* WSP */
+
+#wsp{
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 2999;
+}
+
+
+/* WSP */
+
+#wsp{
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 2999;
+}
+
+/* HEADER */
+
+#header {
+  display: flex;
+  top: 0;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 1%;
+  padding-right: 1%;
+  text-align: center;
+  z-index: 1000;
+  position: absolute;
+  width: 100%;
+  transition: all .5s ease;
+}
+.header-color {
+  background-color: black;
+}
+#nav-logo {
+  margin-left: 3%;
+  margin-top: 10%;
+}
+.nav1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2%;
+  width: 100%;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.nav-li {
+  position: relative; /* Necesario para que el submenú se posicione correctamente */
+  list-style-type: none;
+  padding: 1%;
+  font-size: medium;
+}
+.subnava {
+  padding: 25px;
+}
+.subnav {
+  display: none; /* Oculto por defecto */
+  position: absolute;
+  left: 0; /* Alinea el borde izquierdo del submenú con el borde izquierdo de "Colecciones" */
+  top: 100%; /* Posiciona el submenú justo debajo del contenedor padre */
+  text-align: start;
+  font-size: small;
+  padding: 0.5%;
+  width: 250px;
+  background-color: rgb(34, 34, 34);
+  z-index: 1001;
+}
+.subnav-li {
+  padding: 3%;
+  margin: 5px; /* Añade un pequeño margen */
+}
+
+.subnav-li:hover {
+  background-color: rgb(53, 53, 53);
+}
+.blank-link {
+  text-decoration: none;
+}
+.nav-link {
+  text-decoration: none;
+}
+.nav-link-white {
+  color: #f1f1f1;
+}
+.nav-link-black {
+  color: black;
+}
+.sticky {
+  top: 0;
+  width: 100%;
+}
+.header-black {
+  background-color: black;
+}
+
+.header-white {
+  background-color: #f1f1f1;
+}
+#hamburguer-icon-div {
+  padding: 20px;
+}
+
+#mobile-header-background {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1999;
+}
+#mobile-header {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  height: 100%;
+  width: 300px;
+  background-color: white;
+  z-index: 2000;
+  transition: all 0.2s ease-in-out;
+}
+#mobile-nav {
+  margin-top: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+#mobile-nav hr {
+  margin-right: 10%;
+}
+
+.mobile-nav-item {
+  display: block;
+  padding: 15px;
+  font-size: 16px;
+  list-style-type: none;
+}
+#mobile-subnav {
+  margin-left: 20px;
+  transition: all 0.2s ease-in-out;
+}
+#mobile-subnav-image {
+  padding-left: 100px;
+}
+.mobile-subnav-item {
+  display: block;
+  padding: 10px;
+  font-size: 16px;
+  list-style-type: none;
+  transition: all 0.2s ease-in-out;
+}
+#close-div {
+  position: relative;
+}
+#close-mobile-header-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 5%;
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  border: 0;
+  background-color: #868686;
+}
+
+@media (max-width: 768px) {
+  #hamburguer-icon-div {
+    display: block;
+  }
+  .nav1 {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  #hamburguer-icon-div {
+    display: none;
+  }
+  .nav1 {
+    display: block;
+  }
+}
+
+/* MAIN */
+
+.sticky + .content {
+  padding-top: 102px;
+}
+#video-index {
+  position: relative;
+  overflow: hidden;
+  object-fit: cover;
+}
+#myVideo {
+  right: 0;
+  top: 0;
+  min-width: 100%;
+  min-height: 100vh;
+  max-height: 100vh;
+  transform: scale(1.25);
+  z-index: 999;
+}
+.content {
+  position: absolute;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  z-index: 998;
+  display: flex; /* Añadido */
+  justify-content: center; /* Añadido */
+  align-items: center; /* Añadido */
+}
+
+.text-container { /* Nuevo contenedor */
+  transform: translateY(20%); /* Ajustar según la altura del menú fijo */
+}
+#sl1 {
+  margin-left: 47%;
+  margin-right: 47%;
+}
+#sl2 {
+  margin-left: 35%;
+  margin-right: 35%;
+}
+#h2-video-index {
+  font-size: medium;
+}
+#h1-video-index {
+  margin-top: 0;
+  margin-bottom: 2%;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+#contact-button {
+  font-size: 20px;
+  letter-spacing: 0.15rem;
+}
+.vl {
+  border-left: 1px solid white;
+  height: 120px;
+  margin: 10% 50%; /* Centrado verticalmente */
+}
+
+#description {
+  display: grid;
+}
+#description-text {
+  grid-column: 1;
+  margin-top: 5%;
+  padding-left: 7%;
+  padding-right: 7%;
+}
+#description-text h1 {
+  margin-bottom: 0;
+  padding-right: 10%;
+  font-size: 70px;
+}
+#description-text p {
+  padding-right: 1%;
+  color: gray;
+  font-size: 20px;
+}
+#sale-button {
+  background-color: #ffffff;
+  font-size: 20px;
+  margin-top: 5%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-left: 15%;
+  padding-right: 15%;
+  border: 1px solid black;
+  transition: background-color 0.5s, color 0.2s, border 0.2s;
+}
+#sale-button:hover {
+  background-color: #bda76f;
+  color: #f1f1f1;
+  border: 1px solid #bda76f;
+}
+#description-images {
+  margin: 5%;
+  padding: 5%;
+  display: grid;
+}
+#description-images div {
+  padding: 2%;
+}
+.link {
+  color: #bda76f;
+  text-decoration: none;
+}
+.link:hover {
+  color: #f1f1f1;
+}
+.link2 {
+  color: rgb(59, 59, 59);
+  text-decoration: none;
+}
+.link2:hover {
+  color: #f1f1f1;
+}
+#collections {
+  display: grid;
+  margin: 2%;
+}
+.collection {
+  background-size: cover;
+  text-align: center;
+  padding: 30px;
+  padding-top: 20%;
+  padding-bottom: 20%;
+  padding-left: 2%;
+  padding-right: 2%;
+  grid-column: auto;
+}
+.collection hr {
+  margin-right: 10%;
+  margin-left: 10%;
+}
+.collection p {
+  padding-left: 15%;
+  padding-right: 15%;
+  letter-spacing: 0.2rem;
+  font-size: 18px;
+}
+.collection h1 {
+  font-size: 43px;
+}
+.collection h4 {
+  font-size: 30px;
+}
+.collection a {
+  font-size: 20px;
+}
+#riviera {
+  background-image: url(resources/VELZIA\ SAN\ TELESFORO\ 13\ WEB_011.jpg);
+  margin: 2%;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.7);
+  color: #f1f1f1;
+}
+#emerald {
+  background-image: url(resources/VELZIA\ AV\ DEL\ MEDITERRÁNEO\ 5\ WEB_001.jpg);
+  margin: 2%;
+  box-shadow: inset 0 0 0 1000px rgb(243, 241, 229, 0.7);
+  color: rgb(59, 59, 59);
+}
+#grand-emerald {
+  background-image: url(resources/VELZIA\ VALLEHERMOSO\ 4\ WEB_001.jpg);
+  margin: 2%;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.7);
+  color: #f1f1f1;
+}
+#milano {
+  background-image: url(resources/VELZIA\ PADILLA\ 68\ WEB_001.jpg);
+  margin: 2%;
+  box-shadow: inset 0 0 0 1000px rgb(243, 241, 229, 0.7);
+  color: rgb(59, 59, 59);
+}
+#palazzo {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+#palazzo2 {
+  background-image: url(resources/VELZIA\ PINTOR\ ROSALES\ 70\ WEB_004.jpg);
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.7);
+  color: #f1f1f1;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+#team-section {
+  text-align: center;
+}
+#team-section h1 {
+  padding: 3%;
+}
+#team-section h4 {
+  font-size: 24px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+#team {
+  display: grid;
+  padding: 3%;
+}
+#team * h2 {
+  font-size: xx-large;
+}
+#team * p {
+  letter-spacing: 0.1rem;
+  padding-left: 7%;
+  padding-right: 7%;
+}
+#team1 {
+  grid-column: auto;
+  margin-bottom: 5%;
+}
+#team2 {
+  grid-column: auto;
+  margin-bottom: 5%;
+}
+#team3 {
+  grid-column: auto;
+  margin-bottom: 5%;
+}
+#chateau{
+  display: block;
+}
+#chateau-content {
+  display: grid;
+  margin-top: 5%;
+}
+#chateau-background {
+  background-color: #2d2d2d;
+  z-index: 99;
+}
+#chateau-image {
+  background-image: url(resources/20240129_Joselito_V03\ -\ Exterior\ 01.jpg);
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+#chateau-info {
+  padding: 10%;
+  background-color: #2d2d2d;
+  color: #f1f1f1;
+  z-index: 100;
+}
+#chateau-info hr{
+  width: 260px;
+  margin: 0;
+  color: #b3aaa5;
+}
+#chateau-info h2,
+#chateau-info h3 {
+  font-size: 70px;
+  margin: 0;
+}
+#chateau-button {
+  color: #f1f1f1;
+  background-color: #565656;
+  font-size: 18px;
+  padding: 3%;
+  margin-top: 10%;
+}
+#partners {
+  text-align: center;
+  display: block;
+  margin-bottom: 5%;
+}
+#partners h1 {
+  font-size: 80px;
+}
+
+@media (max-width: 768px) {
+  #h1-video-index {
+    font-size: 42px;
+  }
+  .content {
+    padding-top: 0; 
+  }
+  .text-container {
+    transform: translateY(10%); /* Ajustar para dispositivos móviles */
+  }
+  #contact-button {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+  #description {
+    grid-template-columns: repeat(1, 100%);
+  }
+  #description-text {
+    text-align: center;
+  }
+  #description-images {
+    grid-column: 1;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #description-images div {
+    grid-column: 1;
+  }
+  #collections {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #palazzo {
+    margin: 2%;
+  }
+  #palazzo2 {
+    margin: 2%;
+  }
+  #team {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #chateau{
+    display: block;
+  }
+  #chateau-content {
+    grid-template-columns: 100%;
+    grid-template-rows: 30% 70%;
+  }
+  #chateau-background {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  #chateau-image {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  #chateau-info {
+    grid-column: 1;
+    grid-row: 2;
+    padding-bottom: 100%;
+    text-align: center;
+  }
+  #chateau-info p {
+    font-size: 25px;
+  }
+}
+@media (min-width: 768px) {
+  #h1-video-index {
+    font-size: 70px;
+  }
+  .content {
+    padding-top: 0; 
+  }
+  .text-container {
+    transform: translateY(20%); /* Ajustar según la altura del menú fijo */
+  }
+  #contact-button {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+  #description {
+    grid-template-columns: repeat(2, 50%);
+    margin: 8%;
+  }
+  #description-images {
+    grid-column: 2;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 0.5fr);
+  }
+  #description-image1 {
+    grid-row: 1;
+    grid-column: 1;
+  }
+  #description-image2 {
+    grid-row: 2 / spans 2;
+    grid-column: 1;
+  }
+  #description-image3 {
+    grid-row: 1 / span 2;
+    grid-column: 2;
+  }
+  #description-image4 {
+    grid-row: 3;
+    grid-column: 2;
+  }
+  #collections {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 600px;
+    margin: 0% 7% 0 7%;
+  }
+  #palazzo {
+    margin: 2% 7% 7% 7%;
+  }
+  #team-section {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+  #team {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  #chateau-content {
+    grid-template-columns: 15% 35% 35% 15%;
+    grid-template-rows: 10% 40% 40% 10%;
+    height: 800px;
+  }
+  #chateau-background {
+    grid-column: 2 / span 3;
+    grid-row: 1 / span 4;
+  }
+  #chateau-image {
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 2;
+  }
+  #chateau-info {
+    grid-column: 3 / span 2;
+    grid-row: 2 / span 2;
+  }
+}
+/* FOOTER */
+#footer {
+  background-color: #101010;
+  text-align: center;
+  padding-bottom: 3%;
+  padding-top: 2%;
+}
+
+.menu-footer {
+  margin-bottom: 3%;
+}
+
+.menu-footer ul {
+  display: flex;
+  justify-content: center;
+  padding-inline-start: 0px;
+  list-style-type: none;
+}
+
+.menu-footer li {
+  margin: 0 10px; /* Ajusta el margen entre los elementos según sea necesario */
+}
+
+.menu-footer li a {
+  font-size: 12px;
+  color: #f1f1f1;
+  text-decoration: none;
+}
+
+.rrss ul {
+  padding-inline-start: 0px;
+}
+
+.rrss li {
+  list-style-type: none;
+  display: inline;
+}
+
+.rrss li a {
+  text-decoration: none;
+}
+/*
+Font classes
+*/
+
+.cormorant-garamond-light {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.cormorant-garamond-regular {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cormorant-garamond-medium {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.cormorant-garamond-semibold {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.cormorant-garamond-bold {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.cormorant-garamond-light-italic {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.cormorant-garamond-regular-italic {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.cormorant-garamond-medium-italic {
+  color: #b3aaa5;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.cormorant-garamond-semibold-italic {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.cormorant-garamond-bold-italic {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.roboto-thin {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-black {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.roboto-thin-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.roboto-light-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.roboto-regular-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.roboto-medium-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.roboto-bold-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.roboto-black-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}

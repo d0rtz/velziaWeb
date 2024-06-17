@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./resources/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./resources/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./resources/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./resources/site.webmanifest" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Velzia - Luxury homes in Madrid</title>
+  </head>
+
+  <body>
+    <div id="wsp">
+      <a
+        href="https://api.whatsapp.com/send/?phone=34637505275&text&type=phone_number&app_absent=0"
+        ><img src="./resources/wsp.png" alt="wsp" width="50px" height="50px"
+      /></a>
+    </div>
+    <header id="header" class="header-color">
+      <a href="./">
+        <img
+          src="./resources/logo-index-def.png"
+          alt="logo-velzia"
+          height="50"
+          width="150"
+          id="nav-logo"
+      /></a>
+
+      <nav class="nav1 cormorant-garamond-light">
+        <div class="menu">
+          <div class="nav-li subnava" id="collection-li">
+            <a href="#" class="nav-link nav-link-white">Colecciones</a>
+
+            <div class="subnav" id="subnav">
+              <a
+                href="gama.html?gama=riviera"
+                class="blank-link nav-link-white"
+              >
+                <div class="subnav-li">Riviera - Desde 300.000 €</div>
+              </a>
+              <a
+                href="gama.html?gama=emerald"
+                class="blank-link nav-link-white"
+              >
+                <div class="subnav-li">Emerald - Desde 400.000 €</div>
+              </a>
+              <a
+                href="gama.html?gama=grand-emerald"
+                class="blank-link nav-link-white"
+              >
+                <div class="subnav-li">Grand Emerald - Desde 700.000 €</div>
+              </a>
+              <a href="gama.html?gama=milano" class="blank-link nav-link-white">
+                <div class="subnav-li">Milano - Desde 950.000 €</div>
+              </a>
+              <a
+                href="gama.html?gama=palazzo"
+                class="blank-link nav-link-white"
+              >
+                <div class="subnav-li">Palazzo - Desde 1.500.000 €</div>
+              </a>
+            </div>
+          </div>
+          <div class="nav-li">
+            <a href="./pisos-en-venta/" class="nav-link nav-link-white"
+              >Pisos en venta</a
+            >
+          </div>
+          <div class="nav-li">
+            <a href="./tu-casa-a-medida/" class="nav-link nav-link-white"
+              >Velzia Tailor</a
+            >
+          </div>
+          <div class="nav-li">
+            <a href="./quiero-invertir/" class="nav-link nav-link-white"
+              >Quiero invertir</a
+            >
+          </div>
+          <div class="nav-li">
+            <a href="./trabaja-con-nosotros/" class="nav-link nav-link-white"
+              >Trabaja con nosotros</a
+            >
+          </div>
+          <div class="nav-li">
+            <a href="./contacto/" class="nav-link nav-link-white">Contacto</a>
+          </div>
+          <div class="nav-li" style="font-size: 22px;">
+            <i id="phone-icon" class='bx bxs-phone' style='color:#f1f1f1;'></i>
+            <a
+              href="tel:+34911989927"
+              class="nav-link nav-link-white"
+              id="number"
+            ></a>
+          </div>
+        </div>
+      </nav>
+      <div id="hamburguer-icon-div">
+        <img
+          src="resources/hamburguesa-blanco.png"
+          alt=""
+          height="25px"
+          width="25px"
+          id="hamburguer-icon"
+        />
+      </div>
+    </header>
+    <div id="mobile-header-background">
+      <div id="mobile-header" class="cormorant-garamond-light">
+        <div id="close-div">
+          <button id="close-mobile-header-button">
+            <img
+              src="resources/x.png"
+              alt="close-header"
+              width="10"
+              height="10"
+            />
+          </button>
+        </div>
+        <div id="mobile-nav">
+          <div class="mobile-nav-item" id="mobile-dropdown-btn">
+            <a href="#" class="blank-link nav-link-black">Colecciones</a>
+            <img
+              src="resources/plus.png"
+              alt=""
+              width="15px"
+              height="15px"
+              id="mobile-subnav-image"
+            />
+          </div>
+          <div
+            id="mobile-subnav"
+            class="cormorant-garamond-medium"
+            style="display: none"
+          >
+            <hr />
+            <div class="mobile-subnav-item">
+              <a href="gama.html?gama=riviera" class="blank-link nav-link-black"
+                >Riviera - Desde 300.000 €</a
+              >
+            </div>
+            <div class="mobile-subnav-item">
+              <a href="gama.html?gama=emerald" class="blank-link nav-link-black"
+                >Emerald - Desde 400.000 €</a
+              >
+            </div>
+            <div class="mobile-subnav-item">
+              <a
+                href="gama.html?gama=grand-emerald"
+                class="blank-link nav-link-black"
+                >Grand Emerald - Desde 700.000 €</a
+              >
+            </div>
+            <div class="mobile-subnav-item">
+              <a href="gama.html?gama=milano" class="blank-link nav-link-black"
+                >Milano - Desde 950.000 €</a
+              >
+            </div>
+            <div class="mobile-subnav-item">
+              <a href="gama.html?gama=palazzo" class="blank-link nav-link-black"
+                >Palazzo - Desde 1.500.000 €</a
+              >
+            </div>
+          </div>
+          <hr />
+          <div class="mobile-nav-item">
+            <a href="./pisos-en-venta/" class="blank-link nav-link-black"
+              >Pisos en venta</a
+            >
+          </div>
+          <hr />
+          <div class="mobile-nav-item">
+            <a href="#" class="blank-link nav-link-black">Velzia Tailor</a>
+          </div>
+          <hr />
+          <div class="mobile-nav-item">
+            <a href="./quiero-invertir/" class="blank-link nav-link-black"
+              >Quiero invertir</a
+            >
+          </div>
+          <hr />
+          <div class="mobile-nav-item">
+            <a href="./trabaja-con-nosotros/" class="blank-link nav-link-black"
+              >Trabaja con nosotros</a
+            >
+          </div>
+          <hr />
+          <div class="mobile-nav-item">
+            <a href="./contacto/" class="blank-link nav-link-black">Contacto</a>
+          </div>
+          <hr />
+          <div class="mobile-nav-item">
+            <i class='bx bxs-phone'></i>
+            <a
+              href="tel:+34911989927"
+              class="blank-link nav-link-black"
+              id="mobile-number"
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section id="main">
+      <section id="video-index">
+        <video autoplay muted loop id="myVideo">
+          <source src="resources/background-video.mp4" type="video/mp4" />
+        </video>
+
+        <div class="content">
+          <div class="text-container">
+            <h2 id="h2-video-index" class="roboto-regular">VELZIA</h2>
+            <hr id="sl1" />
+            <h1 id="h1-video-index" class="cormorant-garamond-regular">
+              Casas de revista, listas para disfrutar
+            </h1>
+            <a href="./contacto/">
+              <button id="contact-button" class="roboto-regular">
+                CONTACTA CON NOSOTROS
+              </button>
+            </a>
+            <div class="vl"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="description">
+        <div id="description-text">
+          <h1 class="cormorant-garamond-light">
+            Diseño Elegancia y Exclusividad
+          </h1>
+          <p class="roboto-thin">
+            Somos diseño, tendencia y sofisticación. Somos artesanía e
+            innovación. Somos emoción. Vendemos viviendas íntegramente
+            rehabilitadas. Vendemos casas únicas e inspiradoras, listas para
+            entrar a vivir.
+          </p>
+          <p class="roboto-thin">
+            Totalmente decoradas y equipadas. Donde cada detalle cuenta.
+          </p>
+          <p class="roboto-thin">
+            Para que no tengas que preocuparte de nada. Sólo de disfrutar de tu
+            nuevo hogar. Descubre las casas más deseadas de Madrid.
+          </p>
+          <a href="./pisos-en-venta/">
+            <button id="sale-button" class="roboto-regular">
+              PISOS EN VENTA
+            </button>
+          </a>
+        </div>
+        <div id="description-images">
+          <div id="description-image1">
+            <img
+              src="resources/VELZIA-PINTOR-ROSALES-70-WEB_039-1200x800.jpg"
+              alt="imagen palazzo 1"
+              height="100%"
+              width="100%"
+            />
+          </div>
+          <div id="description-image2">
+            <img
+              src="resources/VELZIA-PINTOR-ROSALES-70-WEB_008-1-1024x1536.jpg"
+              alt="imagen palazzo 2"
+              height="100%"
+              width="100%"
+            />
+          </div>
+          <div id="description-image3">
+            <img
+              src="resources/VELZIA-PINTOR-ROSALES-70-WEB_056-1024x1536.jpg"
+              alt="imagen palazzo 3"
+              height="100%"
+              width="100%"
+            />
+          </div>
+          <div id="description-image4">
+            <img
+              src="resources/VELZIA-PINTOR-ROSALES-70-WEB_035-1200x800.jpg"
+              alt="imagen palazzo 4"
+              height="100%"
+              width="100%"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="collections">
+        <div id="riviera" class="collection cormorant-garamond-light">
+          <p>Diseño, calidad y estilo a precio asequible.</p>
+          <hr />
+          <h1>Riviera</h1>
+          <h4>Desde 300.000 €</h4>
+          <a href="gama.html?gama=riviera" class="roboto-regular link"
+            >VER COLECCIÓN</a
+          >
+        </div>
+        <div id="emerald" class="collection cormorant-garamond-light">
+          <p>Diseño moderno y elegante con toques de sofisticación.</p>
+          <hr />
+          <h1>Emerald</h1>
+          <h4>Desde 400.000 €</h4>
+          <a href="gama.html?gama=emerald" class="roboto-regular link2"
+            >VER COLECCIÓN</a
+          >
+        </div>
+        <div id="grand-emerald" class="collection cormorant-garamond-light">
+          <p>Sofisticación, diseño y máximo confort, con códigos de lujo.</p>
+          <hr />
+          <h1>Grand Emerald</h1>
+          <h4>Desde 700.000 €</h4>
+          <a href="gama.html?gama=grand-emerald" class="roboto-regular link"
+            >VER COLECCIÓN</a
+          >
+        </div>
+        <div id="milano" class="collection cormorant-garamond-light">
+          <p>
+            Lujo y diseño contemporáneo de la más alta calidad en perfecta
+            armonía.
+          </p>
+          <hr />
+          <h1>Milano</h1>
+          <h4>Desde 950.000 €</h4>
+          <a href="gama.html?gama=milano" class="roboto-regular link2"
+            >VER COLECCIÓN</a
+          >
+        </div>
+      </section>
+
+      <section id="palazzo">
+        <div id="palazzo2" class="collection cormorant-garamond-light">
+          <p>
+            El más exquisito lujo contemporáneo en los barrios mas exclusivos de
+            Madrid.
+          </p>
+          <hr />
+          <h1>Palazzo</h1>
+          <h4>Desde 1.500.000 €</h4>
+          <a href="gama.html?gama=palazzo" class="roboto-regular link"
+            >VER COLECCIÓN</a
+          >
+        </div>
+      </section>
+      <section id="team-section">
+        <p class="roboto-regular">
+          Diseñamos y construimos los espacios de tus sueños
+        </p>
+        <hr id="sl2" />
+        <h1 id="h1-video-index" class="cormorant-garamond-medium">
+          Equipo Interno
+        </h1>
+        <h4 class="cormorant-garamond-medium">
+          Entendemos la transformación de nuestras viviendas como un proceso
+          integral para el que contamos con nuestro propio equipo interno de
+          especialistas en arquitectura, diseño de interiores, albañilería,
+          carpintería... Ellos son los que hacen la verdadera magia y otorgan a
+          nuestros proyectos ese valor diferencial que los hace únicos.
+        </h4>
+        <div id="team">
+          <div id="team1">
+            <img
+              src="resources/two-business-builder-people-at-construction-site-2022-01-14-00-09-26-utc-1-1200x800.jpg"
+              alt="obra"
+              height="auto"
+              width="90%"
+            />
+            <h2 class="cormorant-garamond-medium">Constructora</h2>
+            <p class="roboto-light">
+              Arquitectos, ingenieros, constructores… profesionales altamente
+              cualificados y con amplia experiencia fusionan innovación
+              arquitectónica y calidad en cada proyecto. Nuestro objetivo es
+              crear espacios excepcionales que superen las más altas
+              expectativas del cliente más exigente.
+            </p>
+          </div>
+          <div id="team2">
+            <img
+              src="resources/man-gluing-planks-in-a-carpentry-workshop-2022-11-09-08-46-32-utc-1-1200x800.jpg"
+              alt="carpintero"
+              height="auto"
+              width="90%"
+            />
+            <h2 class="cormorant-garamond-medium">
+              Fábrica de muebles y cocinas
+            </h2>
+            <p class="roboto-light">
+              Creamos mobiliario único para espacios exclusivos. Unimos
+              artesanía y fabricación hecha a mano con innovación y diseño.
+              Usamos siempre materiales de alta calidad que proporcionan un
+              resultado inspirador y duradero. Nuestros muebles son sinónimo de
+              belleza, calidad, estilo y distinción.
+            </p>
+          </div>
+          <div id="team3">
+            <img
+              src="resources/flat-lay-of-hands-of-contemporary-creative-interio-2021-09-24-03-16-08-utc-1-1200x800.jpg"
+              alt="interiorismo"
+              height="auto"
+              width="90%"
+            />
+            <h2 class="cormorant-garamond-medium">Estudio de Interiorismo</h2>
+            <p class="roboto-light">
+              El diseño y el interiorismo están en el ADN de VELZIA Homes.
+              Contamos con nuestro propio atelier de interiorismo formado por
+              profesionales dedicados a crear espacios únicos y cautivadores.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="chateau">
+        <div id="chateau-content">
+          <div id="chateau-background"></div>
+          <div id="chateau-image"></div>
+          <div id="chateau-info">
+            <hr />
+            <h2 class="cormorant-garamond-medium">Descubre</h2>
+            <h3 class="cormorant-garamond-medium-italic">Château</h3>
+            <p class="roboto-thin">
+              Chateau es nuestra nueva colección/gama de viviendas
+              unifamiliares. Propiedades extraordinarias para clientes
+              extraordinarios.
+            </p>
+            <p class="roboto-thin">
+              Se trata de chalets que combinan el diseño y la sofisticación del
+              sello VELZIA Homes con el placer de vivir en la capital, pero a un
+              ritmo más pausado, en exclusivas zonas próximas al centro de la
+              ciudad.
+            </p>
+            <p class="roboto-thin">
+              Descubre la belleza y sofisticación de las viviendas de esta
+              colección/gama.
+            </p>
+            <button id="chateau-button" class="cormorant-garamond-medium">
+              Quiero saber más
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="partners">
+        <h1 class="cormorant-garamond-semibold">Partners</h1>
+        <div id="slider">
+          <img src="resources/LogoGooglebueno-01-150x150.png" alt="Google" />
+          <img src="resources/Diseno-sin-titulo-14-150x150.png" alt="KNAUF" />
+          <img src="resources/Diseno-sin-titulo-15-150x150.png" alt="Duval" />
+          <img src="resources/RocaLogo-150x150.png" alt="Roca" />
+          <img src="resources/BoschLogo-150x150.png" alt="Bosch" />
+        </div>
+      </section>
+    </section>
+
+    <footer id="footer">
+      <img
+        src="./resources/logo-index.png"
+        alt="logo-velzia"
+        height="100"
+        width="140"
+      />
+      <nav class="menu-footer">
+        <ul>
+          <li class="nav-li">
+            <a href="#" class="blank-link nav-link-white roboto-thin">Blog</a>
+          </li>
+          <li class="nav-li">
+            <a
+              href="./politicas/politica-privacidad.html"
+              class="blank-link nav-link-white roboto-thin"
+              >Política de Privacidad</a
+            >
+          </li>
+          <li class="nav-li">
+            <a
+              href="./politicas/politica-cookies.html"
+              class="blank-link nav-link-white roboto-thin"
+              >Política de Cookies</a
+            >
+          </li>
+          <li class="nav-li">
+            <a
+              href="./politicas/aviso-legal.html"
+              class="blank-link nav-link-white roboto-thin"
+              >Aviso legal</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <nav class="rrss">
+        <ul>
+          <li class="nav-li">
+            <a
+              href="https://www.facebook.com/people/Velzia-by-ChapnikGiesen/100075860846740/?ref=pages_you_manage"
+              target="_blank"
+              class="blank-link nav-link-white"
+              ><img
+                src="resources/logo-de-facebook.png"
+                alt="facebook"
+                width="20"
+                height="20"
+            /></a>
+          </li>
+          <li class="nav-li">
+            <a
+              href="https://www.instagram.com/velzia.es/"
+              target="_blank"
+              class="blank-link nav-link-white"
+              ><img
+                src="resources/instagram.png"
+                alt="instagram"
+                width="20"
+                height="20"
+            /></a>
+          </li>
+          <li class="nav-li">
+            <a
+              href="https://www.pinterest.es/velziabychapnikandgiesen/"
+              target="_blank"
+              class="blank-link nav-link-white"
+              ><img
+                src="resources/logotipo-de-pinterest.png"
+                alt="pinterest"
+                width="20"
+                height="20"
+            /></a>
+          </li>
+          <li class="nav-li">
+            <a
+              href="https://www.youtube.com/@velziabychapnikgiesen5789/videos"
+              target="_blank"
+              class="blank-link nav-link-white"
+              ><img
+                src="resources/youtube.png"
+                alt="youtube"
+                width="20"
+                height="20"
+            /></a>
+          </li>
+          <li class="nav-li">
+            <a
+              href="https://www.tiktok.com/@velzia"
+              target="_blank"
+              class="blank-link nav-link-white"
+              ><img
+                src="resources/tiktok-64.png"
+                alt="tiktok"
+                width="20"
+                height="20"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+    <script src="./js/index-functions.js"></script>
+  </body>
+</html>

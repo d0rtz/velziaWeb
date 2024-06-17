@@ -1,0 +1,667 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+button {
+  cursor: pointer;
+}
+::selection{
+  background-color: #101010;
+  color: #f1f1f1;
+}
+
+/* WSP */
+
+#wsp{
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 2999;
+}
+
+/* HEADER */
+
+#header {
+  display: flex;
+  top: 0;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 1%;
+  padding-right: 1%;
+  text-align: center;
+  z-index: 1000;
+  position: absolute;
+  width: 100%;
+  transition: all .5s ease;
+}
+.header-color {
+  background-color: black;
+}
+#nav-logo {
+  margin-left: 3%;
+  margin-top: 10%;
+}
+.nav1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2%;
+  width: 100%;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.nav-li {
+  position: relative; /* Necesario para que el submenú se posicione correctamente */
+  list-style-type: none;
+  padding: 1%;
+  font-size: medium;
+}
+.subnava {
+  padding: 25px;
+}
+.subnav {
+  display: none;
+  position: absolute;
+  left: 0; /* Alinea el borde izquierdo del submenú con el borde izquierdo de "Colecciones" */
+  top: 100%; /* Posiciona el submenú justo debajo del contenedor padre */
+  text-align: start;
+  font-size: small;
+  padding: 0.5%;
+  width: 250px;
+  background-color: rgb(34, 34, 34);
+  z-index: 1001;
+}
+.subnav-li {
+  padding: 3%;
+  margin: 5px; /* Añade un pequeño margen */
+}
+
+.subnav-li:hover {
+  background-color: rgb(53, 53, 53);
+}
+.blank-link {
+  text-decoration: none;
+}
+.nav-link {
+  text-decoration: none;
+}
+.nav-link-white {
+  color: #f1f1f1;
+}
+.nav-link-black {
+  color: black;
+}
+.sticky {
+  top: 0;
+  width: 100%;
+}
+.header-black {
+  background-color: black;
+}
+
+.header-white {
+  background-color: #f1f1f1;
+}
+#hamburguer-icon-div {
+  padding: 20px;
+}
+
+#mobile-header-background {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1999;
+}
+#mobile-header {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  height: 100%;
+  width: 300px;
+  background-color: white;
+  z-index: 2000;
+  transition: all 0.2s ease-in-out;
+}
+#mobile-nav {
+  margin-top: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+#mobile-nav hr {
+  margin-right: 10%;
+}
+.mobile-nav-item {
+  display: block;
+  padding: 15px;
+  font-size: 16px;
+  list-style-type: none;
+}
+#mobile-subnav {
+  margin-left: 20px;
+  transition: all 0.2s ease-in-out;
+}
+#mobile-subnav-image {
+  padding-left: 100px;
+}
+.mobile-subnav-item {
+  display: block;
+  padding: 10px;
+  font-size: 16px;
+  list-style-type: none;
+  transition: all 0.2s ease-in-out;
+}
+#close-div {
+  position: relative;
+}
+#close-mobile-header-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 5%;
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  border: 0;
+  background-color: #868686;
+}
+
+@media (max-width: 768px) {
+  #hamburguer-icon-div {
+    display: block;
+  }
+  .nav1 {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  #hamburguer-icon-div {
+    display: none;
+  }
+  .nav1 {
+    display: block;
+  }
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .main-container {
+  padding-top: 102px;
+}
+
+#sale {
+  position: relative;
+  overflow: hidden;
+  object-fit: cover;
+}
+/* Style the video: 100% width and height to cover the entire window */
+#background {
+  right: 0;
+  top: 0;
+  min-width: 100%;
+  min-height: 100vh;
+  max-width: 100%;
+  max-height: 100vh;
+  z-index: 999;
+}
+
+/* Add some content at the bottom of the video/page */
+.main-container {
+  position: absolute;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 998;
+}
+#form-start-div{
+  color: #f1f1f1;
+}
+.main-container div h2 {
+  font-size: 38px;
+}
+.main-container div h3 {
+  font-size: 28px;
+}
+.main-container div h4 {
+  font-size: 20px;
+}
+#contact-button {
+  background-color: #e5decf;
+  color: #ffffff;
+  border-radius: 10px;
+  font-size: 20px;
+  padding-left: 40%;
+  padding-right: 40%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+/*FORM*/
+
+:root {
+  --primary: #333;
+  --secondary: #333;
+  --errorColor: red;
+  --stepNumber: 5;
+  --containerWidth: 600px;
+  --bgColor: #333;
+  --inputBorderColor: lightgray;
+}
+
+::selection {
+  color: #fff;
+  background: var(--primary);
+}
+.container {
+  width: var(--containerWidth);
+  background: #fff;
+  text-align: center;
+  border-radius: 5px;
+  display: none;
+  padding: 0px 35px 10px 35px;
+}
+.container header {
+  font-size: 35px;
+  font-weight: 600;
+  margin: 0 0 30px 0;
+}
+.container .form-outer {
+  width: 100%;
+  overflow: hidden;
+}
+.container .form-outer form {
+  display: flex;
+  width: calc(100% * var(--stepNumber));
+}
+.form-outer form .page {
+  width: calc(100% / var(--stepNumber));
+  height: 220px;
+  transition: margin-left 0.3s ease-in-out;
+}
+.form-outer form .page .title {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 500;
+}
+.form-outer form .page .field {
+  width: var(--containerWidth);
+  height: 45px;
+  margin: 45px 0;
+  display: flex;
+  position: relative;
+}
+form .page .field .label {
+  position: absolute;
+  top: -30px;
+  font-weight: 500;
+}
+form .page .field input {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  border: 1px solid var(--inputBorderColor);
+  border-radius: 5px;
+  padding-left: 15px;
+  margin: 0 1px;
+  font-size: 18px;
+  transition: border-color 150ms ease;
+}
+form .page .field input.invalid-input {
+  border-color: var(--errorColor);
+}
+form .page .field select {
+  width: 100%;
+  padding-left: 10px;
+  font-size: 17px;
+  font-weight: 500;
+  overflow-y: auto;
+  transition: all 0.3s ease-in;
+}
+form .page .field select option{
+  padding: 10px;
+  font-size: 17px;
+}
+form .page .field button {
+  width: 100%;
+  height: calc(100% + 5px);
+  border: none;
+  background: var(--secondary);
+  margin-top: -20px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.5s ease;
+}
+form .page .field button:hover {
+  background: #000;
+}
+form .page .btns button {
+  margin-top: -20px !important;
+}
+form .page .btns button.prev {
+  margin-right: 3px;
+  font-size: 17px;
+}
+form .page .btns button.next {
+  margin-left: 3px;
+}
+.container .progress-bar {
+  display: flex;
+  margin: 40px 0;
+  user-select: none;
+}
+.container .progress-bar .step {
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+.container .progress-bar .step p {
+  font-weight: 500;
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 8px;
+}
+.progress-bar .step .bullet {
+  height: 25px;
+  width: 25px;
+  border: 2px solid #000;
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+  transition: 0.2s;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 25px;
+}
+.progress-bar .step .bullet.active {
+  border-color: var(--primary);
+  background: var(--primary);
+}
+.progress-bar .step .bullet span {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.progress-bar .step .bullet.active span {
+  display: none;
+}
+.progress-bar .step .bullet:before,
+.progress-bar .step .bullet:after {
+  position: absolute;
+  content: "";
+  bottom: 11px;
+  right: -94px;
+  height: 3px;
+  width: 92px;
+  background: #262626;
+}
+.progress-bar .step .bullet.active:after {
+  background: var(--primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 0.3s linear forwards;
+}
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+.progress-bar .step:last-child .bullet:before,
+.progress-bar .step:last-child .bullet:after {
+  display: none;
+}
+.progress-bar .step p.active {
+  color: var(--primary);
+  transition: 0.2s linear;
+}
+.progress-bar .step .check {
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  font-size: 15px;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.progress-bar .step .check.active {
+  display: block;
+  color: #fff;
+}
+
+@media screen and (max-width: 660px) {
+  :root {
+    --containerWidth: 400px;
+  }
+  .progress-bar .step p {
+    display: none;
+  }
+  .progress-bar .step .bullet::after,
+  .progress-bar .step .bullet::before {
+    display: none;
+  }
+  .progress-bar .step .bullet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .progress-bar .step .check {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 15px;
+    transform: translate(-50%, -50%);
+    display: none;
+  }
+  .step {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 490px) {
+  :root {
+    --containerWidth: 100%;
+  }
+  .container {
+    box-sizing: border-box;
+    border-radius: 0;
+  }
+}
+
+/* FOOTER */
+
+#footer {
+  background-color: #101010;
+  text-align: center;
+  padding-bottom: 3%;
+  padding-top: 2%;
+}
+
+.menu-footer {
+  margin-bottom: 3%;
+}
+
+.menu-footer ul {
+  display: flex;
+  justify-content: center;
+  padding-inline-start: 0px;
+  list-style-type: none;
+}
+
+.menu-footer li {
+  margin: 0 10px; /* Ajusta el margen entre los elementos según sea necesario */
+}
+
+.menu-footer li a {
+  font-size: 12px;
+  color: #f1f1f1;
+  text-decoration: none;
+}
+
+.rrss ul {
+  padding-inline-start: 0px;
+}
+
+.rrss li {
+  list-style-type: none;
+  display: inline;
+}
+
+.rrss li a {
+  text-decoration: none;
+}
+
+
+/*
+  Font classes
+  */
+
+.cormorant-garamond-light {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.cormorant-garamond-regular {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cormorant-garamond-medium {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.cormorant-garamond-semibold {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.cormorant-garamond-bold {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.cormorant-garamond-light-italic {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.cormorant-garamond-regular-italic {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.cormorant-garamond-medium-italic {
+  color: #b3aaa5;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.cormorant-garamond-semibold-italic {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.cormorant-garamond-bold-italic {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.roboto-thin {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-black {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.roboto-thin-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.roboto-light-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.roboto-regular-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.roboto-medium-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.roboto-bold-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.roboto-black-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
