@@ -1,6 +1,6 @@
 <?php
 
-$sname= "localhost";
+$sname= "79.137.45.155";
 
 $uname= "root";
 

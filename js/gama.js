@@ -1,6 +1,6 @@
 var gama = params.get("gama");
 
-var url = "http://localhost:4999/gama/" + gama;
+var url = "http://79.137.45.155:4999/gama/" + gama;
 
 const requestOptions = {
   method: "GET",

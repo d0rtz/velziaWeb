@@ -1,4 +1,4 @@
-var url = "http://localhost:4999/";
+var url = "http://79.137.45.155:4999/";
 var modal = document.getElementById("myModal");
 var span = document.getElementById("modal-close");
 
