@@ -6,7 +6,7 @@ console.log(querystring); // '?q=pisos+en+barcelona&ciudad=Barcelona'
 const params = new URLSearchParams(querystring);
 var zona = params.get("zona");
 
-var url = "http://79.137.45.155:4999/zone/" + zona;
+var url = "https://79.137.45.155:4999/zone/" + zona;
 
 const requestOptions = {
   method: "GET",
