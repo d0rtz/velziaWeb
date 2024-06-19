@@ -96,7 +96,7 @@ function pisosWindow() {
     .then((result) => {
       var pisos = JSON.parse(result);
       var list = ``;
-      pisos.houses.forEach(function (piso) {
+      pisos.houses.reverse().forEach(function (piso) {
         list += `<div class="piso-li" ><div onclick=houseDetail(${
           piso.id
         })><h3>${piso.name}</h3><img src="${
