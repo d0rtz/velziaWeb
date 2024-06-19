@@ -2,7 +2,7 @@
 
 $sname= "79.137.45.155";
 
-$uname= "root";
+$uname= "velziadmin";
 
 $password = "202121";
 
