@@ -192,7 +192,7 @@ function houseDetail(id) {
       // Mostrar imagen principal si existe
       if (piso.background) {
         $("#current-background")
-          .attr("src", "/uploads/" + piso.background.replace(/\\/g, "/"))
+          .attr("src", "." + piso.background)
           .show();
       }
 
@@ -201,10 +201,7 @@ function houseDetail(id) {
         const photos = piso.photos.split(",");
         let photoHtml = "";
         photos.forEach((photo) => {
-          photoHtml += `<img src="/uploads/${photo.replace(
-            /\\/g,
-            "/"
-          )}" width="100px" height="60px"/>`;
+          photoHtml += `<img src=".${photo}" width="100px" height="60px"/>`;
         });
         $("#current-photos").html(photoHtml).show();
       }
