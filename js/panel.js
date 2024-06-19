@@ -100,8 +100,8 @@ function pisosWindow() {
         list += `<div class="piso-li" ><div onclick=houseDetail(${
           piso.id
         })><h3>${piso.name}</h3><img src="${
-          piso.background.includes("../")
-            ? "../" + piso.background
+          piso.background.includes("./")
+            ? "." + piso.background
             : piso.background
         }" width="100px" height="60px"/></div><i class='bx bx-trash' onclick=deleteModal(${
           piso.id
