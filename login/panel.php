@@ -75,7 +75,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user'])) {
         <span class="dashboard">Panel</span>
       </div>
       <div class="profile-details">
-        <img src="../resources/android-chrome-192x192.PNG" alt="">
+        <img src="../resources/android-chrome-192x192.png" alt="">
         <span class="admin_name">Hola, <?php echo $_SESSION['name']; ?></span>
       </div>
     </nav>
