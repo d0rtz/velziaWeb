@@ -9,10 +9,10 @@ var contactForm = `
         </h3>
         <div id="form-div">
             <div class="form-container">
-            <form action="" id="login">
+            <form action="https://sig-api.chapnikandgiesen.com/api/leads/form" method="post" id="login">
                 <div id="form-name">
                 <p class="roboto-regular">Nombre *</p>
-                <input id="name" type="text" name="name" required/>
+                <input id="name" type="text" name="full_name" required/>
                 </div>
                 <div id="form-tel">
                 <p class="roboto-regular">Teléfono *</p>
@@ -40,11 +40,11 @@ var contactForm = `
                 </p>
                 </div>
                 <div id="form-check1">
-                    <input type="checkbox" name="privacy-checkbox" id="privacy-checkbox" required>
+                    <input type="checkbox" name="accept_terms" id="privacy-checkbox" required>
                     <label for="privacy-checkbox" class="roboto-regular">He leído y acepto la política de <a href="../politicas/politica-privacidad.html">privacidad</a>.</label>
                 </div>
                 <div id="form-check2">
-                    <input type="checkbox" name="ad-checkbox" id="ad-checkbox" >
+                    <input type="checkbox" name="receive_information" id="ad-checkbox" >
                     <label for="ad-checkbox" class="roboto-regular">Acepto recibir información de nuestros inmuebles, incluso por medios electrónicos.</label>
                 </div>
                 <div id="form-submit">

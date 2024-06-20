@@ -272,11 +272,11 @@
             </div>
 
             <div class="form-outer">
-              <form action="">
+              <form action="https://sig-api.chapnikandgiesen.com/api/leads/form" method="post">
                 <div class="page slide-page">
                   <div class="title">Tu Presupuesto</div>
                   <div class="field">
-                    <select>
+                    <select name="budget">
                       <option value="" disabled selected></option>
                       <option value="500000">Hasta 500.000 €</option>
                       <option value="600000">Hasta 600.000 €</option>
@@ -305,7 +305,7 @@
                     ¿En qué zonas de Madrid quieres tu nueva casa?
                   </div>
                   <div class="field">
-                    <input type="text" />
+                    <input type="text" name="zone"/>
                   </div>
                   <div class="field btns">
                     <button class="prev-1 prev">Anterior</button>
@@ -315,7 +315,7 @@
                 <div class="page">
                   <div class="title">¿Cuántos m2 (aproximadamente) buscas?</div>
                   <div class="field">
-                    <input type="text" />
+                    <input type="text" name="area"/>
                   </div>
                   <div class="field btns">
                     <button class="prev-2 prev">Anterior</button>
@@ -325,8 +325,8 @@
                 <div class="page">
                   <div class="title">Nombre y Apellidos*</div>
                   <div class="field">
-                    <input type="text" placeholder="Nombre" required />
-                    <input type="text" placeholder="Apellido" required />
+                    <input type="text" name="full_name" placeholder="Nombre" required />
+                    <input type="text" name="last_name" placeholder="Apellido" required />
                   </div>
                   <div class="field btns">
                     <button class="prev-3 prev">Anterior</button>
@@ -337,7 +337,7 @@
                 <div class="page">
                   <div class="title">Teléfono*</div>
                   <div class="field">
-                    <input type="text" required />
+                    <input type="tel" name="phone" required />
                   </div>
                   <div class="field btns">
                     <button class="submit">Enviar</button>
