@@ -76,6 +76,27 @@ var contactForm = `
       error.style.display = "none";
     }
   }
+   const submitBtn = document.getElementById('submit');
+    submitBtn.addEventListener("click", function () {
+      event.preventDefault();
+      let name = document.getElementById("name");
+      let phone2 = document.getElementById("phone");
+      let accept_terms2 = document.getElementById("privacy-checkbox");
+      let receive_information2 = document.getElementById("ad-checkbox");
+      fetch("https://sig-api.chapnikandgiesen.com/api/leads/form", {
+        method: "POST",
+        body: new URLSearchParams({
+          formTitle: window.location.search,
+          full_name: name.value,
+          phone: phone2.value,
+          accept_terms: accept_terms2.checked,
+          receive_information: receive_information2.checked,
+        }),
+      }).then((response) => {
+        console.log(response);
+        window.location.href = "../thank-you.html";
+      });
+    });
 </script>
 </section>`;
 var slideIndex = 1;
@@ -171,27 +192,7 @@ fetch(url, requestOptions)
       showSlides(slideIndex);
     }
     
-    const submitBtn = document.getElementById('submit');
-    submitBtn.addEventListener("click", function () {
-      event.preventDefault();
-      let name = document.getElementById("name");
-      let phone2 = document.getElementById("phone");
-      let accept_terms2 = document.getElementById("privacy-checkbox");
-      let receive_information2 = document.getElementById("ad-checkbox");
-      fetch("https://sig-api.chapnikandgiesen.com/api/leads/form", {
-        method: "POST",
-        body: new URLSearchParams({
-          formTitle: window.location.search,
-          full_name: name.value,
-          phone: phone2.value,
-          accept_terms: accept_terms2.checked,
-          receive_information: receive_information2.checked,
-        }),
-      }).then((response) => {
-        console.log(response);
-        window.location.href = "../thank-you.html";
-      });
-    });
+   
 
     $(function () {
       renderizarGaleria(data);
