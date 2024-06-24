@@ -319,7 +319,7 @@
                   >
                 </div>
                 <div id="form-submit">
-                  <input type="submit" id="submit" value="Enviar" />
+                  <button type="button" id="submit" value="Enviar"></button>
                 </div>
               </form>
             </div>
@@ -429,6 +429,7 @@
     </footer>
     <script>
       const phoneInputField = document.querySelector("#phone");
+      const submitBtn = document.getElementById("submit");
       const phoneInput = window.intlTelInput(phoneInputField, {
         initialCountry: "es",
         utilsScript:
@@ -448,6 +449,31 @@
           error.style.display = "none";
         }
       }
+
+      submitBtn.addEventListener("click", function () {
+        event.preventDefault();
+        let name = document.getElementById("name");
+        let phone2 = document.getElementById("phone");
+        let message2 = document.getElementById("message");
+        let accept_terms2 = document.getElementById("privacy-checkbox");
+        let receive_information2 = document.getElementById("ad-checkbox");
+        fetch('https://sig-api.chapnikandgiesen.com/api/leads/form', {
+            method: 'POST',
+            body: new URLSearchParams({
+              formTitle: window.location.search,
+              full_name: name.value,
+              phone: phone2.value,
+              message: message2.value,
+              accept_terms: accept_terms2.checked,
+              receive_information: receive_information2.checked
+            })
+          })
+            .then(response => {
+                console.log(response);
+                window.location.href = "../thank-you.html";
+        });
+    });
+
     </script>
     <script
       type="text/javascript"
