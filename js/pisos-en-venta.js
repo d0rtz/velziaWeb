@@ -54,6 +54,7 @@ function initMultiStepForm() {
         });
     }
     submitBtn.addEventListener("click", function () {
+        event.preventDefault();
         bullet[current - 1].classList.add("active");
         progressCheck[current - 1].classList.add("active");
         progressText[current - 1].classList.add("active");
