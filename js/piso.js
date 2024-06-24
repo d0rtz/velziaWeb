@@ -48,7 +48,7 @@ var contactForm = `
                     <label for="ad-checkbox" class="roboto-regular">Acepto recibir información de nuestros inmuebles, incluso por medios electrónicos.</label>
                 </div>
                 <div id="form-submit">
-                <button type="button" id="submit" value="Enviar" />
+                <button type="button" id="submit">Enviar</button>
                 </div>
             </form>
             </div>
