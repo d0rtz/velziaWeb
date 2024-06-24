@@ -57,10 +57,30 @@ function initMultiStepForm() {
         bullet[current - 1].classList.add("active");
         progressCheck[current - 1].classList.add("active");
         progressText[current - 1].classList.add("active");
+        let budget2 = document.getElementById("budget");
+        let zona = document.getElementById("zone");
+        let area2 = document.getElementById("area");
+        let first_name = document.getElementById("first_name");
+        let last_name = document.getElementById("last_name");
+        let full_name2 = first_name.value + " " + last_name.value;
+        let phone2 = document.getElementById("phone");
+
         current += 1;
-        setTimeout(function () {
-            alert("Your Form Successfully Signed up");
-        }, 800);
+        fetch('https://sig-api.chapnikandgiesen.com/api/leads/form', {
+            method: 'POST',
+            body: new URLSearchParams({
+              budget: budget2.value,
+              zone: zona.value,
+              area: area2.value,
+              full_name: full_name2,
+              phone: phone2.value
+            })
+          })
+            .then(response => {
+                alert("Success: "+ response);
+                console.log(response);
+                window.location.href = "../thank-you.html";
+        });
     });
 
     function validateInputs(ths) {
@@ -84,6 +104,8 @@ function initMultiStepForm() {
 const contactBtn = document.getElementById("contact-button");
 const formStartDiv = document.getElementById("form-start-div");
 const container = document.getElementsByClassName("container")[0];
+
+
 
 contactBtn.addEventListener("click", () => {
     formStartDiv.style.display = "none";
