@@ -1,4 +1,4 @@
-var url = "https://79.137.45.155:4999/";
+var url = "https://dev.velzia.es:4999/";
 var modal = document.getElementById("myModal");
 var span = document.getElementById("modal-close");
 
@@ -61,7 +61,7 @@ var houseForm = `
         </section>
         <section>
             <button value="delete-btn" id="delete-button">Eliminar</button>
-            <button type="submit" value="create-btn" id="create-btn">Crear</button>
+            <button type="submit" value="create-btn" id="create-btn">Publicar</button>
         </section>
     </form>
     </div>
@@ -97,7 +97,7 @@ function pisosWindow() {
       var pisos = JSON.parse(result);
       var list = ``;
       pisos.houses.reverse().forEach(function (piso) {
-        list += `<div class="piso-li" ><div onclick=houseDetail(${
+        list += `<div class="piso-li"><div onclick=houseDetail(${
           piso.id
         })><h3>${piso.name}</h3><img src="${
           piso.background.includes("./")
@@ -206,7 +206,7 @@ function houseDetail(id) {
         $("#current-photos").html(photoHtml).show();
       }
 
-      $("#create-btn").html("Editar");
+      $("#create-btn").html("Guardar cambios");
       $("#create-btn").attr("id", "edit-btn");
 
       // Asignar evento submit al botón de edición
