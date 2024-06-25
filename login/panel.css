@@ -300,6 +300,22 @@ nav .profile-details i {
 #current-photos img {
   margin: 1%;
 }
+#sortable {
+  list-style-type: none;
+  padding: 0;
+}
+
+#sortable li {
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+}
+
+#sortable img {
+  width: 100px;
+  height: 60px;
+}
 
 /* Responsive Media Query */
 @media (max-width: 1240px) {
