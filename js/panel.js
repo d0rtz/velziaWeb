@@ -282,12 +282,12 @@ function editarDatosRestantes(id) {
   });
 
   formData.append("id", id);
-  var formObject = [];
+  var formObject = {};
   formData.forEach((value, key) => {
     formObject[key] = value;
   });
 
-  console.log("FormData: "+formObject.toString);
+  console.log("FormData: "+formObject);
 
   fetch(url + "house-images/" + id, {
     method: "PATCH",
