@@ -121,7 +121,7 @@ fetch(url, requestOptions)
         style: "currency",
         currency: "EUR",
       });
-
+      document.title = data.house.name;
       for (let i = 0; i < photos.length; i++) {
         slider += `
         <div class="mySlides fade">
