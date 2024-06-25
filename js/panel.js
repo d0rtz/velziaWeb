@@ -263,6 +263,7 @@ function editarDatosRestantes(id) {
   const files = document.getElementById("input-photos").files;
   const sortedIndexes = document.getElementById("sorted-photos").value.split(',').map(Number);
   const sortedFiles = sortedIndexes.map(i => files[i]);
+  console.log(sortedFiles);  
 
   const formData = new FormData();
   if (bg) {
