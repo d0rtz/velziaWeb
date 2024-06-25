@@ -301,12 +301,12 @@ nav .profile-details i {
   margin: 1%;
 }
 #sortable {
-  grid-column: 2;
   list-style-type: none;
   padding: 0;
 }
 
 #sortable li {
+  grid-column: 2;
   margin: 5px;
   padding: 5px;
   border: 1px solid #ccc;

@@ -53,7 +53,7 @@ var houseForm = `
         <section>
             <label for="input-photos">Imágenes (puede arrastrarlas para ordenar).</label>
             <input type="file" name="input-photos" id="input-photos" accept="image/png, image/jpeg, image/webp" multiple />
-            <ul id="sortable" style="list-style-type: none; padding: 0;"></ul>
+            <div id="sortable" style="display:flex; flex-wrap:wrap;"></div>
             <input type="hidden" id="sorted-photos" name="sorted-photos">
         </section>
         <section>
@@ -233,13 +233,13 @@ function enviarDatosRestantes(id) {
 
   const formData = new FormData();
   formData.append("input-background", bg);
-  
+
   sortedFiles.forEach((file) => {
     formData.append("input-photos", file);
   });
 
   formData.append("id", id);
-  
+
   fetch(url + "new-house-images", {
     method: "POST",
     body: formData,
@@ -270,7 +270,7 @@ function editarDatosRestantes(id) {
   });
 
   formData.append("id", id);
-  
+
   fetch(url + "house-images/" + id, {
     method: "PATCH",
     body: formData,
@@ -355,12 +355,10 @@ function newHouse() {
   let formTitle = `Añadir nuevo piso`;
   $("#form-title").html(formTitle);
   $("#create-btn").html("Crear");
-  document
-    .getElementById("new-house-form")
-    .addEventListener("submit", function (event) {
-      event.preventDefault();
-      create();
-    });
+  document.getElementById("new-house-form").addEventListener("submit", function (event) {
+    event.preventDefault();
+    create();
+  });
   initializeSortable();  // Inicializar sortable al crear una nueva casa
 }
 
@@ -404,8 +402,9 @@ function initializeSortable() {
   }).disableSelection();
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('input-photos').addEventListener('change', function(event) {
+// Delegación de eventos para manejar dinámicamente el input de archivos
+document.addEventListener('change', function(event) {
+    if (event.target && event.target.id === 'input-photos') {
         const files = event.target.files;
         const sortableList = document.getElementById('sortable');
         sortableList.innerHTML = ''; // Limpiar cualquier contenido anterior
@@ -437,5 +436,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Almacenar el array de archivos en el input de tipo hidden
         document.getElementById('sorted-photos').value = selectedFiles.map((_, i) => i).join(',');
-    });
+    }
 });
