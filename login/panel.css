@@ -303,10 +303,10 @@ nav .profile-details i {
 #sortable {
   list-style-type: none;
   padding: 0;
+  grid-column: 2;
 }
 
 #sortable li {
-  grid-column: 2;
   margin: 5px;
   padding: 5px;
   border: 1px solid #ccc;
