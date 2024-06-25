@@ -7,6 +7,9 @@ body {
 button {
   cursor: pointer;
 }
+h1 {
+  font-weight: 400;
+}
 ::selection{
   background-color: #101010;
   color: #f1f1f1;
@@ -265,7 +268,7 @@ button {
     grid-template-columns: 1fr;
   }
   #title h1 {
-    font-size: 60px;
+    font-size: 40px;
   }
   #galeria {
     grid-template-columns: 1fr;
