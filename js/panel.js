@@ -278,9 +278,7 @@ function editarDatosRestantes(id) {
   }
 
   sortedFiles.forEach((file) => {
-    if (file instanceof File) {
       formData.append("input-photos", file);
-    }
   });
 
   formData.append("id", id);
