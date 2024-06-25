@@ -232,7 +232,9 @@ function enviarDatosRestantes(id) {
   const sortedFiles = sortedIndexes.map(i => files[i]);
 
   const formData = new FormData();
-  formData.append("input-background", bg);
+  if (bg) {
+    formData.append("input-background", bg);
+  }
 
   sortedFiles.forEach((file) => {
     formData.append("input-photos", file);
@@ -263,7 +265,9 @@ function editarDatosRestantes(id) {
   const sortedFiles = sortedIndexes.map(i => files[i]);
 
   const formData = new FormData();
-  formData.append("input-background", bg);
+  if (bg) {
+    formData.append("input-background", bg);
+  }
 
   sortedFiles.forEach((file) => {
     formData.append("input-photos", file);
@@ -319,11 +323,7 @@ function editHouse(id) {
   })
     .then((res) => res.json())
     .then((data) => {
-      if (bg.files.length > 0 || files.files.length > 0) {
-        editarDatosRestantes(id);
-      } else {
-        pisosWindow();
-      }
+      editarDatosRestantes(id); // Siempre actualizamos el orden de las imágenes
     })
     .catch((err) => console.error("Error occurred", err));
 }
