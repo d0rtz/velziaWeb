@@ -282,6 +282,12 @@ function editarDatosRestantes(id) {
   });
 
   formData.append("id", id);
+  
+  formData.forEach((value, key) => {
+    formObject[key] = value;
+  });
+
+  console.log("FormData: "+formObject);
 
   fetch(url + "house-images/" + id, {
     method: "PATCH",
