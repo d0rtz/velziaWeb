@@ -180,13 +180,14 @@ fetch(url, requestOptions)
                         <section class="slideshow-container">
                             ${slider}
                         </section>
-                        <div style="text-align:center">
-                            ${dots}
-                        </div>
                         ${contactForm}
                         `
                 }
                 `;
+                
+                        // <div style="text-align:center">
+                        //     ${dots}
+                        // </div>
       $("#main").html(html);
 
       showSlides(slideIndex);
