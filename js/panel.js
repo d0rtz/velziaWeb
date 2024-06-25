@@ -287,7 +287,7 @@ function editarDatosRestantes(id) {
     formObject[key] = value;
   });
 
-  console.log("FormData: "+formObject);
+  console.log("FormData: "+formObject.toString);
 
   fetch(url + "house-images/" + id, {
     method: "PATCH",
