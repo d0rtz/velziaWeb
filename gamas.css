@@ -272,7 +272,7 @@ h1 {
     grid-template-columns: 1fr;
     margin: 0% 5% 5% 5%;
   }
-  #galeria-item{
+  .galeria-item{
     height: 200px;
     margin: 5%;
   }
@@ -288,7 +288,7 @@ h1 {
     grid-template-columns: repeat(2, 1fr);
     margin: 0% 15% 5% 15%;
   }
-  #galeria-item{
+  .galeria-item{
     height: 300px;
     margin: 3%;
   }
