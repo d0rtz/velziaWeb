@@ -281,8 +281,8 @@ function editarDatosRestantes(id) {
     if (file instanceof File) {
       formData.append("input-photos", file);
     } else {
-      // Si es una URL (imagen existente), añade la URL o procesa según sea necesario
-      formData.append("existing-photos", file);
+      // Si es una URL (imagen existente), añade la URL corregida
+      formData.append("existing-photos", file.replace(/^.*\/uploads\//, './uploads/'));
     }
   });
 
