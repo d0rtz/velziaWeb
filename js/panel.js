@@ -267,7 +267,7 @@ function editarDatosRestantes(id) {
   const sortableItems = document.querySelectorAll("#sortable li");
   const sortedFiles = Array.from(sortableItems).map((item, index) => {
     const fileIndex = item.getAttribute('data-id');
-    return files[fileIndex] || item.querySelector('img').src;
+    return files[fileIndex];
   });
 
   console.log("sortedFiles:", sortedFiles); // Log para depuración
@@ -278,11 +278,8 @@ function editarDatosRestantes(id) {
   }
 
   sortedFiles.forEach((file) => {
-    if (file instanceof File) {
+    if (file) {
       formData.append("input-photos", file);
-    } else {
-      // Si es una URL (imagen existente), añade la URL corregida
-      formData.append("existing-photos", file.replace(/^.*\/uploads\//, './uploads/'));
     }
   });
 

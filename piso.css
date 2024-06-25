@@ -7,6 +7,9 @@ body {
 button {
   cursor: pointer;
 }
+h2{
+  font-weight: 400;
+}
 .iti{
   width: 100% !important;
 }
