@@ -214,7 +214,6 @@ button {
 }
 #galeria {
   display: grid;
-  margin: 0% 15% 5% 15%;
 }
 
 .galeria-container {
@@ -270,6 +269,7 @@ button {
   }
   #galeria {
     grid-template-columns: 1fr;
+    margin: 0% 5% 5% 5%;
   }
 }
 @media (min-width: 768px) {
@@ -281,6 +281,7 @@ button {
   }
   #galeria {
     grid-template-columns: repeat(2, 1fr);
+    margin: 0% 15% 5% 15%;
   }
 }
 
