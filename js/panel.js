@@ -265,9 +265,9 @@ function editarDatosRestantes(id) {
 
   // Obtener las imágenes desde el contenedor sortable
   const sortableItems = document.querySelectorAll("#sortable li");
-  const sortedFiles = Array.from(sortableItems).map((item, index) => {
+  const sortedFiles = Array.from(sortableItems).map((item) => {
     const fileIndex = item.getAttribute('data-id');
-    return files[fileIndex];
+    return files[fileIndex] || item.querySelector('img').src;
   });
 
   console.log("sortedFiles:", sortedFiles); // Log para depuración
@@ -278,7 +278,7 @@ function editarDatosRestantes(id) {
   }
 
   sortedFiles.forEach((file) => {
-    if (file) {
+    if (file instanceof File) {
       formData.append("input-photos", file);
     }
   });
