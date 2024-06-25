@@ -282,7 +282,7 @@ function editarDatosRestantes(id) {
   });
 
   formData.append("id", id);
-  
+  var formObject = '';
   formData.forEach((value, key) => {
     formObject[key] = value;
   });
