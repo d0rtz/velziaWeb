@@ -199,7 +199,7 @@ h1 {
 /* MAIN */
 
 #main {
-  margin-top: 80px;
+  margin-top: 100px;
 }
 #title {
   display: grid;
@@ -232,8 +232,6 @@ h1 {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 300px;
-  margin: 3%;
   transition: all 0.5s ease-in-out;
 }
 .galeria-item h3 {
@@ -274,6 +272,10 @@ h1 {
     grid-template-columns: 1fr;
     margin: 0% 5% 5% 5%;
   }
+  #galeria-item{
+    height: 200px;
+    margin: 5%;
+  }
 }
 @media (min-width: 768px) {
   #title {
@@ -285,6 +287,10 @@ h1 {
   #galeria {
     grid-template-columns: repeat(2, 1fr);
     margin: 0% 15% 5% 15%;
+  }
+  #galeria-item{
+    height: 300px;
+    margin: 3%;
   }
 }
 
