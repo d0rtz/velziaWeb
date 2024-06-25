@@ -301,6 +301,7 @@ nav .profile-details i {
   margin: 1%;
 }
 #sortable {
+  grid-column: 2;
   list-style-type: none;
   padding: 0;
 }
