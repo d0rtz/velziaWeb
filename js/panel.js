@@ -251,7 +251,7 @@ async function enviarDatosRestantes(id) {
     formData.append("input-background", bg);
   }
 
-  if (sortedFiles[0].contains("http")) {
+  if (typeof sortedFiles[0] === 'string' && sortedFiles[0].startsWith("http")) {
     await convertUrlsToFiles(sortedFiles).then((files2) => {
       console.log(files2);
       formData.append("input-photos", files2);
@@ -300,7 +300,7 @@ async function editarDatosRestantes(id) {
     formData.append("input-background", bg);
   }
 
-  if (sortedFiles[0].contains("http")) {
+  if (typeof sortedFiles[0] === 'string' && sortedFiles[0].startsWith("http")) {
     await convertUrlsToFiles(sortedFiles).then((files2) => {
       console.log(files2);
       formData.append("input-photos", files2);
