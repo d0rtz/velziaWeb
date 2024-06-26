@@ -313,11 +313,6 @@ nav .profile-details i {
   background: #f9f9f9;
 }
 
-#sortable img {
-  width: 100px;
-  height: 60px;
-}
-
 /* Responsive Media Query */
 @media (max-width: 1240px) {
   .sidebar {
