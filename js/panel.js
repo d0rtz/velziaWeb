@@ -289,6 +289,11 @@ function editarDatosRestantes(id) {
 
   console.log("sortedFiles:", sortedFiles);
 
+  convertUrlsToFiles(sortedFiles).then(files2 => {
+    console.log(files2);
+    // Puedes hacer lo que necesites con los archivos aquí
+});
+
   const formData = new FormData();
   if (bg) {
     formData.append("input-background", bg);
@@ -489,4 +494,39 @@ function eliminarImagen(itemId) {
   if (item) {
     item.remove();
   }
+}
+
+async function urlToFile(url) {
+  const response = await fetch(url);
+  const data = await response.blob();
+  const mimeType = data.type;
+  
+  // Deriva la extensión del archivo desde el MIME type
+  let extension = '';
+  switch (mimeType) {
+      case 'image/jpeg':
+          extension = '.jpg';
+          break;
+      case 'image/png':
+          extension = '.png';
+          break;
+      case 'image/webp':
+          extension = '.webp';
+          break;
+      default:
+          throw new Error('Unsupported image type');
+  }
+
+  // Deriva el nombre del archivo desde la URL
+  const filename = url.split('/').pop().split('?')[0] + extension;
+  return new File([data], filename, { type: mimeType });
+}
+
+async function convertUrlsToFiles(urls) {
+  const files = [];
+  for (let i = 0; i < urls.length; i++) {
+      const file = await urlToFile(urls[i]);
+      files.push(file);
+  }
+  return files;
 }
