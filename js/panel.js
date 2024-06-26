@@ -233,7 +233,7 @@ function houseDetail(id) {
     .catch((error) => console.error(error));
 }
 
-function enviarDatosRestantes(id) {
+async function enviarDatosRestantes(id) {
   const bg = document.getElementById("input-background").files[0];
   const files = document.getElementById("input-photos").files;
 
@@ -252,10 +252,8 @@ function enviarDatosRestantes(id) {
   }
 
   if (typeof sortedFiles[0] === 'string' && sortedFiles[0].startsWith("http")) {
-    convertUrlsToFiles(sortedFiles).then((files2) => {
-      console.log(files2);
-      formData.append("input-photos", files2);
-    });
+    let files3 = await convertUrlsToFiles(sortedFiles)
+    formData.append("input-photos", files3);
   } else {
     sortedFiles.forEach(file => {
       formData.append("input-photos", file);
@@ -284,7 +282,7 @@ function enviarDatosRestantes(id) {
     .catch((err) => console.error("Error occurred", err));
 }
 
-function editarDatosRestantes(id) {
+async function editarDatosRestantes(id) {
   const bg = document.getElementById("input-background").files[0];
   const files = document.getElementById("input-photos").files;
 
@@ -303,10 +301,8 @@ function editarDatosRestantes(id) {
   }
 
   if (typeof sortedFiles[0] === 'string' && sortedFiles[0].startsWith("http")) {
-      convertUrlsToFiles(sortedFiles).then((files2) => {
-        console.log(files2);
-        formData.append("input-photos", files2);
-    });
+    let files3 = await convertUrlsToFiles(sortedFiles)
+    formData.append("input-photos", files3);
   } else {
     sortedFiles.forEach(file => {
       formData.append("input-photos", file);
@@ -506,35 +502,37 @@ function eliminarImagen(itemId) {
   }
 }
 
-function urlToFile(url) {
-  fetch(url)
-    .then(response => response.blob())
-    .then(data => {
-      const mimeType = data.type;
+async function urlToFile(url) {
+  const response = await fetch(url);
+  const data = await response.blob();
+  const mimeType = data.type;
 
-      // Deriva la extensión del archivo desde el MIME type
-      let extension = "";
-      switch (mimeType) {
-        case "image/jpeg":
-          extension = ".jpg";
-          break;
-        case "image/png":
-          extension = ".png";
-          break;
-        case "image/webp":
-          extension = ".webp";
-          break;
-        default:
-          throw new Error("Unsupported image type");
-      }
+  // Deriva la extensión del archivo desde el MIME type
+  let extension = "";
+  switch (mimeType) {
+    case "image/jpeg":
+      extension = ".jpg";
+      break;
+    case "image/png":
+      extension = ".png";
+      break;
+    case "image/webp":
+      extension = ".webp";
+      break;
+    default:
+      throw new Error("Unsupported image type");
+  }
 
-      // Deriva el nombre del archivo desde la URL
-      const filename = url.split("/").pop().split("?")[0] + extension;
-      return new File([data], filename, { type: mimeType });
-    });
+  // Deriva el nombre del archivo desde la URL
+  const filename = url.split("/").pop().split("?")[0] + extension;
+  return new File([data], filename, { type: mimeType });
 }
 
-function convertUrlsToFiles(urls) {
-  const filePromises = urls.map(url => urlToFile(url));
-  return Promise.all(filePromises);
+async function convertUrlsToFiles(urls) {
+  const files = [];
+  for (let i = 0; i < urls.length; i++) {
+    const file = await urlToFile(urls[i]);
+    files.push(file);
+  }
+  return files;
 }
