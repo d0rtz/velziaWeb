@@ -257,7 +257,9 @@ function enviarDatosRestantes(id) {
       formData.append("input-photos", files2);
     });
   } else {
-    formData.append("input-photos", sortedFiles);
+    sortedFiles.forEach(file => {
+      formData.append("input-photos", file);
+    })
   }
 
   formData.append("id", id);
@@ -306,7 +308,9 @@ function editarDatosRestantes(id) {
         formData.append("input-photos", files2);
     });
   } else {
-    formData.append("input-photos", sortedFiles);
+    sortedFiles.forEach(file => {
+      formData.append("input-photos", file);
+    })
   }
 
   formData.append("id", id);
