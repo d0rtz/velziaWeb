@@ -174,10 +174,7 @@ fetch(url, requestOptions)
                         </section>
                         <section class="slideshow-container">
                             ${slider}
-                        </section>
-                        <div style="text-align:center">
-                            ${dots}
-                        </div>`
+                        </section>`
                     : ` <br><br>
                         <section class="slideshow-container">
                             ${slider}
