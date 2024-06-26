@@ -307,12 +307,20 @@ nav .profile-details i {
 }
 
 #sortable li {
+  position: relative;
   margin: 5px;
   padding: 5px;
   width: 200px;
   height: 140px;
   border: 1px solid #ccc;
   background: #f9f9f9;
+}
+.delete-btn{
+ position: absolute;
+ top: 5px;
+ right: 5px;
+ font-size: 20px;
+ color: red;
 }
 
 /* Responsive Media Query */
