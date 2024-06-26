@@ -253,7 +253,7 @@ function enviarDatosRestantes(id) {
 
   convertUrlsToFiles(sortedFiles).then((files2) => {
     console.log(files2);
-    formData.append("input-photos", file);
+    formData.append("input-photos", files2);
   });
 
   formData.append("id", id);
@@ -298,7 +298,7 @@ function editarDatosRestantes(id) {
 
   convertUrlsToFiles(sortedFiles).then((files2) => {
     console.log(files2);
-    formData.append("input-photos", file);
+    formData.append("input-photos", files2);
     
   });
 
