@@ -217,6 +217,7 @@ h1 {
 }
 #galeria {
   display: grid;
+  justify-items: center;
 }
 
 .galeria-container {
