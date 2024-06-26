@@ -278,6 +278,7 @@ function enviarDatosRestantes(id) {
 
 function editarDatosRestantes(id) {
   const bg = document.getElementById("input-background").files[0];
+  const files = document.getElementById("input-photos").files;
 
   // Obtener las imágenes desde el contenedor sortable
   const sortableItems = document.querySelectorAll("#sortable li");
