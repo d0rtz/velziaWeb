@@ -233,7 +233,7 @@ function houseDetail(id) {
     .catch((error) => console.error(error));
 }
 
-function enviarDatosRestantes(id) {
+async function enviarDatosRestantes(id) {
   const bg = document.getElementById("input-background").files[0];
   const files = document.getElementById("input-photos").files;
 
@@ -251,7 +251,7 @@ function enviarDatosRestantes(id) {
     formData.append("input-background", bg);
   }
 
-  convertUrlsToFiles(sortedFiles).then((files2) => {
+  await convertUrlsToFiles(sortedFiles).then((files2) => {
     console.log(files2);
     formData.append("input-photos", files2);
   });
@@ -278,7 +278,7 @@ function enviarDatosRestantes(id) {
     .catch((err) => console.error("Error occurred", err));
 }
 
-function editarDatosRestantes(id) {
+async function editarDatosRestantes(id) {
   const bg = document.getElementById("input-background").files[0];
   const files = document.getElementById("input-photos").files;
 
@@ -296,10 +296,9 @@ function editarDatosRestantes(id) {
     formData.append("input-background", bg);
   }
 
-  convertUrlsToFiles(sortedFiles).then((files2) => {
+   await convertUrlsToFiles(sortedFiles).then((files2) => {
     console.log(files2);
     formData.append("input-photos", files2);
-    
   });
 
   formData.append("id", id);
