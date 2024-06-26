@@ -203,9 +203,6 @@ h1 {
 }
 #title {
   display: grid;
-
-  /* justify-content: space-between;
-    align-items: baseline; */
   margin: 10% 18% 1% 18%;
 }
 #title h1 {
@@ -217,12 +214,10 @@ h1 {
 }
 #galeria {
   display: grid;
-  justify-items: center;
 }
 
 .galeria-container {
   grid-column: auto;
-  width: 600px;
   text-decoration: none;
 }
 .galeria-item {
@@ -277,6 +272,9 @@ h1 {
     height: 200px;
     margin: 5%;
   }
+  .galeria-container{
+    max-width: 600px;
+  }
 }
 @media (min-width: 768px) {
   #title {
@@ -288,10 +286,14 @@ h1 {
   #galeria {
     grid-template-columns: repeat(2, 1fr);
     margin: 0% 15% 5% 15%;
+    justify-items: center;
   }
   .galeria-item{
     height: 300px;
     margin: 3%;
+  }
+  .galeria-container{
+    width: 600px;
   }
 }
 
