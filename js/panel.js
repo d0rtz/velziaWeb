@@ -235,12 +235,14 @@ function houseDetail(id) {
 
 function enviarDatosRestantes(id) {
   const bg = document.getElementById("input-background").files[0];
-  const files = document.getElementById("input-photos").files;
-  const sortedIndexes = document
-    .getElementById("sorted-photos")
-    .value.split(",")
-    .map(Number);
-  const sortedFiles = sortedIndexes.map((i) => files[i]);
+  
+  const sortableItems = document.querySelectorAll("#sortable li");
+  const sortedFiles = Array.from(sortableItems).map((item) => {
+    const fileIndex = item.getAttribute("data-id");
+    return files[fileIndex] || item.querySelector("img").src;
+  });
+
+  console.log("sortedFiles:", sortedFiles);
 
   const formData = new FormData();
   if (bg) {
@@ -252,6 +254,10 @@ function enviarDatosRestantes(id) {
   });
 
   formData.append("id", id);
+
+  for (var pair of formData.entries()) {
+    console.log(pair[0] + ", " + pair[1]);
+  }
 
   fetch(url + "new-house-images", {
     method: "POST",
@@ -271,7 +277,6 @@ function enviarDatosRestantes(id) {
 
 function editarDatosRestantes(id) {
   const bg = document.getElementById("input-background").files[0];
-  const files = document.getElementById("input-photos").files;
 
   // Obtener las imágenes desde el contenedor sortable
   const sortableItems = document.querySelectorAll("#sortable li");
@@ -322,8 +327,6 @@ function editHouse(id) {
   const description = document.getElementById("input-description");
   const type = document.getElementById("input-type");
   const zone = document.getElementById("input-zone");
-  const bg = document.getElementById("input-background");
-  const files = document.getElementById("input-photos");
 
   const infoJSON = {
     name: name.value,
@@ -458,8 +461,6 @@ document.addEventListener("change", function (event) {
       };
       reader.readAsDataURL(file);
     });
-
-    // Event listener para el botón de eliminar
 
     // Inicializar sortable
     $("#sortable")
