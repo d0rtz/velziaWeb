@@ -212,14 +212,6 @@ function houseDetail(id) {
 
       $("#create-btn").html("Guardar cambios").attr("id", "edit-btn");
 
-      function eliminarImagen(itemId) {
-        const item = document.querySelector(
-          `#sortable li[data-id='${itemId}']`
-        );
-        if (item) {
-          item.remove();
-        }
-      }
       // Event listener para el botón de eliminar
       document.querySelectorAll(".delete-btn").forEach((button) => {
         button.addEventListener("click", function () {
@@ -288,7 +280,7 @@ function editarDatosRestantes(id) {
     return files[fileIndex] || item.querySelector("img").src;
   });
 
-  console.log("sortedFiles:", sortedFiles); // Log para depuración
+  console.log("sortedFiles:", sortedFiles);
 
   const formData = new FormData();
   if (bg) {
@@ -455,10 +447,18 @@ document.addEventListener("change", function (event) {
         li.className = "ui-state-default";
         li.setAttribute("data-id", index);
         li.style.margin = "5px";
-        li.innerHTML = `<img src="${e.target.result}" width="100px" height="60px"/>`;
+        li.innerHTML = `<img src="${e.target.result}" width="100px" height="60px"/><img src="../resources/x.png" width="10px" height="10px" style="margin-left:5px;margin-bottom: 50px;" class="delete-btn"/>`;
         sortableList.appendChild(li);
       };
       reader.readAsDataURL(file);
+    });
+
+    // Event listener para el botón de eliminar
+    document.querySelectorAll(".delete-btn").forEach((button) => {
+      button.addEventListener("click", function () {
+        const itemId = this.closest("li").getAttribute("data-id");
+        eliminarImagen(itemId);
+      });
     });
 
     // Inicializar sortable
@@ -480,3 +480,12 @@ document.addEventListener("change", function (event) {
       .join(",");
   }
 });
+
+function eliminarImagen(itemId) {
+  const item = document.querySelector(
+    `#sortable li[data-id='${itemId}']`
+  );
+  if (item) {
+    item.remove();
+  }
+}
