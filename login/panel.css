@@ -309,6 +309,8 @@ nav .profile-details i {
 #sortable li {
   margin: 5px;
   padding: 5px;
+  width: 200px;
+  height: 120px;
   border: 1px solid #ccc;
   background: #f9f9f9;
 }

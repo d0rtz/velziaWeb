@@ -466,7 +466,7 @@ document.addEventListener("change", function (event) {
         li.className = "ui-state-default";
         li.setAttribute("data-id", index);
         li.style.margin = "5px";
-        li.innerHTML = `<img src="${e.target.result}" width="100px" height="60px"/><img src="../resources/x.png" width="10px" height="10px" style="margin-left:5px;margin-bottom: 50px;" class="delete-btn"/>`;
+        li.innerHTML = `<img src="${e.target.result}" width="auto" height="120px"/><img src="../resources/x.png" width="10px" height="10px" style="margin-left:5px;margin-bottom: 110px;" class="delete-btn"/>`;
         sortableList.appendChild(li);
         document.querySelectorAll(".delete-btn").forEach((button) => {
           button.addEventListener("click", function () {
