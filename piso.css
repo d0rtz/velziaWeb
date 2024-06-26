@@ -282,12 +282,12 @@ h2{
 
 #galeria {
   display: grid;
-  margin: 2%;
+  margin: 0% 6%;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(auto, 100vh);
 }
 #galeria div {
-  margin: 5%;
+  margin: 1%;
 }
 
 @media (max-width: 768px) {
