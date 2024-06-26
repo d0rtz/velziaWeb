@@ -449,17 +449,17 @@ document.addEventListener("change", function (event) {
         li.style.margin = "5px";
         li.innerHTML = `<img src="${e.target.result}" width="100px" height="60px"/><img src="../resources/x.png" width="10px" height="10px" style="margin-left:5px;margin-bottom: 50px;" class="delete-btn"/>`;
         sortableList.appendChild(li);
+        document.querySelectorAll(".delete-btn").forEach((button) => {
+          button.addEventListener("click", function () {
+            const itemId = this.closest("li").getAttribute("data-id");
+            eliminarImagen(itemId);
+          });
+        });
       };
       reader.readAsDataURL(file);
     });
 
     // Event listener para el botón de eliminar
-    document.querySelectorAll(".delete-btn").forEach((button) => {
-      button.addEventListener("click", function () {
-        const itemId = this.closest("li").getAttribute("data-id");
-        eliminarImagen(itemId);
-      });
-    });
 
     // Inicializar sortable
     $("#sortable")
@@ -482,9 +482,7 @@ document.addEventListener("change", function (event) {
 });
 
 function eliminarImagen(itemId) {
-  const item = document.querySelector(
-    `#sortable li[data-id='${itemId}']`
-  );
+  const item = document.querySelector(`#sortable li[data-id='${itemId}']`);
   if (item) {
     item.remove();
   }
