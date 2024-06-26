@@ -31,7 +31,7 @@ var houseForm = `
             <input type="checkbox" name="input-sold" id="input-sold">
         </section>
         <section>
-            <label for="input-price">Precio.*</label>
+            <label for="input-price">Precio.</label>
             <input type="number" name="input-price" id="input-price">
         </section>
         <section>
@@ -136,8 +136,7 @@ function create() {
   if (
     name.value != "" &&
     gama.value != "" &&
-    description.value != "" &&
-    price.value != ""
+    description.value != ""
   ) {
     var infoJSON = {
       name: name.value,
