@@ -207,7 +207,7 @@ function houseDetail(id) {
           photoHtml += `<li data-id="${index}" class="ui-state-default"><img src=".${photo}" width="100px" height="60px"/></li>`;
         });
         $("#sortable").html(photoHtml).show();
-        initializeSortable();  // Inicializar sortable después de cargar las imágenes
+        initializeSortable(); // Inicializar sortable después de cargar las imágenes
       }
 
       $("#create-btn").html("Guardar cambios").attr("id", "edit-btn");
@@ -228,8 +228,11 @@ function houseDetail(id) {
 function enviarDatosRestantes(id) {
   const bg = document.getElementById("input-background").files[0];
   const files = document.getElementById("input-photos").files;
-  const sortedIndexes = document.getElementById("sorted-photos").value.split(',').map(Number);
-  const sortedFiles = sortedIndexes.map(i => files[i]);
+  const sortedIndexes = document
+    .getElementById("sorted-photos")
+    .value.split(",")
+    .map(Number);
+  const sortedFiles = sortedIndexes.map((i) => files[i]);
 
   const formData = new FormData();
   if (bg) {
@@ -261,13 +264,16 @@ function enviarDatosRestantes(id) {
 function editarDatosRestantes(id) {
   const bg = document.getElementById("input-background").files[0];
   const files = document.getElementById("input-photos").files;
-  const sortedIndexes = document.getElementById("sorted-photos").value.split(',').map(Number);
+  const sortedIndexes = document
+    .getElementById("sorted-photos")
+    .value.split(",")
+    .map(Number);
 
   // Obtener las imágenes desde el contenedor sortable
   const sortableItems = document.querySelectorAll("#sortable li");
   const sortedFiles = Array.from(sortableItems).map((item) => {
-    const fileIndex = item.getAttribute('data-id');
-    return files[fileIndex] || item.querySelector('img').src;
+    const fileIndex = item.getAttribute("data-id");
+    return files[fileIndex] || item.querySelector("img").src;
   });
 
   console.log("sortedFiles:", sortedFiles); // Log para depuración
@@ -278,16 +284,14 @@ function editarDatosRestantes(id) {
   }
 
   sortedFiles.forEach((file) => {
-      formData.append("input-photos", file);
+    formData.append("input-photos", file);
   });
 
   formData.append("id", id);
-  var formObject = {};
-  formData.forEach((value, key) => {
-    formObject[key] = value;
-  });
-
-  console.log(formObject);
+  
+  for (var pair of formData.entries()) {
+    console.log(pair[0] + ", " + pair[1]);
+  }
 
   fetch(url + "house-images/" + id, {
     method: "PATCH",
@@ -369,11 +373,13 @@ function newHouse() {
   let formTitle = `Añadir nuevo piso`;
   $("#form-title").html(formTitle);
   $("#create-btn").html("Crear");
-  document.getElementById("new-house-form").addEventListener("submit", function (event) {
-    event.preventDefault();
-    create();
-  });
-  initializeSortable();  // Inicializar sortable al crear una nueva casa
+  document
+    .getElementById("new-house-form")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+      create();
+    });
+  initializeSortable(); // Inicializar sortable al crear una nueva casa
 }
 
 function deleteModal(id) {
@@ -407,48 +413,58 @@ window.onclick = function (event) {
 };
 
 function initializeSortable() {
-  $("#sortable").sortable({
-    update: function(event, ui) {
-      var sortedIDs = $("#sortable").sortable("toArray", { attribute: 'data-id' });
-      console.log("Nuevo orden: ", sortedIDs);
-      document.getElementById('sorted-photos').value = sortedIDs.join(',');
-    }
-  }).disableSelection();
+  $("#sortable")
+    .sortable({
+      update: function (event, ui) {
+        var sortedIDs = $("#sortable").sortable("toArray", {
+          attribute: "data-id",
+        });
+        console.log("Nuevo orden: ", sortedIDs);
+        document.getElementById("sorted-photos").value = sortedIDs.join(",");
+      },
+    })
+    .disableSelection();
 }
 
 // Delegación de eventos para manejar dinámicamente el input de archivos
-document.addEventListener('change', function(event) {
-    if (event.target && event.target.id === 'input-photos') {
-        const files = event.target.files;
-        const sortableList = document.getElementById('sortable');
-        sortableList.innerHTML = ''; // Limpiar cualquier contenido anterior
+document.addEventListener("change", function (event) {
+  if (event.target && event.target.id === "input-photos") {
+    const files = event.target.files;
+    const sortableList = document.getElementById("sortable");
+    sortableList.innerHTML = ""; // Limpiar cualquier contenido anterior
 
-        // Crear un array para almacenar los archivos seleccionados en el orden correcto
-        const selectedFiles = Array.from(files);
+    // Crear un array para almacenar los archivos seleccionados en el orden correcto
+    const selectedFiles = Array.from(files);
 
-        selectedFiles.forEach((file, index) => {
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                const li = document.createElement('li');
-                li.className = 'ui-state-default';
-                li.setAttribute('data-id', index);
-                li.style.margin = '5px';
-                li.innerHTML = `<img src="${e.target.result}" width="100px" height="60px"/>`;
-                sortableList.appendChild(li);
-            };
-            reader.readAsDataURL(file);
-        });
+    selectedFiles.forEach((file, index) => {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        const li = document.createElement("li");
+        li.className = "ui-state-default";
+        li.setAttribute("data-id", index);
+        li.style.margin = "5px";
+        li.innerHTML = `<img src="${e.target.result}" width="100px" height="60px"/>`;
+        sortableList.appendChild(li);
+      };
+      reader.readAsDataURL(file);
+    });
 
-        // Inicializar sortable
-        $( "#sortable" ).sortable({
-            update: function(event, ui) {
-                var sortedIDs = $("#sortable").sortable("toArray", { attribute: 'data-id' });
-                console.log("Nuevo orden: ", sortedIDs);
-                document.getElementById('sorted-photos').value = sortedIDs.join(',');
-            }
-        }).disableSelection();
+    // Inicializar sortable
+    $("#sortable")
+      .sortable({
+        update: function (event, ui) {
+          var sortedIDs = $("#sortable").sortable("toArray", {
+            attribute: "data-id",
+          });
+          console.log("Nuevo orden: ", sortedIDs);
+          document.getElementById("sorted-photos").value = sortedIDs.join(",");
+        },
+      })
+      .disableSelection();
 
-        // Almacenar el array de archivos en el input de tipo hidden
-        document.getElementById('sorted-photos').value = selectedFiles.map((_, i) => i).join(',');
-    }
+    // Almacenar el array de archivos en el input de tipo hidden
+    document.getElementById("sorted-photos").value = selectedFiles
+      .map((_, i) => i)
+      .join(",");
+  }
 });
