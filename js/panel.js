@@ -235,7 +235,8 @@ function houseDetail(id) {
 
 function enviarDatosRestantes(id) {
   const bg = document.getElementById("input-background").files[0];
-  
+  const files = document.getElementById("input-photos").files;
+
   const sortableItems = document.querySelectorAll("#sortable li");
   const sortedFiles = Array.from(sortableItems).map((item) => {
     const fileIndex = item.getAttribute("data-id");
