@@ -120,7 +120,8 @@ fetch(url, requestOptions)
       const formatter = new Intl.NumberFormat("es-ES", {
         style: "currency",
         currency: "EUR",
-        maximumSignificantDigits: 0
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 0
       });
       document.title = data.house.name;
       for (let i = 0; i < photos.length; i++) {
