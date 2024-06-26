@@ -206,7 +206,7 @@ h1 {
 
   /* justify-content: space-between;
     align-items: baseline; */
-  margin: 10% 16% 1% 16%;
+  margin: 10% 18% 1% 18%;
 }
 #title h1 {
   margin: 0;
@@ -221,7 +221,7 @@ h1 {
 
 .galeria-container {
   grid-column: auto;
-  max-width: 600px;
+  width: 600px;
   text-decoration: none;
 }
 .galeria-item {
