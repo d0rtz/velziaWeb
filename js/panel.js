@@ -204,7 +204,7 @@ function houseDetail(id) {
         const photos = piso.photos.split(",");
         let photoHtml = "";
         photos.forEach((photo, index) => {
-          photoHtml += `<li data-id="${index}" class="ui-state-default"><img src=".${photo}" width="100px" height="60px"/><img src="../resources/x.png" width="10px" height="10px" class="delete-btn"/> </li>`;
+          photoHtml += `<li data-id="${index}" class="ui-state-default"><img src=".${photo}" width="100px" height="60px"/><img src="../resources/x.png" width="10px" height="10px" style="margin-left:5px;margin-bottom: 50px;" class="delete-btn"/> </li>`;
         });
         $("#sortable").html(photoHtml).show();
         initializeSortable(); // Inicializar sortable después de cargar las imágenes
