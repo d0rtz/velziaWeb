@@ -507,7 +507,7 @@ function eliminarImagen(itemId) {
 }
 
 function urlToFile(url) {
-  return fetch(url)
+  fetch(url)
     .then(response => response.blob())
     .then(data => {
       const mimeType = data.type;
