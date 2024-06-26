@@ -253,7 +253,9 @@ async function enviarDatosRestantes(id) {
 
   if (typeof sortedFiles[0] === 'string' && sortedFiles[0].startsWith("http")) {
     let files3 = await convertUrlsToFiles(sortedFiles)
-    formData.append("input-photos", files3);
+    files3.forEach(file => {
+      formData.append("input-photos", file);
+    })
   } else {
     sortedFiles.forEach(file => {
       formData.append("input-photos", file);
@@ -302,7 +304,9 @@ async function editarDatosRestantes(id) {
 
   if (typeof sortedFiles[0] === 'string' && sortedFiles[0].startsWith("http")) {
     let files3 = await convertUrlsToFiles(sortedFiles)
-    formData.append("input-photos", files3);
+    files3.forEach(file => {
+      formData.append("input-photos", file);
+    })
   } else {
     sortedFiles.forEach(file => {
       formData.append("input-photos", file);
