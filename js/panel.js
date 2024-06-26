@@ -251,10 +251,14 @@ async function enviarDatosRestantes(id) {
     formData.append("input-background", bg);
   }
 
-  await convertUrlsToFiles(sortedFiles).then((files2) => {
-    console.log(files2);
-    formData.append("input-photos", files2);
-  });
+  if (sortedFiles[0].includes("http")) {
+    await convertUrlsToFiles(sortedFiles).then((files2) => {
+      console.log(files2);
+      formData.append("input-photos", files2);
+    });
+  } else {
+    formData.append("input-photos", sortedFiles);
+  }
 
   formData.append("id", id);
 
@@ -296,10 +300,14 @@ async function editarDatosRestantes(id) {
     formData.append("input-background", bg);
   }
 
-   await convertUrlsToFiles(sortedFiles).then((files2) => {
-    console.log(files2);
-    formData.append("input-photos", files2);
-  });
+  if (sortedFiles[0].includes("http")) {
+    await convertUrlsToFiles(sortedFiles).then((files2) => {
+      console.log(files2);
+      formData.append("input-photos", files2);
+    });
+  } else {
+    formData.append("input-photos", sortedFiles);
+  }
 
   formData.append("id", id);
 
