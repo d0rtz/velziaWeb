@@ -237,6 +237,7 @@ function enviarDatosRestantes(id) {
   const bg = document.getElementById("input-background").files[0];
   const files = document.getElementById("input-photos").files;
 
+  // Obtener las imágenes desde el contenedor sortable
   const sortableItems = document.querySelectorAll("#sortable li");
   const sortedFiles = Array.from(sortableItems).map((item) => {
     const fileIndex = item.getAttribute("data-id");
@@ -250,8 +251,12 @@ function enviarDatosRestantes(id) {
     formData.append("input-background", bg);
   }
 
-  sortedFiles.forEach((file) => {
-    formData.append("input-photos", file);
+  convertUrlsToFiles(sortedFiles).then((files2) => {
+    console.log(files2);
+    // Puedes hacer lo que necesites con los archivos aquí
+    files2.forEach((file) => {
+      formData.append("input-photos", file);
+    });
   });
 
   formData.append("id", id);
@@ -289,18 +294,17 @@ function editarDatosRestantes(id) {
 
   console.log("sortedFiles:", sortedFiles);
 
-  convertUrlsToFiles(sortedFiles).then(files2 => {
-    console.log(files2);
-    // Puedes hacer lo que necesites con los archivos aquí
-});
-
   const formData = new FormData();
   if (bg) {
     formData.append("input-background", bg);
   }
 
-  sortedFiles.forEach((file) => {
-    formData.append("input-photos", file);
+  convertUrlsToFiles(sortedFiles).then((files2) => {
+    console.log(files2);
+    // Puedes hacer lo que necesites con los archivos aquí
+    files2.forEach((file) => {
+      formData.append("input-photos", file);
+    });
   });
 
   formData.append("id", id);
@@ -500,33 +504,33 @@ async function urlToFile(url) {
   const response = await fetch(url);
   const data = await response.blob();
   const mimeType = data.type;
-  
+
   // Deriva la extensión del archivo desde el MIME type
-  let extension = '';
+  let extension = "";
   switch (mimeType) {
-      case 'image/jpeg':
-          extension = '.jpg';
-          break;
-      case 'image/png':
-          extension = '.png';
-          break;
-      case 'image/webp':
-          extension = '.webp';
-          break;
-      default:
-          throw new Error('Unsupported image type');
+    case "image/jpeg":
+      extension = ".jpg";
+      break;
+    case "image/png":
+      extension = ".png";
+      break;
+    case "image/webp":
+      extension = ".webp";
+      break;
+    default:
+      throw new Error("Unsupported image type");
   }
 
   // Deriva el nombre del archivo desde la URL
-  const filename = url.split('/').pop().split('?')[0] + extension;
+  const filename = url.split("/").pop().split("?")[0] + extension;
   return new File([data], filename, { type: mimeType });
 }
 
 async function convertUrlsToFiles(urls) {
   const files = [];
   for (let i = 0; i < urls.length; i++) {
-      const file = await urlToFile(urls[i]);
-      files.push(file);
+    const file = await urlToFile(urls[i]);
+    files.push(file);
   }
   return files;
 }
