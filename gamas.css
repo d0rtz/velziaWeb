@@ -252,9 +252,16 @@ h1 {
   padding: 2%;
   top: 10px;
   left: 10px;
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+}
+.galeria-item-on-sale{
   background-color: #101010;
   color: #f1f1f1;
-  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.galeria-item-sold{
+  background-color: #f1f1f1;
+  color: #101010;
 }
 
 @media (max-width: 768px) {
