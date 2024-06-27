@@ -127,7 +127,7 @@ fetch(url, requestOptions)
         for (let i = 4; i < photos.length; i++) {
           slider += `
           <div class="mySlides fade">
-              <div class="numbertext">${i - 3} / ${photos.length}</div>
+              <div class="numbertext">${i - 3} / ${photos.length - 4}</div>
               <img src="${photos[i]}" style="width:100%">
           </div>
           `;
