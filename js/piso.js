@@ -115,7 +115,6 @@ fetch(url, requestOptions)
       console.log(data.house);
       let photos = data.house.photos.split(",");
       let slider = "";
-      let dots = "";
       // Create our number formatter.
       const formatter = new Intl.NumberFormat("es-ES", {
         style: "currency",
@@ -124,17 +123,26 @@ fetch(url, requestOptions)
         maximumFractionDigits: 0
       });
       document.title = data.house.name;
-      for (let i = 4; i < photos.length; i++) {
-        slider += `
-        <div class="mySlides fade">
-            <div class="numbertext">${i + 1} / ${photos.length}</div>
-            <img src="${photos[i]}" style="width:100%">
-        </div>
-        `;
-        dots += `
-        <span class="dot" onclick="currentSlide(${i + 1})"></span>
-        `;
+      if(data.house.sold){
+        for (let i = 4; i < photos.length; i++) {
+          slider += `
+          <div class="mySlides fade">
+              <div class="numbertext">${i - 3} / ${photos.length}</div>
+              <img src="${photos[i]}" style="width:100%">
+          </div>
+          `;
+        }
+      }else{
+        for (let i = 0; i < photos.length; i++) {
+          slider += `
+          <div class="mySlides fade">
+              <div class="numbertext">${i + 1} / ${photos.length}</div>
+              <img src="${photos[i]}" style="width:100%">
+          </div>
+          `;
+        }
       }
+      
       slider += `
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
