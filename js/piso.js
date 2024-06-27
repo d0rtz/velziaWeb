@@ -124,7 +124,7 @@ fetch(url, requestOptions)
         maximumFractionDigits: 0
       });
       document.title = data.house.name;
-      for (let i = 0; i < photos.length; i++) {
+      for (let i = 4; i < photos.length; i++) {
         slider += `
         <div class="mySlides fade">
             <div class="numbertext">${i + 1} / ${photos.length}</div>
