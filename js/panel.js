@@ -479,19 +479,21 @@ document.addEventListener("change", function (event) {
     // Crear un array para almacenar los archivos seleccionados en el orden correcto
     const selectedFiles = Array.from(files);
 
-    // Función para procesar archivos secuencialmente
-    function processFile(index) {
-      if (index >= selectedFiles.length) {
+    // Procesar cada archivo uno por uno para asegurar el orden
+    let currentIndex = 0;
+
+    function processNextFile() {
+      if (currentIndex >= selectedFiles.length) {
         initializeSortable();
         return;
       }
 
-      const file = selectedFiles[index];
+      const file = selectedFiles[currentIndex];
       const reader = new FileReader();
       reader.onload = function (e) {
         const li = document.createElement("li");
         li.className = "ui-state-default";
-        li.setAttribute("data-id", index);
+        li.setAttribute("data-id", currentIndex);
         li.style.margin = "5px";
         li.innerHTML = `<img src="${e.target.result}" width="auto" height="120px"/><img src="../resources/x.png" width="10px" height="10px" style="margin-left:5px;margin-bottom: 110px;" class="delete-btn"/>`;
         sortableList.appendChild(li);
@@ -501,15 +503,17 @@ document.addEventListener("change", function (event) {
             eliminarImagen(itemId);
           });
         });
-        processFile(index + 1);
+
+        // Procesar el siguiente archivo
+        currentIndex++;
+        processNextFile();
       };
       reader.readAsDataURL(file);
     }
 
     // Iniciar el procesamiento de archivos
-    processFile(0);
+    processNextFile();
 
-    // Función para inicializar sortable
     function initializeSortable() {
       // Inicializar sortable
       $("#sortable")
