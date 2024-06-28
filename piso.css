@@ -357,7 +357,6 @@ h2{
 * {
   box-sizing: border-box;
 }
-
 /* Slideshow container */
 .slideshow-container {
   max-width: 80vw;
@@ -380,9 +379,9 @@ h2{
 }
 .mySlides img {
   max-height: 100%;
-  min-height: 100%;
-  max-width: 100%;
-  object-fit: cover;
+  height: 100%;
+  object-fit: contain; /* Cambiado de cover a contain */
+  object-position: center;
 }
 
 /* Next & previous buttons */

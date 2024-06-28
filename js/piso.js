@@ -128,7 +128,7 @@ fetch(url, requestOptions)
           slider += `
           <div class="mySlides fade">
               <div class="numbertext">${i - 3} / ${photos.length - 4}</div>
-              <img src="${photos[i]}" style="width:100%">
+              <img src="${photos[i]}">
           </div>
           `;
         }
@@ -137,7 +137,7 @@ fetch(url, requestOptions)
           slider += `
           <div class="mySlides fade">
               <div class="numbertext">${i + 1} / ${photos.length}</div>
-              <img src="${photos[i]}" style="width:100%">
+              <img src="${photos[i]}">
           </div>
           `;
         }
@@ -191,10 +191,6 @@ fetch(url, requestOptions)
                         `
                 }
                 `;
-                
-                        // <div style="text-align:center">
-                        //     ${dots}
-                        // </div>
       $("#main").html(html);
 
       showSlides(slideIndex);
@@ -221,7 +217,6 @@ function currentSlide(n) {
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
   if (n > slides.length) {
     slideIndex = 1;
   }
@@ -231,9 +226,5 @@ function showSlides(n) {
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
   slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
 }
