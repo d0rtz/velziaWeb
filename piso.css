@@ -376,7 +376,16 @@ h2{
   justify-content: center; /* Centra horizontalmente */
   align-items: center;     /* Centra verticalmente */
 }
-.mySlides img {
+.mySlides .slider-bg {
+  max-height: 100%;
+  height: auto;
+  opacity: 0.2;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;     /* Centra verticalmente */
+  object-fit: cover; /* Cambiado de cover a contain */
+  object-position: center;
+}
+.mySlides .slider-photo {
   max-height: 100%;
   height: auto;
   justify-content: center; /* Centra horizontalmente */

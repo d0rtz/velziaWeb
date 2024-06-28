@@ -128,7 +128,8 @@ fetch(url, requestOptions)
           slider += `
           <div class="mySlides fade">
               <div class="numbertext">${i - 3} / ${photos.length - 4}</div>
-              <img src="${photos[i]}">
+              <img class="slider-bg" src="${photos[i]}">
+              <img class="slider-photo" src="${photos[i]}">
           </div>
           `;
         }
@@ -137,7 +138,8 @@ fetch(url, requestOptions)
           slider += `
           <div class="mySlides fade">
               <div class="numbertext">${i + 1} / ${photos.length}</div>
-              <img src="${photos[i]}">
+              <img class="slider-bg" src="${photos[i]}">
+              <img class="slider-photo" src="${photos[i]}">
           </div>
           `;
         }
