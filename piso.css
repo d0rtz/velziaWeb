@@ -377,6 +377,9 @@ h2{
   align-items: center;     /* Centra verticalmente */
 }
 .mySlides .slider-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
   max-height: 100%;
   height: auto;
   opacity: 0.2;
