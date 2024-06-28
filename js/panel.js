@@ -1,6 +1,7 @@
-var url = "https://dev.velzia.es:4999/";
-var modal = document.getElementById("myModal");
-var span = document.getElementById("modal-close");
+const url = "https://dev.velzia.es:4999/";
+const modal = document.getElementById("myModal");
+const span = document.getElementById("modal-close");
+const search = document.getElementById("input-search");
 
 var houseForm = `
     <div id="new-house-form-div">
@@ -119,6 +120,25 @@ function pisosWindow() {
             </div>
             `;
       $("#home-content").html(html);
+      search.addEventListener("change", function(e) {
+        var filter = e.target.value.toLowerCase();
+        var pisosFiltered = pisos.houses.filter(function(piso) {
+          return piso.name.toLowerCase().includes(filter);
+        });
+        list = ``;
+        pisosFiltered.reverse().forEach(function (piso) {
+          list += `<div class="piso-li"><div onclick=houseDetail(${
+            piso.id
+          })><h3>${piso.name}</h3><img src="${
+            piso.background.includes("./")
+             ? "." + piso.background
+              : piso.background
+          }" width="100px" height="60px"/></div><i class='bx bx-trash' onclick=deleteModal(${
+            piso.id
+          })></i></div>`;
+        });
+        $("#pisos-div").html(list);
+      });
     })
     .catch((error) => console.error(error));
 }

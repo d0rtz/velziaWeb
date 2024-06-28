@@ -82,7 +82,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user'])) {
       </div>
       <div class="search-box">
         <i class="uil uil-search"></i>
-        <input type="text" placeholder="Search here...">
+        <input type="text" placeholder="Buscar..." id="input-search">
       </div>
       <div class="profile-details">
         <img src="../resources/android-chrome-192x192.png" alt="">
