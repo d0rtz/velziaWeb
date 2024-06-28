@@ -380,8 +380,8 @@ h2{
   position: absolute;
   top: 0;
   left: 0;
-  max-height: 100%;
-  height: auto;
+  height: 100%;
+  width: 100%;
   opacity: 0.2;
   justify-content: center; /* Centra horizontalmente */
   align-items: center;     /* Centra verticalmente */
@@ -389,6 +389,7 @@ h2{
   object-position: center;
 }
 .mySlides .slider-photo {
+  z-index: 99;
   max-height: 100%;
   height: auto;
   justify-content: center; /* Centra horizontalmente */
