@@ -479,7 +479,14 @@ document.addEventListener("change", function (event) {
     // Crear un array para almacenar los archivos seleccionados en el orden correcto
     const selectedFiles = Array.from(files);
 
-    selectedFiles.forEach((file, index) => {
+    // Función para procesar archivos secuencialmente
+    function processFile(index) {
+      if (index >= selectedFiles.length) {
+        initializeSortable();
+        return;
+      }
+
+      const file = selectedFiles[index];
       const reader = new FileReader();
       reader.onload = function (e) {
         const li = document.createElement("li");
@@ -494,36 +501,51 @@ document.addEventListener("change", function (event) {
             eliminarImagen(itemId);
           });
         });
+        processFile(index + 1);
       };
       reader.readAsDataURL(file);
-    });
+    }
 
-    // Inicializar sortable
-    $("#sortable")
-      .sortable({
-        update: function (event, ui) {
-          var sortedIDs = $("#sortable").sortable("toArray", {
-            attribute: "data-id",
-          });
-          console.log("Nuevo orden: ", sortedIDs);
-          document.getElementById("sorted-photos").value = sortedIDs.join(",");
-        },
-      })
-      .disableSelection();
+    // Iniciar el procesamiento de archivos
+    processFile(0);
 
-    // Almacenar el array de archivos en el input de tipo hidden
-    document.getElementById("sorted-photos").value = selectedFiles
-      .map((_, i) => i)
-      .join(",");
+    // Función para inicializar sortable
+    function initializeSortable() {
+      // Inicializar sortable
+      $("#sortable")
+        .sortable({
+          update: function (event, ui) {
+            var sortedIDs = $("#sortable").sortable("toArray", {
+              attribute: "data-id",
+            });
+            console.log("Nuevo orden: ", sortedIDs);
+            document.getElementById("sorted-photos").value = sortedIDs.join(",");
+          },
+        })
+        .disableSelection();
+
+      // Almacenar el array de archivos en el input de tipo hidden
+      document.getElementById("sorted-photos").value = selectedFiles
+        .map((_, i) => i)
+        .join(",");
+    }
   }
 });
 
 function eliminarImagen(itemId) {
-  const item = document.querySelector(`#sortable li[data-id='${itemId}']`);
+  const sortableList = document.getElementById("sortable");
+  const item = sortableList.querySelector(`li[data-id='${itemId}']`);
   if (item) {
-    item.remove();
+    sortableList.removeChild(item);
   }
+
+  // Actualizar el input hidden después de eliminar una imagen
+  const sortedIDs = $("#sortable").sortable("toArray", {
+    attribute: "data-id",
+  });
+  document.getElementById("sorted-photos").value = sortedIDs.join(",");
 }
+
 
 async function urlToFile(url) {
   const response = await fetch(url);
