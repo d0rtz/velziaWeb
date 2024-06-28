@@ -373,13 +373,14 @@ h2{
   display: none;
   height: 100%;
   width: 100%;
-  display: flex;
   justify-content: center; /* Centra horizontalmente */
   align-items: center;     /* Centra verticalmente */
 }
 .mySlides img {
   max-height: 100%;
   height: auto;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;     /* Centra verticalmente */
   object-fit: contain; /* Cambiado de cover a contain */
   object-position: center;
 }
