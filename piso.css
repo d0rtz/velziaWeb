@@ -382,7 +382,7 @@ h2{
   left: 0;
   height: 100%;
   width: 100%;
-  opacity: 0.2;
+  opacity: 0.1;
   justify-content: center; /* Centra horizontalmente */
   align-items: center;     /* Centra verticalmente */
   object-fit: cover; /* Cambiado de cover a contain */
