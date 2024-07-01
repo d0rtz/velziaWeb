@@ -240,7 +240,6 @@ function initializeSplide() {
     gap             : 10,
     focus           : 'center',
     pagination      : false,
-    cover           : true,
     arrows: false,
     dragMinThreshold: {
       mouse: 4,
