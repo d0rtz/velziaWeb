@@ -236,92 +236,71 @@
         </div>
       </div>
     </div>
-    <div id="background"></div>
     <section id="main">
-      <div class="content">
-        <h1>VELZIA Tailor</h1>
+      <section id="sale">
+        <img
+          src="../resources/VELZIA ESPRONCEDA 43 WEB_001.jpg"
+          alt=""
+          id="background"
+        />
+
+        <div class="content">
+          <h1>
+            ARQUITECTURA, INTERIORISMO & REFORMAS "LLAVE EN MANO"
+          </h1>
+          <h2 class="cormorant-garamond-light">
+            VELZIA Tailor es nuestro servicio integral de reformas y diseño de interiores.
+            Creamos espacios únicos a tu medida. Y lo hacemos, conjugando diseño y eficiencia, sofisticación y vanguardia. Con el inconfundible sello VELZIA.
+          </h2>
+          <a href="https://api.whatsapp.com/send/?phone=34617020780">
+            <button id="contact-button" class="roboto-regular">
+              QUIERO UNA CASA DE REVISTA
+            </button>
+          </a>
+        </div>
+      </section>
+      
+      <section id="section3">
+        <div id="section3-left" data-aos="fade-up">
+          
+        </div>
+        <div id="section3-right" data-aos="fade-up">
+          <div>
+            <h1 class="cormorant-garamond-semibold">
+              Convierte tu casa en un Velzia
+            </h1>
+          </div>
+          <div>
+            <p class="roboto-light">
+              Velzia Tailor se especializa en crear hogares de ensueño con un servicio integral de reformas y diseño de interiores, proporcionando soluciones “llave en mano” que abarcan desde la conceptualización hasta la entrega final del proyecto.
+            </p>
+          </div>
+          <div>
+            <p class="roboto-light">
+              Entendemos que el tiempo es un recurso valioso por lo que nos encargamos de todo el proceso, desde la planificación inicial hasta la elección del mobiliario y atrezzo, para que nuestros clientes puedan disfrutar de sus nuevos espacios sin demoras innecesarias.
+            </p>
+          </div>
+          <div>
+            <button>QUIERO EMPEZAR MI PROYECTO</button>
+          </div>
+        </div>
+      </section>
+      <section>
         <div>
-          <p>CONVERTIMOS TU CASA EN UN VELZIA</p>
-          <p>
-            Nuestro equipo se ajusta a las necesidades de cada cliente,
-            reformando desde cero el interior de la vivienda, diseñando y
-            ejecutando el mobiliario, dotándolo de la última tecnología y
-            creando un espacio único a medida.
-          </p>
-        </div>
-      </div>
-      <div class="grid-container">
-        <div class="grid-item">
-          <h2>REFORMAS INTEGRALES</h2>
-          <p>
-            Proyectos de reformas integrales en viviendas con acabados de máxima
-            calidad.
-          </p>
-          <h2>INTERIORISMO DE DISEÑO</h2>
-          <p>
-            Diseño de interiores y decoración acorde a tus necesidades, cuidando
-            siempre los detalles.
-          </p>
-          <h2>ELIGE TU MODELO</h2>
-          <p>
-            Fabricación y diseño de mobiliario específico y único para cada
-            proyecto.
-          </p>
+          <h2 class="cormorant-garamond-semibold">
+            Tu casa de revista en 3 pasos
+          </h2>
         </div>
         <div>
-          <h2>138 PROYECTOS FINALIZADOS</h2>
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
-      </div>
-      <div>
-        <h2>ELIGE LA COLECCIÓN</h2>
-        <div class="grid-container"> 
-            <div class="grid-item">
-            <h3>RIVIERA</h3>
-            <p>
-              Vive el lujo a precio asequible. Viviendas únicas. Interiorismo al
-              alcance de todos, acabados en madera color ébano, chimenea y
-              alicatados porcelánicos.
-            </p>
-          </div>
-          <div></div>  
-          <div></div>  
-          <div class="grid-item">
-            <h3>EMERALD</h3>
-            <p>
-              Casas de Revista. Listas para disfrutar. La combinación perfecta
-              entre funcionalidad y estética, cuidando hasta el último detalle.
-            </p>
-          </div>
-          <div class="grid-item">
-            <h3>GRAND EMERALD</h3>
-            <p>
-              Máximo Confort, elegancia y diseño. Diseño contemporáneo y un
-              toque lujoso, adaptado a lo que tu hogar necesita.
-            </p>
-          </div>
-          <div></div> 
-          <div></div> 
-          <div class="grid-item">
-            <h3>MILANO</h3>
-            <p>
-              Lujo y modernidad en una perfecta armonía. Color, texturas y
-              materiales que brindan un diseño equilibrado y un espacio
-              memorable.
-            </p>
-          </div>
-          <div class="grid-item">
-            <h3>PALAZZO</h3>
-            <p>
-              Alta decoración. Diseño exclusivo. El más exquisito lujo
-              contemporáneo respondiendo a la exigencia del cliente y creando
-              espacios únicos.
-            </p>
-          </div>
-          <div></div> 
+        <div>
+          
         </div>
-      </div>
-    </section>
-    <section id="form-section">
+      </section>
+      <section id="form-section">
         <div data-aos="fade-up">
           <h3 class="cormorant-garamond-light">
             Danos la oportunidad de explicarte nuestro modelo de negocio sin
@@ -329,7 +308,11 @@
           </h3>
           <div id="form-div">
             <div class="form-container">
-              <form action="" id="login">
+              <form
+                action="https://sig-api.chapnikandgiesen.com/api/leads/form"
+                method="post"
+                id="login"
+              >
                 <div id="form-name">
                   <p class="roboto-regular">Nombre *</p>
                   <input id="name" type="text" name="full_name" required />
@@ -367,7 +350,11 @@
                   >
                 </div>
                 <div id="form-check2">
-                  <input type="checkbox" name="receive_information" id="ad-checkbox" />
+                  <input
+                    type="checkbox"
+                    name="receive_information"
+                    id="ad-checkbox"
+                  />
                   <label for="ad-checkbox" class="roboto-regular"
                     >Acepto recibir información de nuestros inmuebles, incluso
                     por medios electrónicos.</label
@@ -394,6 +381,7 @@
           </div>
         </div>
       </section>
+    </section>
     <footer id="footer">
       <img
         src="../resources/logo-index.png"
