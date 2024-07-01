@@ -130,7 +130,7 @@ function relatedProjects(pisos) {
   let relatedProjectsHtml = "";
   var relatedProjectsComplete = "";
   pisos.houses.reverse().forEach(function (piso) {
-    if (piso.gama == data.house.gama && !piso.sold) {
+    if (piso.gama == data.house.gama && !piso.sold && piso.id != data.house.id) {
       relatedProjectsArray.push(piso);
     }
   });
@@ -157,13 +157,13 @@ function relatedProjects(pisos) {
         break;
     }
     for (let index = 0; index < relatedGama.length; index++) {
-      if (piso.gama == relatedGama[index] && !piso.sold) {
+      if (piso.gama == relatedGama[index] && !piso.sold && piso.id != data.house.id) {
         relatedProjectsArray.push(piso);
       }
     }
   });
   pisos.houses.reverse().forEach(function (piso) {
-    if (piso.gama == data.house.gama && piso.sold) {
+    if (piso.gama == data.house.gama && piso.sold && piso.id != data.house.id) {
       relatedProjectsArray.push(piso);
     }
   });
