@@ -124,7 +124,7 @@ function relatedProjects(data) {
   let relatedProjectsArray = [];
   let relatedProjectsHtml = "";
   var relatedProjectsComplete = "";
-  fetch(url + "houses", requestOptions)
+  fetch(url + "houses/", requestOptions)
     .then((response) => {
       response.text();
     })
