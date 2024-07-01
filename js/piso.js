@@ -134,7 +134,6 @@ function renderizarGaleria(data) {
     for (let i = 4; i < photos.length; i++) {
       slider += `
       <li class="splide__slide">
-          <img class="slider-bg" src="${photos[i]}">
           <div class="numbertext">${i - 3} / ${photos.length - 4}</div>
           <img class="slider-photo" src="${photos[i]}">
       </li>
@@ -144,7 +143,6 @@ function renderizarGaleria(data) {
     for (let i = 0; i < photos.length; i++) {
       slider += `
       <li class="splide__slide">
-          <img class="slider-bg" src="${photos[i]}">
           <div class="numbertext">${i + 1} / ${photos.length}</div>
           <img class="slider-photo" src="${photos[i]}">
       </li>
