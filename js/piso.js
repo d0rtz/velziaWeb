@@ -168,6 +168,8 @@ function relatedProjects(pisos) {
     }
   });
   for (let i = 0; i < 9 || i < relatedProjectsArray.length; i++) {
+    console.log("ciclo: "+ i);
+    console.log(relatedProjectsArray[i]);
     relatedProjectsHtml += `
       <li class="splide__slide">
         <a href="piso.html?id=${
