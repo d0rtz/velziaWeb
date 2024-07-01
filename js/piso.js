@@ -167,7 +167,11 @@ function relatedProjects(pisos) {
       relatedProjectsArray.push(piso);
     }
   });
-  for (let i = 0; i < 9 || i < relatedProjectsArray.length; i++) {
+  var max = 9;
+  if (relatedProjectsArray.length < 9) {
+    max = relatedProjectsArray.length;
+  }
+  for (let i = 0; i < max; i++) {
     console.log("ciclo: "+ i);
     console.log(relatedProjectsArray[i]);
     relatedProjectsHtml += `
