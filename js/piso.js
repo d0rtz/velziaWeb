@@ -167,7 +167,7 @@ function relatedProjects(pisos) {
       relatedProjectsArray.push(piso);
     }
   });
-  for (let i = 0; i < 9; i++) {
+  for (let i = 0; i < 9 || relatedProjectsArray.length; i++) {
     relatedProjectsHtml += `
       <li class="splide__slide">
         <a href="piso.html?id=${
