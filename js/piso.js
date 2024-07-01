@@ -168,12 +168,12 @@ function renderizarGaleria(data) {
           ${slider}
         </ul>
       </div>
-      <div id="thumbnail-slider" class="splide">
-        <div class="splide__track">
-          <ul class="splide__list">
-            ${thumbnails}
-          </ul>
-        </div>
+    </div>
+    <div id="thumbnail-slider" class="splide">
+      <div class="splide__track">
+		    <ul class="splide__list">
+          ${thumbnails}
+        </ul>
       </div>
     </div>
   `;
