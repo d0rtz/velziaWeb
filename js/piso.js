@@ -223,7 +223,7 @@ function renderizarGaleria(data) {
 
 function initializeSplide() {
   var main = new Splide( '#image-slider', {
-    type       : 'loop',
+    type       : 'slide',
     perPage: 1,
     perMove: 1,
     height: '600px',
