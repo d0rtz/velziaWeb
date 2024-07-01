@@ -383,11 +383,13 @@ h2{
 }
 
 #related-projects{
-  
+
 }
 
 .galeria-container {
   text-decoration: none;
+  width: auto;
+  height: 500px;
 }
 .galeria-item {
   display: flex;
