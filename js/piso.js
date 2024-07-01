@@ -374,6 +374,11 @@ function initializeRelatedSplide() {
     arrows: true,
     cover: true,
     gap: 20,
+    breakpoints: {
+      768: {
+        perPage: 1,
+      },
+    },
   });
 
   rel.mount();
