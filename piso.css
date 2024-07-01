@@ -385,7 +385,10 @@ h2{
 #related-projects{
 
 }
-
+#related-projects-title{
+  text-align: center;
+  font-size: 32px;
+}
 .galeria-container {
   text-decoration: none;
   width: auto;
