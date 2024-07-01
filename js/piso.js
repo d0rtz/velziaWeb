@@ -228,10 +228,10 @@ function initializeSplide() {
     perMove: 1,
     height: '600px',
     focus: 'center',
-    padding: '50px',
     pagination : false,
     arrows     : true,
     autoWidth: true,
+    trimSpace: true,
   } );
   
   var thumbnails = new Splide( '#thumbnail-slider', {
