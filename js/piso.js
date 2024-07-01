@@ -136,12 +136,12 @@ function renderizarGaleria(data) {
       slider += `
       <li class="splide__slide">
           <div class="numbertext">${i - 3} / ${photos.length - 4}</div>
-          <img class="slider-photo" src="${photos[i]}">
+          <img class="slider-photo" src="${photos[i]}" height="600px" width="auto">
       </li>
       `;
       thumbnails += `
       <li class="splide__slide">
-          <img class="slider-thumbnail-img" src="${photos[i]}">
+          <img class="slider-thumbnail-img" src="${photos[i]}" height="60px" width="auto">
       </li>
       `;
     }
@@ -150,12 +150,12 @@ function renderizarGaleria(data) {
       slider += `
       <li class="splide__slide">
           <div class="numbertext">${i + 1} / ${photos.length}</div>
-          <img class="slider-photo" src="${photos[i]}">
+          <img class="slider-photo" src="${photos[i]}" height="600px" width="auto">
       </li>
       `;
       thumbnails += `
       <li class="splide__slide">
-          <img class="slider-thumbnail-img" src="${photos[i]}">
+          <img class="slider-thumbnail-img" src="${photos[i]}" height="60px" width="auto">
       </li>
       `;
     }
