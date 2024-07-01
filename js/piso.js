@@ -1,7 +1,5 @@
 var piso = params.get("id");
 var url = "https://dev.velzia.es:4999/house/" + piso;
-var main = {};
-var thumbnails = {};
 var contactForm = `
 <section id="contact-form-section" class="cormorant-garamond-light">
 <div id="form-section">
@@ -122,6 +120,7 @@ function renderizarGaleria(data) {
   console.log(data.house);
   let photos = data.house.photos.split(",");
   let slider = "";
+  let thumbnails = "";
 
   // Create our number formatter.
   const formatter = new Intl.NumberFormat("es-ES", {
@@ -140,6 +139,11 @@ function renderizarGaleria(data) {
           <img class="slider-photo" src="${photos[i]}">
       </li>
       `;
+      thumbnails += `
+      <li class="thumbnail">
+          <img class="slider-thumbnail-img" src="${photos[i]}">
+      </li>
+      `;
     }
   }else{
     for (let i = 0; i < photos.length; i++) {
@@ -147,6 +151,11 @@ function renderizarGaleria(data) {
       <li class="splide__slide">
           <div class="numbertext">${i + 1} / ${photos.length}</div>
           <img class="slider-photo" src="${photos[i]}">
+      </li>
+      `;
+      thumbnails += `
+      <li class="thumbnail">
+          <img class="slider-thumbnail-img" src="${photos[i]}">
       </li>
       `;
     }
@@ -159,6 +168,9 @@ function renderizarGaleria(data) {
           ${slider}
         </ul>
       </div>
+    </div>
+    <div id="thumbnail-slider">
+      ${thumbnails}
     </div>
   `;
   
@@ -204,8 +216,9 @@ function renderizarGaleria(data) {
   $("#main").html(html);
   initializeSplide();
 }
+
 function initializeSplide() {
-  main = new Splide( '#image-slider', {
+  var main = new Splide( '#image-slider', {
     type       : 'loop',
     perPage: 1,
     perMove: 1,
@@ -215,7 +228,7 @@ function initializeSplide() {
     cover      : true,
   } );
   
-  thumbnails = new Splide( '#thumbnail-slider', {
+  var thumbnails = new Splide( '#thumbnail-slider', {
     rewind          : true,
     fixedWidth      : 104,
     fixedHeight     : 58,
