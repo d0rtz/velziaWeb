@@ -226,10 +226,10 @@ function initializeSplide() {
     type       : 'loop',
     perPage: 1,
     perMove: 1,
-    fixedHeight: '600px',
+    height: '600px',
     pagination : false,
     arrows     : true,
-    cover      : true,
+    autoWidth: true,
   } );
   
   var thumbnails = new Splide( '#thumbnail-slider', {
