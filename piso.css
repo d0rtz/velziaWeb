@@ -375,10 +375,8 @@ h2{
 
 #thumbnail-slider{
   background-color: rgba(0, 0, 0);
-  opacity: 0.7;
-}
-.slider-thumbnail-img{
-  padding: 3px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 /*
 
