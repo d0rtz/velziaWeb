@@ -229,7 +229,6 @@ function initializeSplide() {
     height: '600px',
     pagination : false,
     arrows     : true,
-    cover      : true,
   } );
   
   var thumbnails = new Splide( '#thumbnail-slider', {
