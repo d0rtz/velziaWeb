@@ -368,7 +368,7 @@ function initializeRelatedSplide() {
     type: "slide",
     perPage: 3,
     perMove: 1,
-    height: "600px",
+    height: "400px",
     focus: "center",
     pagination: false,
     arrows: true,

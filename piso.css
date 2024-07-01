@@ -386,7 +386,7 @@ h2{
   max-width: 80vw;
   position: relative;
   margin: auto;
-  height: 600px;
+  height: 400px;
 }
 #related-projects-title{
   text-align: center;
@@ -399,7 +399,7 @@ h2{
 }
 .galeria-item {
   width: auto;
-  height: 500px;
+  height: 400px;
   display: flex;
   position: relative;
   justify-content: center;
