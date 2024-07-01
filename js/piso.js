@@ -99,134 +99,118 @@ var contactForm = `
     });
 </script>
 </section>`;
-var slideIndex = 1;
+
 const requestOptions = {
   method: "GET",
   redirect: "follow",
 };
+
 var data = {};
 fetch(url, requestOptions)
   .then((response) => response.text())
   .then((result) => {
     console.log(result);
     data = JSON.parse(result);
-    function renderizarGaleria(data) {
-      console.log(data);
-      console.log(data.house);
-      let photos = data.house.photos.split(",");
-      let slider = "";
-      // Create our number formatter.
-      const formatter = new Intl.NumberFormat("es-ES", {
-        style: "currency",
-        currency: "EUR",
-        minimumFractionDigits: 0,
-        maximumFractionDigits: 0
-      });
-      document.title = data.house.name;
-      if(data.house.sold){
-        for (let i = 4; i < photos.length; i++) {
-          slider += `
-          <div class="mySlides fade">
-              <div class="numbertext">${i - 3} / ${photos.length - 4}</div>
-              <img class="slider-bg" src="${photos[i]}">
-              <img class="slider-photo" src="${photos[i]}">
-          </div>
-          `;
-        }
-      }else{
-        for (let i = 0; i < photos.length; i++) {
-          slider += `
-          <div class="mySlides fade">
-              <div class="numbertext">${i + 1} / ${photos.length}</div>
-              <img class="slider-bg" src="${photos[i]}">
-              <img class="slider-photo" src="${photos[i]}">
-          </div>
-          `;
-        }
-      }
-      
-      slider += `
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        `;
-      let html = `
-                <section id="sale">
-                    <img
-                        src="${data.house.background}"
-                        alt=""
-                        id="background"
-                    />
-                    <div class="content">
-                        <div id="content-video-div">
-                            ${data.house.videoURL}
-                        </div>
-                        <div id="content-text-div">
-                            <h3>${data.house.type != "apartment"?data.house.type:"REFORMA INTEGRAL DE UN PISO"}</h3>
-                            <h2>${data.house.name}</h2>
-                            ${
-                              data.house.sold
-                                ? "<br>"
-                                : `<h4 class="roboto-thin">${formatter.format(
-                                    data.house.price
-                                  )}</h4>`
-                            }
-                            <p class="roboto-thin">${data.house.description}</p>
-                        </div>
-                    </div>
-                </section>
-                ${
-                  data.house.sold
-                    ? ` <section id="galeria">
-                            <div id="img1-div" ><img data-aos="fade-up" src="${photos[0]}" alt="img1" id="img1" width="100%" height="100%" /></div>
-                            <div id="img2-div"><img data-aos="fade-right" src="${photos[1]}" alt="img2" id="img2" width="100%" height="100%" /></div>
-                            <div id="img3-div"><img data-aos="fade-left" src="${photos[2]}" alt="img3" id="img3" width="100%" height="100%" /></div>
-                            <div id="img4-div"><img data-aos="fade-up" src="${photos[3]}" alt="img4" id="img4" width="100%" height="100%" /></div>
-                        </section>
-                        <section class="slideshow-container">
-                            ${slider}
-                        </section>`
-                    : ` <br><br>
-                        <section class="slideshow-container">
-                            ${slider}
-                        </section>
-                        ${contactForm}
-                        `
-                }
-                `;
-      $("#main").html(html);
-
-      showSlides(slideIndex);
-    }
-    
-   
-
-    $(function () {
-      renderizarGaleria(data);
-    });
+    renderizarGaleria(data);
   })
   .catch((error) => console.error(error));
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides((slideIndex += n));
+function renderizarGaleria(data) {
+  console.log(data);
+  console.log(data.house);
+  let photos = data.house.photos.split(",");
+  let slider = "";
+
+  // Create our number formatter.
+  const formatter = new Intl.NumberFormat("es-ES", {
+    style: "currency",
+    currency: "EUR",
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0
+  });
+  document.title = data.house.name;
+
+  if(data.house.sold){
+    for (let i = 4; i < photos.length; i++) {
+      slider += `
+      <li class="splide__slide">
+          <img class="slider-bg" src="${photos[i]}">
+          <div class="numbertext">${i - 3} / ${photos.length - 4}</div>
+          <img class="slider-photo" src="${photos[i]}">
+      </li>
+      `;
+    }
+  }else{
+    for (let i = 0; i < photos.length; i++) {
+      slider += `
+      <li class="splide__slide">
+          <img class="slider-bg" src="${photos[i]}">
+          <div class="numbertext">${i + 1} / ${photos.length}</div>
+          <img class="slider-photo" src="${photos[i]}">
+      </li>
+      `;
+    }
+  }
+
+  let splideHTML = `
+    <div id="image-slider" class="splide">
+      <div class="splide__track">
+        <ul class="splide__list">
+          ${slider}
+        </ul>
+      </div>
+    </div>
+  `;
+  
+  let html = `
+    <section id="sale">
+        <img src="${data.house.background}" alt="" id="background" />
+        <div class="content">
+            <div id="content-video-div">${data.house.videoURL}</div>
+            <div id="content-text-div">
+                <h3>${data.house.type != "apartment" ? data.house.type : "REFORMA INTEGRAL DE UN PISO"}</h3>
+                <h2>${data.house.name}</h2>
+                ${
+                  data.house.sold
+                    ? "<br>"
+                    : `<h4 class="roboto-thin">${formatter.format(data.house.price)}</h4>`
+                }
+                <p class="roboto-thin">${data.house.description}</p>
+            </div>
+        </div>
+    </section>
+    ${
+      data.house.sold
+        ? `
+          <section id="galeria">
+              <div id="img1-div"><img data-aos="fade-up" src="${photos[0]}" alt="img1" id="img1" width="100%" height="100%" /></div>
+              <div id="img2-div"><img data-aos="fade-right" src="${photos[1]}" alt="img2" id="img2" width="100%" height="100%" /></div>
+              <div id="img3-div"><img data-aos="fade-left" src="${photos[2]}" alt="img3" id="img3" width="100%" height="100%" /></div>
+              <div id="img4-div"><img data-aos="fade-up" src="${photos[3]}" alt="img4" id="img4" width="100%" height="100%" /></div>
+          </section>
+          <section class="slideshow-container">
+              ${splideHTML}
+          </section>`
+        : `
+          <br><br>
+          <section class="slideshow-container">
+              ${splideHTML}
+          </section>
+          ${contactForm}
+        `
+    }
+  `;
+  
+  $("#main").html(html);
+  initializeSplide();
 }
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides((slideIndex = n));
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  if (n > slides.length) {
-    slideIndex = 1;
-  }
-  if (n < 1) {
-    slideIndex = slides.length;
-  }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slides[slideIndex - 1].style.display = "flex";
+function initializeSplide() {
+  new Splide('#image-slider', {
+    type: 'loop',
+    perPage: 1,
+    perMove: 1,
+    height: '600px',
+    cover: true,
+  }).mount();
 }
