@@ -228,7 +228,7 @@ function initializeSplide() {
     perMove: 1,
     height: '600px',
     focus: 'center',
-    padding: '5rem',
+    padding: '50px',
     pagination : false,
     arrows     : true,
     autoWidth: true,
