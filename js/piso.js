@@ -1,5 +1,7 @@
 var piso = params.get("id");
 var url = "https://dev.velzia.es:4999/house/" + piso;
+var main = {};
+var thumbnails = {};
 var contactForm = `
 <section id="contact-form-section" class="cormorant-garamond-light">
 <div id="form-section">
@@ -202,17 +204,18 @@ function renderizarGaleria(data) {
   $("#main").html(html);
   initializeSplide();
 }
-
 function initializeSplide() {
-  var main = new Splide( '#image-slider', {
-    type       : 'fade',
+  main = new Splide( '#image-slider', {
+    type       : 'loop',
+    perPage: 1,
+    perMove: 1,
     height: '600px',
     pagination : false,
     arrows     : false,
     cover      : true,
   } );
   
-  var thumbnails = new Splide( '#thumbnail-slider', {
+  thumbnails = new Splide( '#thumbnail-slider', {
     rewind          : true,
     fixedWidth      : 104,
     fixedHeight     : 58,
