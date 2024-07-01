@@ -188,7 +188,7 @@ function relatedProjects(pisos) {
     `;
   }
   relatedProjectsComplete = `
-    <div><h2>Proyectos relacionados</h2></div>
+    <div><h2 id="related-projects-title">Proyectos relacionados</h2></div>
     <div id="related-slider" class="splide">
       <div class="splide__track">
         <ul class="splide__list">
