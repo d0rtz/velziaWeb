@@ -392,6 +392,8 @@ h2{
   height: 500px;
 }
 .galeria-item {
+  width: auto;
+  height: 500px;
   display: flex;
   position: relative;
   justify-content: center;

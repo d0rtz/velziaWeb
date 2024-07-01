@@ -372,7 +372,7 @@ function initializeRelatedSplide() {
     pagination: false,
     arrows: true,
     cover: true,
-    gap: 1000,
+    gap: 20,
   });
 
   rel.mount();
