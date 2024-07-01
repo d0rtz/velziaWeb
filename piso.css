@@ -374,12 +374,12 @@ h2{
 }
 
 #thumbnail-slider{
-  background-color: rgba(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.5);
   padding-top: 5px;
   padding-bottom: 5px;
 }
 #image-slider{
-  
+
 }
 /*
 
