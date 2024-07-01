@@ -188,6 +188,7 @@ function relatedProjects(pisos) {
     `;
   }
   relatedProjectsComplete = `
+    <h2>Proyectos relacionados</h2>
     <div id="related-slider" class="splide">
       <div class="splide__track">
         <ul class="splide__list">
