@@ -204,11 +204,38 @@ function renderizarGaleria(data) {
 }
 
 function initializeSplide() {
-  new Splide('#image-slider', {
-    type: 'loop',
+  var main = new Splide( '#image-slider', {
+    type       : 'loop',
     perPage: 1,
     perMove: 1,
     height: '600px',
-    cover: true,
-  }).mount();
+    pagination : false,
+    arrows     : false,
+    cover      : true,
+  } );
+  
+  var thumbnails = new Splide( '#thumbnail-slider', {
+    rewind          : true,
+    fixedWidth      : 104,
+    fixedHeight     : 58,
+    isNavigation    : true,
+    gap             : 10,
+    focus           : 'center',
+    pagination      : false,
+    cover           : true,
+    dragMinThreshold: {
+      mouse: 4,
+      touch: 10,
+    },
+    breakpoints : {
+      640: {
+        fixedWidth  : 66,
+        fixedHeight : 38,
+      },
+    },
+  } );
+  
+  main.sync( thumbnails );
+  main.mount();
+  thumbnails.mount();
 }
