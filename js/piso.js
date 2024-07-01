@@ -136,7 +136,7 @@ function renderizarGaleria(data) {
       slider += `
       <li class="splide__slide">
           <div class="numbertext">${i - 3} / ${photos.length - 4}</div>
-          <img class="slider-photo" src="${photos[i]}">
+          <img class="slider-photo" src="${photos[i]}" width="100%" height="100%">
       </li>
       `;
       thumbnails += `
@@ -150,7 +150,7 @@ function renderizarGaleria(data) {
       slider += `
       <li class="splide__slide">
           <div class="numbertext">${i + 1} / ${photos.length}</div>
-          <img class="slider-photo" src="${photos[i]}">
+          <img class="slider-photo" src="${photos[i]}" width="100%" height="100%">
       </li>
       `;
       thumbnails += `
