@@ -112,11 +112,6 @@ fetch(url + "house/" + piso, requestOptions)
     console.log(result);
     data = JSON.parse(result);
     renderizarGaleria(data);
-    relatedProjects(data);
-  })
-  .then((result) => {
-    //data = JSON.parse(result);
-    //relatedProjects(data);
   })
   .catch((error) => console.error(error));
 
@@ -124,10 +119,8 @@ function relatedProjects(data) {
   let relatedProjectsArray = [];
   let relatedProjectsHtml = "";
   var relatedProjectsComplete = "";
-  fetch(url + "houses/", requestOptions)
-    .then((response) => {
-      response.text();
-    })
+  fetch(url + "houses", requestOptions)
+    .then((response) => response.text())
     .then((result) => {
       console.log(result);
       pisos = JSON.parse(result);
@@ -324,6 +317,7 @@ function renderizarGaleria(data) {
   `;
 
   $("#main").html(html);
+  relatedProjects(data);
   initializeSplide();
 }
 
