@@ -234,7 +234,7 @@ function initializeSplide() {
   
   var thumbnails = new Splide( '#thumbnail-slider', {
     rewind          : true,
-    fixedWidth      : 104,
+    autoWidth       : true,
     fixedHeight     : 58,
     isNavigation    : true,
     gap             : 10,
