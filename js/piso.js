@@ -205,9 +205,7 @@ function renderizarGaleria(data) {
 
 function initializeSplide() {
   var main = new Splide( '#image-slider', {
-    type       : 'loop',
-    perPage: 1,
-    perMove: 1,
+    type       : 'fade',
     height: '600px',
     pagination : false,
     arrows     : false,
