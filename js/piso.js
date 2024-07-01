@@ -154,7 +154,7 @@ function renderizarGaleria(data) {
       </li>
       `;
       thumbnails += `
-      <li class="thumbnail">
+      <li class="splide__slide">
           <img class="slider-thumbnail-img" src="${photos[i]}">
       </li>
       `;
