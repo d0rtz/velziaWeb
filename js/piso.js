@@ -121,7 +121,7 @@ fetch(url + "houses", requestOptions)
   .then((result) => {
     console.log(result);
     pisos = JSON.parse(result);
-    //relatedProjects(pisos)
+    relatedProjects(pisos)
   })
   .catch((error) => console.error(error));
 
@@ -320,7 +320,6 @@ function renderizarGaleria(data) {
   `;
 
   $("#main").html(html);
-  relatedProjects(data);
   initializeSplide();
 }
 
