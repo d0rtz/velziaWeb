@@ -383,7 +383,10 @@ h2{
 }
 
 #related-projects{
-
+  max-width: 80vw;
+  position: relative;
+  margin: auto;
+  height: 600px;
 }
 #related-projects-title{
   text-align: center;
