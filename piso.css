@@ -374,7 +374,8 @@ h2{
 }
 
 #thumbnail-slider{
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0);
+  opacity: 0.7;
 }
 /*
 
