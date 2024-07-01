@@ -134,28 +134,28 @@ function relatedProjects(pisos) {
       relatedProjectsArray.push(piso);
     }
   });
-  pisos.houses.reverse().forEach(function (piso) {
-    let relatedGama = [];
-    switch (piso.gama) {
-      case "riviera":
-        relatedGama = ["emerald"];
-        break;
-      case "emerald":
-        relatedGama = ["grand-emerald", "riviera"];
-        break;
-      case "grand-emerald":
-        relatedGama = ["milano", "emerald"];
-        break;
-      case "milano":
-        relatedGama = ["palazzo", "grand-emerald"];
-        break;
-      case "palazzo":
-        relatedGama = ["milano"];
-        break;
+  var relatedGama = [];
+  switch (data.house.gama) {
+    case "riviera":
+      relatedGama = ["emerald"];
+      break;
+    case "emerald":
+      relatedGama = ["grand-emerald", "riviera"];
+      break;
+    case "grand-emerald":
+      relatedGama = ["milano", "emerald"];
+      break;
+    case "milano":
+      relatedGama = ["palazzo", "grand-emerald"];
+      break;
+    case "palazzo":
+      relatedGama = ["milano"];
+      break;
 
-      default:
-        break;
-    }
+    default:
+      break;
+  }
+  pisos.houses.reverse().forEach(function (piso) {
     for (let index = 0; index < relatedGama.length; index++) {
       if (piso.gama == relatedGama[index] && !piso.sold && piso.id != data.house.id) {
         relatedProjectsArray.push(piso);
