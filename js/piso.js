@@ -115,84 +115,86 @@ fetch(url + "house/" + piso, requestOptions)
   })
   .catch((error) => console.error(error));
 
-function relatedProjects(data) {
+fetch(url + "houses", requestOptions)
+  .then((response) => response.text())
+  .then((result) => {
+    console.log(result);
+    pisos = JSON.parse(result);
+    relatedProjects(pisos)
+  })
+  .catch((error) => console.error(error));
+
+function relatedProjects(pisos) {
   let relatedProjectsArray = [];
   let relatedProjectsHtml = "";
   var relatedProjectsComplete = "";
-  fetch(url + "houses", requestOptions)
-    .then((response) => response.text())
-    .then((result) => {
-      console.log(result);
-      pisos = JSON.parse(result);
-      pisos.houses.forEach(function (piso) {
-        if (piso.gama == data.house.gama && !piso.sold) {
-          relatedProjectsArray.push(piso);
-        }
-      });
-      pisos.houses.forEach(function (piso) {
-        let relatedGama = [];
-        switch (piso.gama) {
-          case "riviera":
-            relatedGama = ["emerald"];
-            break;
-          case "emerald":
-            relatedGama = ["grand-emerald", "riviera"];
-            break;
-          case "grand-emerald":
-            relatedGama = ["milano", "emerald"];
-            break;
-          case "milano":
-            relatedGama = ["palazzo", "grand-emerald"];
-            break;
-          case "palazzo":
-            relatedGama = ["milano"];
-            break;
+  pisos.houses.forEach(function (piso) {
+    if (piso.gama == data.house.gama && !piso.sold) {
+      relatedProjectsArray.push(piso);
+    }
+  });
+  pisos.houses.forEach(function (piso) {
+    let relatedGama = [];
+    switch (piso.gama) {
+      case "riviera":
+        relatedGama = ["emerald"];
+        break;
+      case "emerald":
+        relatedGama = ["grand-emerald", "riviera"];
+        break;
+      case "grand-emerald":
+        relatedGama = ["milano", "emerald"];
+        break;
+      case "milano":
+        relatedGama = ["palazzo", "grand-emerald"];
+        break;
+      case "palazzo":
+        relatedGama = ["milano"];
+        break;
 
-          default:
-            break;
-        }
-        for (let index = 0; index < relatedGama.length; index++) {
-          if (piso.gama == relatedGama[index] && !piso.sold) {
-            relatedProjectsArray.push(piso);
-          }
-        }
-      });
-      pisos.houses.forEach(function (piso) {
-        if (piso.gama == data.house.gama && piso.sold) {
-          relatedProjectsArray.push(piso);
-        }
-      });
-      for (let i = 0; i < 9; i++) {
-        relatedProjectsHtml += `
-          <li class="splide__slide">
-            <a href="piso.html?id=${
-              relatedProjectsArray[i].id
-            }" class="galeria-container">
-                <div class="galeria-item" style="background-image:url('${
-                  relatedProjectsArray[i].background
-                }');">
-                ${
-                  relatedProjectsArray[i].sold
-                    ? `<div class="galeria-item-sold roboto-light">VENDIDO</div>`
-                    : `<div class="galeria-item-on-sale roboto-light">EN VENTA</div>`
-                }
-                    <h3>${relatedProjectsArray[i].name}</h3>
-                </div>
-            </a>
-          </li>
-        `;
+      default:
+        break;
+    }
+    for (let index = 0; index < relatedGama.length; index++) {
+      if (piso.gama == relatedGama[index] && !piso.sold) {
+        relatedProjectsArray.push(piso);
       }
-      relatedProjectsComplete = `
-        <div id="related-slider" class="splide">
-          <div class="splide__track">
-            <ul class="splide__list">
-              ${relatedProjectsHtml}
-            </ul>
-          </div>
-        </div>
-      `;
-    })
-    .catch((error) => console.error(error));
+    }
+  });
+  pisos.houses.forEach(function (piso) {
+    if (piso.gama == data.house.gama && piso.sold) {
+      relatedProjectsArray.push(piso);
+    }
+  });
+  for (let i = 0; i < 9; i++) {
+    relatedProjectsHtml += `
+      <li class="splide__slide">
+        <a href="piso.html?id=${
+          relatedProjectsArray[i].id
+        }" class="galeria-container">
+            <div class="galeria-item" style="background-image:url('${
+              relatedProjectsArray[i].background
+            }');">
+            ${
+              relatedProjectsArray[i].sold
+                ? `<div class="galeria-item-sold roboto-light">VENDIDO</div>`
+                : `<div class="galeria-item-on-sale roboto-light">EN VENTA</div>`
+            }
+                <h3>${relatedProjectsArray[i].name}</h3>
+            </div>
+        </a>
+      </li>
+    `;
+  }
+  relatedProjectsComplete = `
+    <div id="related-slider" class="splide">
+      <div class="splide__track">
+        <ul class="splide__list">
+          ${relatedProjectsHtml}
+        </ul>
+      </div>
+    </div>
+  `;
 
   $("#related-projects").html(relatedProjectsComplete);
   initializeRelatedSplide();
