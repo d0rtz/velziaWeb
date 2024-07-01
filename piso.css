@@ -354,7 +354,7 @@ h2{
 
 /*SLIDER*/
 
-/* * {
+ * {
   box-sizing: border-box;
 }
 
@@ -363,10 +363,16 @@ h2{
   position: relative;
   margin: auto;
   height: 600px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 16px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+/*
 
 .mySlides {
   display: none;
