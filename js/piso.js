@@ -228,7 +228,7 @@ function initializeSplide() {
     perMove: 1,
     height: '600px',
     pagination : false,
-    arrows     : false,
+    arrows     : true,
     cover      : true,
   } );
   
@@ -241,6 +241,7 @@ function initializeSplide() {
     focus           : 'center',
     pagination      : false,
     cover           : true,
+    arrows: false,
     dragMinThreshold: {
       mouse: 4,
       touch: 10,
