@@ -106,6 +106,7 @@ const requestOptions = {
 };
 
 var data = {};
+var pisos = [];
 fetch(url + "house/" + piso, requestOptions)
   .then((response) => response.text())
   .then((result) => {
