@@ -172,8 +172,6 @@ function relatedProjects(pisos) {
     max = relatedProjectsArray.length;
   }
   for (let i = 0; i < max; i++) {
-    console.log("ciclo: "+ i);
-    console.log(relatedProjectsArray[i]);
     relatedProjectsHtml += `
       <li class="splide__slide">
         <a href="piso.html?id=${
