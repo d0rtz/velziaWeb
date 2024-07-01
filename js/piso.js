@@ -1,5 +1,5 @@
 var piso = params.get("id");
-var url = "https://dev.velzia.es:4999/house/" + piso;
+var url = "https://dev.velzia.es:4999/";
 var contactForm = `
 <section id="contact-form-section" class="cormorant-garamond-light">
 <div id="form-section">
@@ -106,14 +106,103 @@ const requestOptions = {
 };
 
 var data = {};
-fetch(url, requestOptions)
+fetch(url + "house/" + piso, requestOptions)
   .then((response) => response.text())
   .then((result) => {
     console.log(result);
     data = JSON.parse(result);
     renderizarGaleria(data);
   })
+  .then((result) => {
+    data = JSON.parse(result);
+    relatedProjects(data);
+  })
   .catch((error) => console.error(error));
+
+function relatedProjects(data) {
+  let relatedProjectsArray = [];
+  let relatedProjectsHtml = "";
+  var relatedProjectsComplete = "";
+  fetch(url + "houses", requestOptions)
+    .then((response) => {
+      response.text();
+    })
+    .then((result) => {
+      console.log(result);
+      pisos = JSON.parse(result);
+      pisos.houses.forEach(function (piso) {
+        if (piso.gama == data.house.gama && !piso.sold) {
+          relatedProjectsArray.push(piso);
+        }
+      });
+      pisos.houses.forEach(function (piso) {
+        let relatedGama = [];
+        switch (piso.gama) {
+          case "riviera":
+            relatedGama = ["emerald"];
+            break;
+          case "emerald":
+            relatedGama = ["grand-emerald", "riviera"];
+            break;
+          case "grand-emerald":
+            relatedGama = ["milano", "emerald"];
+            break;
+          case "milano":
+            relatedGama = ["palazzo", "grand-emerald"];
+            break;
+          case "palazzo":
+            relatedGama = ["milano"];
+            break;
+
+          default:
+            break;
+        }
+        for (let index = 0; index < relatedGama.length; index++) {
+          if (piso.gama == relatedGama[index] && !piso.sold) {
+            relatedProjectsArray.push(piso);
+          }
+        }
+      });
+      pisos.houses.forEach(function (piso) {
+        if (piso.gama == data.house.gama && piso.sold) {
+          relatedProjectsArray.push(piso);
+        }
+      });
+      for (let i = 0; i < 9; i++) {
+        relatedProjectsHtml += `
+          <li class="splide__slide">
+            <a href="piso.html?id=${
+              relatedProjectsArray[i].id
+            }" class="galeria-container">
+                <div class="galeria-item" style="background-image:url('${
+                  relatedProjectsArray[i].background
+                }');">
+                ${
+                  relatedProjectsArray[i].sold
+                    ? `<div class="galeria-item-sold roboto-light">VENDIDO</div>`
+                    : `<div class="galeria-item-on-sale roboto-light">EN VENTA</div>`
+                }
+                    <h3>${relatedProjectsArray[i].name}</h3>
+                </div>
+            </a>
+          </li>
+        `;
+      }
+      relatedProjectsComplete = `
+        <div id="related-slider" class="splide">
+          <div class="splide__track">
+            <ul class="splide__list">
+              ${relatedProjectsHtml}
+            </ul>
+          </div>
+        </div>
+      `;
+    })
+    .catch((error) => console.error(error));
+
+  $("#related-projects").html(relatedProjectsComplete);
+  initializeRelatedSplide();
+}
 
 function renderizarGaleria(data) {
   console.log(data);
@@ -127,16 +216,18 @@ function renderizarGaleria(data) {
     style: "currency",
     currency: "EUR",
     minimumFractionDigits: 0,
-    maximumFractionDigits: 0
+    maximumFractionDigits: 0,
   });
   document.title = data.house.name;
 
-  if(data.house.sold){
+  if (data.house.sold) {
     for (let i = 4; i < photos.length; i++) {
       slider += `
       <li class="splide__slide">
           <div class="numbertext">${i - 3} / ${photos.length - 4}</div>
-          <img class="slider-photo" src="${photos[i]}" height="600px" width="auto">
+          <img class="slider-photo" src="${
+            photos[i]
+          }" height="600px" width="auto">
       </li>
       `;
       thumbnails += `
@@ -145,12 +236,14 @@ function renderizarGaleria(data) {
       </li>
       `;
     }
-  }else{
+  } else {
     for (let i = 0; i < photos.length; i++) {
       slider += `
       <li class="splide__slide">
           <div class="numbertext">${i + 1} / ${photos.length}</div>
-          <img class="slider-photo" src="${photos[i]}" height="600px" width="auto">
+          <img class="slider-photo" src="${
+            photos[i]
+          }" height="600px" width="auto">
       </li>
       `;
       thumbnails += `
@@ -177,19 +270,25 @@ function renderizarGaleria(data) {
       </div>
     </div>
   `;
-  
+
   let html = `
     <section id="sale">
         <img src="${data.house.background}" alt="" id="background" />
         <div class="content">
             <div id="content-video-div">${data.house.videoURL}</div>
             <div id="content-text-div">
-                <h3>${data.house.type != "apartment" ? data.house.type : "REFORMA INTEGRAL DE UN PISO"}</h3>
+                <h3>${
+                  data.house.type != "apartment"
+                    ? data.house.type
+                    : "REFORMA INTEGRAL DE UN PISO"
+                }</h3>
                 <h2>${data.house.name}</h2>
                 ${
                   data.house.sold
                     ? "<br>"
-                    : `<h4 class="roboto-thin">${formatter.format(data.house.price)}</h4>`
+                    : `<h4 class="roboto-thin">${formatter.format(
+                        data.house.price
+                      )}</h4>`
                 }
                 <p class="roboto-thin">${data.house.description}</p>
             </div>
@@ -206,6 +305,9 @@ function renderizarGaleria(data) {
           </section>
           <section class="slideshow-container">
               ${splideHTML}
+          </section>
+          <section id="related-projects">
+
           </section>`
         : `
           <br><br>
@@ -213,49 +315,68 @@ function renderizarGaleria(data) {
               ${splideHTML}
           </section>
           ${contactForm}
+          <section id="related-projects">
+
+          </section>
         `
     }
   `;
-  
+
   $("#main").html(html);
   initializeSplide();
 }
 
 function initializeSplide() {
-  var main = new Splide( '#image-slider', {
-    type       : 'loop',
+  var main = new Splide("#image-slider", {
+    type: "loop",
     perPage: 1,
     perMove: 1,
-    height: '600px',
-    focus: 'center',
-    pagination : false,
-    arrows     : true,
+    height: "600px",
+    focus: "center",
+    pagination: false,
+    arrows: true,
     autoWidth: true,
     gap: 1000,
-  } );
-  
-  var thumbnails = new Splide( '#thumbnail-slider', {
-    rewind          : true,
-    autoWidth       : true,
-    fixedHeight     : 58,
-    isNavigation    : true,
-    gap             : 10,
-    focus           : 'center',
-    pagination      : false,
-    arrows          : false,
+  });
+
+  var thumbnails = new Splide("#thumbnail-slider", {
+    rewind: true,
+    autoWidth: true,
+    fixedHeight: 58,
+    isNavigation: true,
+    gap: 10,
+    focus: "center",
+    pagination: false,
+    arrows: false,
     dragMinThreshold: {
       mouse: 4,
       touch: 10,
     },
-    breakpoints : {
+    breakpoints: {
       640: {
-        fixedWidth  : 66,
-        fixedHeight : 38,
+        fixedWidth: 66,
+        fixedHeight: 38,
       },
     },
-  } );
-  
-  main.sync( thumbnails );
+  });
+
+  main.sync(thumbnails);
   main.mount();
   thumbnails.mount();
+}
+
+function initializeRelatedSplide() {
+  var main = new Splide("#related-slider", {
+    type: "loop",
+    perPage: 3,
+    perMove: 1,
+    height: "600px",
+    focus: "center",
+    pagination: false,
+    arrows: true,
+    cover: true,
+    gap: 1000,
+  });
+
+  main.mount();
 }
