@@ -226,7 +226,7 @@ function initializeSplide() {
     type       : 'loop',
     perPage: 1,
     perMove: 1,
-    height: '600px',
+    fixedHeight: '600px',
     pagination : false,
     arrows     : true,
     cover      : true,
