@@ -364,7 +364,7 @@ function initializeSplide() {
 
 function initializeRelatedSplide() {
   var rel = new Splide("#related-slider", {
-    type: "loop",
+    type: "slide",
     perPage: 3,
     perMove: 1,
     height: "600px",
