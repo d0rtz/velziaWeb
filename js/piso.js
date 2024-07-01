@@ -129,12 +129,12 @@ function relatedProjects(pisos) {
   let relatedProjectsArray = [];
   let relatedProjectsHtml = "";
   var relatedProjectsComplete = "";
-  pisos.houses.forEach(function (piso) {
+  pisos.houses.reverse().forEach(function (piso) {
     if (piso.gama == data.house.gama && !piso.sold) {
       relatedProjectsArray.push(piso);
     }
   });
-  pisos.houses.forEach(function (piso) {
+  pisos.houses.reverse().forEach(function (piso) {
     let relatedGama = [];
     switch (piso.gama) {
       case "riviera":
@@ -162,7 +162,7 @@ function relatedProjects(pisos) {
       }
     }
   });
-  pisos.houses.forEach(function (piso) {
+  pisos.houses.reverse().forEach(function (piso) {
     if (piso.gama == data.house.gama && piso.sold) {
       relatedProjectsArray.push(piso);
     }
