@@ -112,10 +112,11 @@ fetch(url + "house/" + piso, requestOptions)
     console.log(result);
     data = JSON.parse(result);
     renderizarGaleria(data);
+    relatedProjects(data);
   })
   .then((result) => {
-    data = JSON.parse(result);
-    relatedProjects(data);
+    //data = JSON.parse(result);
+    //relatedProjects(data);
   })
   .catch((error) => console.error(error));
 
