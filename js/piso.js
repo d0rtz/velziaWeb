@@ -361,7 +361,7 @@ function initializeSplide() {
 }
 
 function initializeRelatedSplide() {
-  var main = new Splide("#related-slider", {
+  var rel = new Splide("#related-slider", {
     type: "loop",
     perPage: 3,
     perMove: 1,
@@ -373,5 +373,5 @@ function initializeRelatedSplide() {
     gap: 1000,
   });
 
-  main.mount();
+  rel.mount();
 }
