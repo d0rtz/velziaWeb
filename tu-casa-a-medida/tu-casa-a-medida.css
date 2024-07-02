@@ -232,10 +232,10 @@ h1{
   z-index: 998;
 }
 .content h1 {
-  font-size: 16px;
+  font-size: 14px;
   padding-left: 39%;
   padding-right: 39%;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.2rem;
   line-height: 1.5;
 }
 .content p {
