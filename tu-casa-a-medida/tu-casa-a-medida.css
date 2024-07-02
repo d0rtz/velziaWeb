@@ -223,7 +223,7 @@ h1{
 .content {
   position: absolute;
   top: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 14, 27, 0.5);
   color: #f1f1f1;
   width: 100%;
   height: 100%;
@@ -231,10 +231,20 @@ h1{
   text-align: center;
   z-index: 998;
 }
-.content h2 {
-  font-size: 29px;
-  padding-left: 30%;
-  padding-right: 30%;
+.content h1 {
+  font-size: 16px;
+  padding-left: 39%;
+  padding-right: 39%;
+  letter-spacing: 0.1rem;
+  line-height: 1.5;
+}
+.content p {
+  font-size: 14px;
+  padding-left: 34%;
+  padding-right: 34%;
+  line-height: 1.5;
+  letter-spacing: 0.1rem;
+
 }
 #contact-button {
   margin-top: 3%;
@@ -244,54 +254,26 @@ h1{
 }
 #contact-button:hover {
   margin-top: 2.7%;
-  border: #f1f1f1 2px solid;
-  background-color: transparent;
+  background-color: rgba(37, 41, 48, 0.94);
   color: #f1f1f1;
   transition: all 0.3s ease-in-out;
 }
-
-#section1 {
-  padding: 5% 25% 5% 25%;
-  text-align: center;
-}
-#section1 h2 {
-  font-size: 44px;
-}
-#section1 p {
-  letter-spacing: 0.1rem;
-  line-height: 1.5rem;
-}
-#section2 {
-  display: grid;
-  padding: 5%;
-}
-#section2 div {
-  display: grid;
-  grid-template-columns: 25% auto;
-  grid-template-rows: 30% auto;
-  grid-column: auto;
-  grid-row: auto;
-  padding: 5%;
-}
-#section2 div img {
-  margin-top: 10%;
-  grid-column: 1 / span 2;
-  grid-row: 1;
-}
-#section2 div h3 {
-  grid-column: 2;
-  grid-row: 1;
-  font-size: 22px;
-}
-#section2 div p {
-  grid-column: 2;
-  grid-row: 2;
+#contact-button2 {
+  padding: 20px 25px;
+  margin-top: 3%;
   font-size: 13px;
+  color: #f1f1f1;
+  background-color: rgba(37, 41, 48, 0.94);
   letter-spacing: 0.1rem;
-  line-height: 1.2rem;
+  transition: all 0.3s ease-in-out;
+}
+#contact-button2:hover {
+  margin-top: 2.7%;
+  transition: all 0.3s ease-in-out;
 }
 
 #section3 {
+  height: 900px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -303,30 +285,24 @@ h1{
   justify-content: center;
   align-items: center;
   color: #f1f1f1;
-  background-image: url(../resources/VELZIA-ESPRONCEDA-43-WEB_017.jpg);
-  background-size: cover;
-  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+  background-image: url(../resources/tailor5.jpeg);
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
 }
 #section3-left div {
   text-align: center;
 }
-#section3-left h2 {
-  font-size: 44px;
-}
-#section3-left p {
-  letter-spacing: 0.1rem;
-  line-height: 2rem;
-}
 #section3-right {
   letter-spacing: 0.1rem;
   grid-column: auto;
-  padding: 10%;
+  padding: 10% 10% 10% 0%;
 }
 #section3-right div {
   padding: 1% 5% 1% 5%;
 }
-#section3-right h3 {
-  font-size: 22px;
+#section3-right h1 {
+  font-size: 64px;
 }
 #section3-right p {
   font-size: 13px;
@@ -454,6 +430,129 @@ h1{
   color: #f1f1f1;
   font-size: 11px;
   line-height: 1rem;
+}
+
+
+/*MEDIA QUERIES*/
+
+@media (max-width: 768px) {
+  .content {
+    padding-top: 80%;
+  }
+  #contact-button {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+  #section3 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #section3-right {
+    padding: 10%;
+  }
+  #form-section {
+    padding-top: 15%;
+  }
+  #form-div {
+    padding: 5%;
+  }
+  #form-name {
+    grid-column: span 3;
+    grid-row: 1;
+  }
+  #form-tel {
+    grid-column: span 3;
+    grid-row: 2;
+  }
+  #form-email {
+    grid-column: span 3;
+    grid-row: 3;
+  }
+  #form-check1 {
+    grid-column: span 3;
+    grid-row: 4;
+  }
+  #form-check2 {
+    grid-column: span 3;
+    grid-row: 5;
+  }
+  #form-submit {
+    grid-column: span 3;
+    grid-row: 6;
+  }
+  #form-warn {
+    grid-column: span 3;
+    grid-row: 7;
+  }
+}
+@media (min-width: 768px) {
+  .content {
+    padding-top: 15%;
+  }
+  #contact-button {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
+  #section3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #form-section {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  #form-div {
+    padding: 5% 15% 5% 15%;
+  }
+  .iti .iti__flag-container {
+    position: static;
+  }
+  .iti .iti__selected-flag {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
+  }
+  .iti .iti__country-list {
+    width: 100%;
+    top: 100%;
+  }
+  #form-name {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  #form-tel {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  #form-email {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  #form-check1 {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    grid-column: 1 / span 3;
+    grid-row: 2;
+  }
+  #form-check2 {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    grid-column: 1 / span 3;
+    grid-row: 3;
+  }
+  #form-submit {
+    grid-column: 1 / span 3;
+    grid-row: 4;
+  }
+  #form-warn {
+    grid-column: 1 / span 3;
+    grid-row: 5;
+  }
 }
 
 /* FOOTER */
