@@ -48,6 +48,7 @@ var houseForm = `
             <select name="input-type" id="input-type">
                 <option value=""></option>
                 <option value="apartment">Reforma integral de un piso</option>
+                <option value="conversion">Conversión de un local a vivienda</option>
                 <option value="house">Chateau</option>
             </select>
         </section>

@@ -279,7 +279,7 @@ function renderizarGaleria(data) {
             <div id="content-text-div">
                 <h3>${
                   data.house.type != "apartment"
-                    ? data.house.type
+                    ? data.house.type == "conversion"? "CONVERSIÓN DE UN LOCAL A VIVIENDA" : "CHATEAU"
                     : "REFORMA INTEGRAL DE UN PISO"
                 }</h3>
                 <h2>${data.house.name}</h2>
