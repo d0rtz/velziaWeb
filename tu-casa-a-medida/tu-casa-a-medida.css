@@ -322,6 +322,9 @@ h1{
   display: grid;
   grid-template-columns: repeat(3, auto);
 }
+#section4-nav div h4{
+  font-size:22px;
+}
 #section4-nav1, #section4-nav2, #section4-nav3{
 
 }
