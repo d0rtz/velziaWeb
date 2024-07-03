@@ -308,6 +308,51 @@ h1{
   font-size: 13px;
   line-height: 1.5rem;
 }
+#section4-title {
+  text-align: center;
+}
+#section4-main{
+  text-align: center;
+  padding-left: 20%;
+  padding-right: 20%;
+
+}
+#section4-nav{
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+}
+#section4-nav1, #section4-nav2, #section4-nav3{
+
+}
+#section4-nav1{
+  
+}
+#section4-nav2{
+  
+}
+#section4-nav3{
+  
+}
+#section4-content1, #section4-content2, #section4-content3{
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  padding-top: 15%;
+  padding-bottom: 15%;
+}
+#section4-content1 p, #section4-content2 p, #section4-content3 p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#section4-content1{
+  
+}
+#section4-content2{
+  display: none;
+}
+#section4-content3{
+  display: none;
+}
 
 #form-section {
   display: flex;
