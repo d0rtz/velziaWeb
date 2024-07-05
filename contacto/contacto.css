@@ -243,12 +243,12 @@ button {
 #form-section h2 {
   color: #f1f1f1;
   text-align: center;
-  font-size: 31px;
+  font-size: 28px;
 }
 #form-section h3 {
   color: #f1f1f1;
   text-align: center;
-  font-size: 24px;
+  font-size: 20px;
 }
 #form-div {
   border-radius: 10px;
@@ -304,7 +304,7 @@ button {
   border: 0;
   border-bottom: 1px solid black;
   width: 98%;
-  height: 70px;
+  height: 50px;
   padding: 1%;
 }
 #form-warn {
