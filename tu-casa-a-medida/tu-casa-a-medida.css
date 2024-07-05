@@ -305,8 +305,9 @@ h1{
   font-size: 64px;
 }
 #section3-right p {
-  font-size: 13px;
-  line-height: 1.5rem;
+  font-size: 15px;
+  line-height: 1.6rem;
+  color: #6b6b6b;
 }
 #section4-title {
   text-align: center;
