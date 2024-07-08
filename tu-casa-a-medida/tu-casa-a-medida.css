@@ -340,16 +340,16 @@ h1{
   transform: rotate(45deg);
 }
 .nav-line-active{
-  color: #a94442;
+  color: #c20300;
 }
 .nav-line-inactive{
-  color: #464646;
+  color: #bdbdbd;
 }
 .line-active{
-  background-color: #a94442;
+  background-color: #c20300;
 }
 .line-inactive{
-  background-color: #464646;
+  background-color: #bdbdbd;
 }
 .nav-line::before, .nav-line::after{
   content: "";
@@ -365,6 +365,13 @@ h1{
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  cursor: pointer;
+}
+#section4-nav1:hover .nav-line-inactive, #section4-nav2:hover .nav-line-inactive, #section4-nav3:hover .nav-line-inactive{
+ color: #000000;
+}
+#section4-nav1:hover * .line-inactive, #section4-nav2:hover * .line-inactive, #section4-nav3:hover * .line-inactive{
+ background-color: #000000;
 }
 #section4-nav1{
   
