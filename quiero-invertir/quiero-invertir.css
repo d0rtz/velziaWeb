@@ -587,11 +587,8 @@ button {
 }
 @media (min-width: 768px) {
   #contact-button {
-    width: max-content;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    padding-left: 5%;
-    padding-right: 5%;
+    width: 300px;
+    padding: 7%;
   }
   #section2 {
     grid-template-columns: repeat(2, 1fr);
