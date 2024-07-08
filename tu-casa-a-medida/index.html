@@ -194,27 +194,27 @@
           <div id="section4-nav1">
             <img src="../resources/tailor-icon1.png" height="40px" width="40px"/>
             <h4 class="roboto-light">Comencemos</h4>
-            <div class="nav-line nav-line-active">
-              <span class="line-active"></span>
+            <div id="line1" class="nav-line nav-line-active">
+              <span id="subline1" class="line-active"></span>
             </div>
           </div>
           <div id="section4-nav2">
             <img src="../resources/tailor-icon2.png" height="40px" width="40px"/>
             <h4 class="roboto-light">Avancemos</h4>
-            <div class="nav-line nav-line-inactive">
-              <span class="line-inactive"></span>
+            <div id="line2" class="nav-line nav-line-inactive">
+              <span id="subline2" class="line-inactive"></span>
             </div>
           </div>
           <div id="section4-nav3">
             <img src="../resources/tailor-icon3.png" height="40px" width="40px"/>
             <h4 class="roboto-light">¡Manos a la obra!</h4>
-            <div class="nav-line nav-line-inactive">
-              <span class="line-inactive"></span>
+            <div id="line3" class="nav-line nav-line-inactive">
+              <span id="subline3" class="line-inactive"></span>
             </div>
           </div>
         </div>
         <div id="section4-content">
-          <div id="section4-content1">
+          <div id="section4-content1" style="display: grid;">
             <img src="../resources/tailor2.jpeg" alt="" height="auto" width="300px" />
             <p class="roboto-light">
               Tras una primera llamada telefónica informativa, nuestros
@@ -222,7 +222,7 @@
               para definir el proyecto.
             </p>
           </div>
-          <div id="section4-content2">
+          <div id="section4-content2" style="display: none;">
             <img src="../resources/tailor1.jpeg" alt="" height="auto" width="300px" />
             <p class="roboto-light">
               Se presentan las primeras ideas de distribución en una segunda
@@ -231,7 +231,7 @@
               final de la obra.
             </p>
           </div>
-          <div id="section4-content3">
+          <div id="section4-content3" style="display: none;">
             <img src="../resources/tailor4.jpeg" alt="" height="auto" width="300px" />
             <p class="roboto-light">
               Con el proyecto definido al completo se realizan los planos
@@ -358,6 +358,7 @@
     </nav>
   </footer>
   <script src="../js/functions.js"></script>
+  <script src="../js/tailor.js"></script>
   <script>
     const submitBtn = document.getElementById("submit");
     const phoneInputField = document.querySelector("#phone");
