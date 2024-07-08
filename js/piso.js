@@ -69,7 +69,7 @@ var contactForm = `
     event.preventDefault();
 
     const phoneNumber = phoneInput.getNumber();
-    if (!phoneInput.isValidNumber()) {
+    if (!phoneInput.isValidNumber() && phoneNumber != "") {
       error.style.display = "";
       error.innerHTML = "Número inválido.";
     } else {
