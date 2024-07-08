@@ -387,6 +387,7 @@ h1{
   grid-template-columns: repeat(2, 50%);
   padding-top: 12%;
   padding-bottom: 12%;
+  text-align: justify;
 }
 #section4-content1 p, #section4-content2 p, #section4-content3 p{
   display: flex;
