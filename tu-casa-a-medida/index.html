@@ -1,412 +1,642 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="tu-casa-a-medida.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/23.0.8/css/intlTelInput.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/23.0.8/js/intlTelInput.min.js"></script>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="tu-casa-a-medida.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/23.0.8/css/intlTelInput.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/23.0.8/js/intlTelInput.min.js"></script>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../resources/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../resources/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../resources/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../resources/site.webmanifest" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Tu Casa a Medida - Velzia</title>
+  </head>
 
-  <link rel="apple-touch-icon" sizes="180x180" href="../resources/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="../resources/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="../resources/favicon-16x16.png" />
-  <link rel="manifest" href="../resources/site.webmanifest" />
-  <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
-  <title>Tu Casa a Medida - Velzia</title>
-</head>
-
-<body>
-  <div id="wsp">
-    <a href="https://api.whatsapp.com/send/?phone=34637505275&text&type=phone_number&app_absent=0"><img
-        src="../resources/wsp.png" alt="wsp" width="50px" height="50px" /></a>
-  </div>
-  <header id="header" class="header-color">
-    <a href="../index.html">
-      <img src="../resources/logo-index-def.png" alt="logo-velzia" height="50" width="150" id="nav-logo" />
-    </a>
-    <nav class="nav1 cormorant-garamond-light">
-      <div class="menu">
-        <div class="nav-li subnava" id="collection-li">
-          <a href="#" class="nav-link nav-link-white">Colecciones</a>
-          <div class="subnav" id="subnav">
-            <a href="../gama.html?gama=riviera" class="blank-link nav-link-white">
-              <div class="subnav-li">Riviera - Desde 300.000 €</div>
-            </a>
-            <a href="../gama.html?gama=emerald" class="blank-link nav-link-white">
-              <div class="subnav-li">Emerald - Desde 400.000 €</div>
-            </a>
-            <a href="../gama.html?gama=grand-emerald" class="blank-link nav-link-white">
-              <div class="subnav-li">Grand Emerald - Desde 700.000 €</div>
-            </a>
-            <a href="../gama.html?gama=milano" class="blank-link nav-link-white">
-              <div class="subnav-li">Milano - Desde 950.000 €</div>
-            </a>
-            <a href="../gama.html?gama=palazzo" class="blank-link nav-link-white">
-              <div class="subnav-li">Palazzo - Desde 1.500.000 €</div>
-            </a>
-          </div>
-        </div>
-        <div class="nav-li">
-          <a href="../pisos-en-venta/" class="nav-link nav-link-white">Pisos en venta</a>
-        </div>
-        <div class="nav-li">
-          <a href="../tu-casa-a-medida/" class="nav-link nav-link-white">Velzia Tailor</a>
-        </div>
-        <div class="nav-li">
-          <a href="../quiero-invertir/" class="nav-link nav-link-white">Quiero invertir</a>
-        </div>
-        <div class="nav-li">
-          <a href="../trabaja-con-nosotros/" class="nav-link nav-link-white">Trabaja con nosotros</a>
-        </div>
-        <div class="nav-li">
-          <a href="../contacto/" class="nav-link nav-link-white">Contacto</a>
-        </div>
-        <div class="nav-li" style="font-size: 22px">
-          <i id="phone-icon" class="bx bxs-phone" style="color: #f1f1f1"></i>
-          <a href="tel:+34911989927" class="nav-link nav-link-white" id="number"></a>
-        </div>
-      </div>
-    </nav>
-    <div id="hamburguer-icon-div">
-      <img src="../resources/hamburguesa-blanco.png" alt="" height="25px" width="25px" id="hamburguer-icon" />
+  <body>
+    <div id="wsp">
+      <a
+        href="https://api.whatsapp.com/send/?phone=34637505275&text&type=phone_number&app_absent=0"
+        ><img src="../resources/wsp.png" alt="wsp" width="50px" height="50px"
+      /></a>
     </div>
-  </header>
-  <div id="mobile-header-background">
-    <div id="mobile-header" class="cormorant-garamond-light">
-      <div id="close-div">
-        <button id="close-mobile-header-button">
-          <img src="../resources/x.png" alt="close-header" width="10" height="10" />
-        </button>
+    <header id="header" class="header-color">
+      <a href="../index.html">
+        <img
+          src="../resources/logo-index-def.png"
+          alt="logo-velzia"
+          height="50"
+          width="150"
+          id="nav-logo"
+        />
+      </a>
+      <nav class="nav1 cormorant-garamond-light">
+        <div class="menu">
+          <div class="nav-li subnava" id="collection-li">
+            <a href="#" class="nav-link nav-link-white">Colecciones</a>
+            <div class="subnav" id="subnav">
+              <a
+                href="../gama.html?gama=riviera"
+                class="blank-link nav-link-white"
+              >
+                <div class="subnav-li">Riviera - Desde 300.000 €</div>
+              </a>
+              <a
+                href="../gama.html?gama=emerald"
+                class="blank-link nav-link-white"
+              >
+                <div class="subnav-li">Emerald - Desde 400.000 €</div>
+              </a>
+              <a
+                href="../gama.html?gama=grand-emerald"
+                class="blank-link nav-link-white"
+              >
+                <div class="subnav-li">Grand Emerald - Desde 700.000 €</div>
+              </a>
+              <a
+                href="../gama.html?gama=milano"
+                class="blank-link nav-link-white"
+              >
+                <div class="subnav-li">Milano - Desde 950.000 €</div>
+              </a>
+              <a
+                href="../gama.html?gama=palazzo"
+                class="blank-link nav-link-white"
+              >
+                <div class="subnav-li">Palazzo - Desde 1.500.000 €</div>
+              </a>
+            </div>
+          </div>
+          <div class="nav-li">
+            <a href="../pisos-en-venta/" class="nav-link nav-link-white"
+              >Pisos en venta</a
+            >
+          </div>
+          <div class="nav-li">
+            <a href="../tu-casa-a-medida/" class="nav-link nav-link-white"
+              >Velzia Tailor</a
+            >
+          </div>
+          <div class="nav-li">
+            <a href="../quiero-invertir/" class="nav-link nav-link-white"
+              >Quiero invertir</a
+            >
+          </div>
+          <div class="nav-li">
+            <a href="../trabaja-con-nosotros/" class="nav-link nav-link-white"
+              >Trabaja con nosotros</a
+            >
+          </div>
+          <div class="nav-li">
+            <a href="../contacto/" class="nav-link nav-link-white">Contacto</a>
+          </div>
+          <div class="nav-li" style="font-size: 22px">
+            <i id="phone-icon" class="bx bxs-phone" style="color: #f1f1f1"></i>
+            <a
+              href="tel:+34911989927"
+              class="nav-link nav-link-white"
+              id="number"
+            ></a>
+          </div>
+        </div>
+      </nav>
+      <div id="hamburguer-icon-div">
+        <img
+          src="../resources/hamburguesa-blanco.png"
+          alt=""
+          height="25px"
+          width="25px"
+          id="hamburguer-icon"
+        />
       </div>
-      <div id="mobile-nav">
-        <div class="mobile-nav-item" id="mobile-dropdown-btn">
-          <a href="#" class="blank-link nav-link-black">Colecciones</a>
-          <img src="../resources/plus.png" alt="" width="15px" height="15px" id="mobile-subnav-image" />
-        </div>
-        <div id="mobile-subnav" class="cormorant-garamond-medium" style="display: none">
-          <hr />
-          <div class="mobile-subnav-item">
-            <a href="../gama.html?gama=riviera" class="blank-link nav-link-black">Riviera - Desde 300.000 €</a>
-          </div>
-          <div class="mobile-subnav-item">
-            <a href="../gama.html?gama=emerald" class="blank-link nav-link-black">Emerald - Desde 400.000 €</a>
-          </div>
-          <div class="mobile-subnav-item">
-            <a href="../gama.html?gama=grand-emerald" class="blank-link nav-link-black">Grand Emerald - Desde 700.000
-              €</a>
-          </div>
-          <div class="mobile-subnav-item">
-            <a href="../gama.html?gama=milano" class="blank-link nav-link-black">Milano - Desde 950.000 €</a>
-          </div>
-          <div class="mobile-subnav-item">
-            <a href="../gama.html?gama=palazzo" class="blank-link nav-link-black">Palazzo - Desde 1.500.000 €</a>
-          </div>
-        </div>
-        <hr />
-        <div class="mobile-nav-item">
-          <a href="../pisos-en-venta/" class="blank-link nav-link-black">Pisos en venta</a>
-        </div>
-        <hr />
-        <div class="mobile-nav-item">
-          <a href="../tu-casa-a-medida/" class="blank-link nav-link-black">Velzia Tailor</a>
-        </div>
-        <hr />
-        <div class="mobile-nav-item">
-          <a href="../quiero-invertir/" class="blank-link nav-link-black">Quiero invertir</a>
-        </div>
-        <hr />
-        <div class="mobile-nav-item">
-          <a href="../trabaja-con-nosotros/" class="blank-link nav-link-black">Trabaja con nosotros</a>
-        </div>
-        <hr />
-        <div class="mobile-nav-item">
-          <a href="../contacto/" class="blank-link nav-link-black">Contacto</a>
-        </div>
-        <hr />
-        <div class="mobile-nav-item">
-          <i class="bx bxs-phone"></i>
-          <a href="tel:+34911989927" class="blank-link nav-link-black" id="mobile-number"></a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <section id="main">
-    <section id="sale">
-      <img src="../resources/tailor3.jpeg" alt="" id="background" />
-
-      <div class="content">
-        <h1 class="roboto-medium">ARQUITECTURA, INTERIORISMO & REFORMAS "LLAVE EN MANO"</h1>
-        <p class="roboto-regular">
-          VELZIA Tailor es nuestro servicio integral de reformas y diseño de
-          interiores. Creamos espacios únicos a tu medida. Y lo hacemos,
-          conjugando diseño y eficiencia, sofisticación y vanguardia. Con el
-          inconfundible sello VELZIA.
-        </p>
-        <a href="https://api.whatsapp.com/send/?phone=34617020780">
-          <button id="contact-button" class="roboto-regular">
-            QUIERO UNA CASA DE REVISTA
+    </header>
+    <div id="mobile-header-background">
+      <div id="mobile-header" class="cormorant-garamond-light">
+        <div id="close-div">
+          <button id="close-mobile-header-button">
+            <img
+              src="../resources/x.png"
+              alt="close-header"
+              width="10"
+              height="10"
+            />
           </button>
-        </a>
+        </div>
+        <div id="mobile-nav">
+          <div class="mobile-nav-item" id="mobile-dropdown-btn">
+            <a href="#" class="blank-link nav-link-black">Colecciones</a>
+            <img
+              src="../resources/plus.png"
+              alt=""
+              width="15px"
+              height="15px"
+              id="mobile-subnav-image"
+            />
+          </div>
+          <div
+            id="mobile-subnav"
+            class="cormorant-garamond-medium"
+            style="display: none"
+          >
+            <hr />
+            <div class="mobile-subnav-item">
+              <a
+                href="../gama.html?gama=riviera"
+                class="blank-link nav-link-black"
+                >Riviera - Desde 300.000 €</a
+              >
+            </div>
+            <div class="mobile-subnav-item">
+              <a
+                href="../gama.html?gama=emerald"
+                class="blank-link nav-link-black"
+                >Emerald - Desde 400.000 €</a
+              >
+            </div>
+            <div class="mobile-subnav-item">
+              <a
+                href="../gama.html?gama=grand-emerald"
+                class="blank-link nav-link-black"
+                >Grand Emerald - Desde 700.000 €</a
+              >
+            </div>
+            <div class="mobile-subnav-item">
+              <a
+                href="../gama.html?gama=milano"
+                class="blank-link nav-link-black"
+                >Milano - Desde 950.000 €</a
+              >
+            </div>
+            <div class="mobile-subnav-item">
+              <a
+                href="../gama.html?gama=palazzo"
+                class="blank-link nav-link-black"
+                >Palazzo - Desde 1.500.000 €</a
+              >
+            </div>
+          </div>
+          <hr />
+          <div class="mobile-nav-item">
+            <a href="../pisos-en-venta/" class="blank-link nav-link-black"
+              >Pisos en venta</a
+            >
+          </div>
+          <hr />
+          <div class="mobile-nav-item">
+            <a href="../tu-casa-a-medida/" class="blank-link nav-link-black"
+              >Velzia Tailor</a
+            >
+          </div>
+          <hr />
+          <div class="mobile-nav-item">
+            <a href="../quiero-invertir/" class="blank-link nav-link-black"
+              >Quiero invertir</a
+            >
+          </div>
+          <hr />
+          <div class="mobile-nav-item">
+            <a href="../trabaja-con-nosotros/" class="blank-link nav-link-black"
+              >Trabaja con nosotros</a
+            >
+          </div>
+          <hr />
+          <div class="mobile-nav-item">
+            <a href="../contacto/" class="blank-link nav-link-black"
+              >Contacto</a
+            >
+          </div>
+          <hr />
+          <div class="mobile-nav-item">
+            <i class="bx bxs-phone"></i>
+            <a
+              href="tel:+34911989927"
+              class="blank-link nav-link-black"
+              id="mobile-number"
+            ></a>
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
+    <section id="main">
+      <section id="sale">
+        <img src="../resources/tailor3.jpeg" alt="" id="background" />
 
-    <section id="section3">
-      <div id="section3-left"></div>
-      <div id="section3-right">
-        <div>
-          <h1 class="cormorant-garamond-semibold">
-            Convierte tu casa en un Velzia
+        <div class="content">
+          <h1 class="roboto-medium">
+            ARQUITECTURA, INTERIORISMO & REFORMAS "LLAVE EN MANO"
           </h1>
-          <hr width="20%" style="margin-left: 0;">
-        </div>
-        <div>
-          <p class="roboto-light">
-            Velzia Tailor se especializa en crear <b>hogares de ensueño</b> con un
-            servicio integral de reformas y diseño de interiores,
-            proporcionando <b>soluciones “llave en mano”</b> que abarcan desde la
-            conceptualización hasta la entrega final del proyecto.
+          <p class="roboto-regular">
+            VELZIA Tailor es nuestro servicio integral de reformas y diseño de
+            interiores. Creamos espacios únicos a tu medida. Y lo hacemos,
+            conjugando diseño y eficiencia, sofisticación y vanguardia. Con el
+            inconfundible sello VELZIA.
           </p>
+          <a href="#form-section">
+            <button id="contact-button" class="roboto-regular">
+              QUIERO UNA CASA DE REVISTA
+            </button>
+          </a>
         </div>
-        <div>
-          <p class="roboto-light">
-            Entendemos que el tiempo es un recurso valioso por lo que nos
-            encargamos de todo el proceso, desde la <b>planificación inicial</b>
-            hasta la elección del <b>mobiliario y atrezzo</b>, para que nuestros
-            clientes puedan disfrutar de sus nuevos espacios sin demoras
-            innecesarias.
-          </p>
-        </div>
-        <div>
-          <button id="contact-button2">QUIERO EMPEZAR MI PROYECTO</button>
-        </div>
-      </div>
-    </section>
-    <section id="section4">
-      <div id="section4-title">
-        <h2 class="cormorant-garamond-regular">
-          Tu casa de revista en 3 pasos
-        </h2>
-      </div>
-      <div id="section4-main">
-        <div id="section4-nav">
-          <div id="section4-nav1">
-            <img src="../resources/tailor-icon1.png" height="40px" width="40px"/>
-            <h4 class="roboto-light">Comencemos</h4>
-            <div id="line1" class="nav-line nav-line-active">
-              <span id="subline1" class="line-active"></span>
-            </div>
+      </section>
+
+      <section id="section3">
+        <div id="section3-left"></div>
+        <div id="section3-right">
+          <div>
+            <h1 class="cormorant-garamond-semibold">
+              Convierte tu casa en un Velzia
+            </h1>
+            <hr width="20%" style="margin-left: 0" />
           </div>
-          <div id="section4-nav2">
-            <img src="../resources/tailor-icon2.png" height="40px" width="40px"/>
-            <h4 class="roboto-light">Avancemos</h4>
-            <div id="line2" class="nav-line nav-line-inactive">
-              <span id="subline2" class="line-inactive"></span>
-            </div>
-          </div>
-          <div id="section4-nav3">
-            <img src="../resources/tailor-icon3.png" height="40px" width="40px"/>
-            <h4 class="roboto-light">¡Manos a la obra!</h4>
-            <div id="line3" class="nav-line nav-line-inactive">
-              <span id="subline3" class="line-inactive"></span>
-            </div>
-          </div>
-        </div>
-        <div id="section4-content">
-          <div id="section4-content1" style="display: grid;">
-            <img src="../resources/tailor2.jpeg" alt="" height="auto" width="300px" />
+          <div>
             <p class="roboto-light">
-              Tras una primera llamada telefónica informativa, nuestros
-              interioristas se reúnen con los clientes en las oficinas de Velzia
-              para definir el proyecto.
+              Velzia Tailor se especializa en crear
+              <b>hogares de ensueño</b> con un servicio integral de reformas y
+              diseño de interiores, proporcionando
+              <b>soluciones “llave en mano”</b> que abarcan desde la
+              conceptualización hasta la entrega final del proyecto.
             </p>
           </div>
-          <div id="section4-content2" style="display: none;">
-            <img src="../resources/tailor1.jpeg" alt="" height="auto" width="300px" />
+          <div>
             <p class="roboto-light">
-              Se presentan las primeras ideas de distribución en una segunda
-              reunión, donde nuestros interioristas y jefes de obra colaboran
-              con el cliente para definir posibles cambios y establecer el plazo
-              final de la obra.
+              Entendemos que el tiempo es un recurso valioso por lo que nos
+              encargamos de todo el proceso, desde la
+              <b>planificación inicial</b> hasta la elección del
+              <b>mobiliario y atrezzo</b>, para que nuestros clientes puedan
+              disfrutar de sus nuevos espacios sin demoras innecesarias.
             </p>
           </div>
-          <div id="section4-content3" style="display: none;">
-            <img src="../resources/tailor4.jpeg" alt="" height="auto" width="300px" />
-            <p class="roboto-light">
-              Con el proyecto definido al completo se realizan los planos
-              adicionales y se cierra el presupuesto final. Es el momento de
-              comenzar la obra, acompañándote durante el proceso, desde su
-              inicio hasta la entrega, dónde hacemos un control de calidad con
-              el cliente.
-            </p>
+          <div>
+            <a href="#form-section">
+              <button id="contact-button2">QUIERO EMPEZAR MI PROYECTO</button>
+            </a>
           </div>
         </div>
-      </div>
-    </section>
-    <section id="form-section">
-      <div data-aos="fade-up">
-        <h3 class="cormorant-garamond-light">
-          Danos la oportunidad de explicarte nuestro modelo de negocio sin
-          ningún tipo de compromiso.
-        </h3>
-        <div id="form-div">
-          <div class="form-container">
-            <form action="https://sig-api.chapnikandgiesen.com/api/leads/form" method="post" id="login">
-              <div id="form-name">
-                <input id="name" type="text" name="full_name" placeholder="NOMBRE *" required />
+      </section>
+      <section id="section4">
+        <div id="section4-title">
+          <h2 class="cormorant-garamond-regular">
+            Tu casa de revista en 3 pasos
+          </h2>
+        </div>
+        <div id="section4-main">
+          <div id="section4-nav">
+            <div id="section4-nav1">
+              <img
+                src="../resources/tailor-icon1.png"
+                height="40px"
+                width="40px"
+              />
+              <h4 class="roboto-light">Comencemos</h4>
+              <div id="line1" class="nav-line nav-line-active">
+                <span id="subline1" class="line-active"></span>
               </div>
-              <div id="form-tel">
-                <input
-                  id="phone"
-                  type="tel"
-                  name="phone"
-                  onblur="process(event)"
-                  placeholder="TELEFONO *"
-                  required
-                />
-                <div
-                  class="alert alert-error roboto-regular"
-                  style="display: none"
-                ></div>
+            </div>
+            <div id="section4-nav2">
+              <img
+                src="../resources/tailor-icon2.png"
+                height="40px"
+                width="40px"
+              />
+              <h4 class="roboto-light">Avancemos</h4>
+              <div id="line2" class="nav-line nav-line-inactive">
+                <span id="subline2" class="line-inactive"></span>
               </div>
-              <div id="form-email">
-                <input id="email" type="email" name="email" placeholder="EMAIL *"/>
+            </div>
+            <div id="section4-nav3">
+              <img
+                src="../resources/tailor-icon3.png"
+                height="40px"
+                width="40px"
+              />
+              <h4 class="roboto-light">¡Manos a la obra!</h4>
+              <div id="line3" class="nav-line nav-line-inactive">
+                <span id="subline3" class="line-inactive"></span>
               </div>
-              <div id="form-check1">
-                <input type="checkbox" name="accept_terms" id="privacy-checkbox" required />
-                <label for="privacy-checkbox" class="roboto-regular">He leído y acepto la política de
-                  <a href="../politicas/politica-privacidad.html">privacidad</a>.</label>
-              </div>
-              <div id="form-check2">
-                <input type="checkbox" name="receive_information" id="ad-checkbox" />
-                <label for="ad-checkbox" class="roboto-regular">Acepto recibir información de nuestros inmuebles,
-                  incluso
-                  por medios electrónicos.</label>
-              </div>
-              <div id="form-submit">
-                <button type="button" id="submit">Enviar</button>
-              </div>
-              <div id="form-warn">
-                <p class="roboto-regular">
-                  <b>Finalidades:</b> Responder a sus solicitudes y remitirle
-                  información comercial de nuestros productos y servicios
-                  inmobiliarios, incluso por medios electrónicos.
-                  <b>Derechos: </b>Puede retirar su consentimiento y acceder,
-                  rectificar, suprimir sus datos y demás derechos en
-                  chgg@delegado-datos.com. <b>Más Información </b>en
-                  <a href="../politicas/politica-privacidad.html">Política de Privacidad.</a>
-                </p>
-              </div>
-            </form>
+            </div>
+          </div>
+          <div id="section4-content">
+            <div id="section4-content1" style="display: grid">
+              <img
+                src="../resources/tailor2.jpeg"
+                alt=""
+                height="auto"
+                width="300px"
+              />
+              <p class="roboto-light">
+                Tras una primera llamada telefónica informativa, nuestros
+                interioristas se reúnen con los clientes en las oficinas de
+                Velzia para definir el proyecto.
+              </p>
+            </div>
+            <div id="section4-content2" style="display: none">
+              <img
+                src="../resources/tailor1.jpeg"
+                alt=""
+                height="auto"
+                width="300px"
+              />
+              <p class="roboto-light">
+                Se presentan las primeras ideas de distribución en una segunda
+                reunión, donde nuestros interioristas y jefes de obra colaboran
+                con el cliente para definir posibles cambios y establecer el
+                plazo final de la obra.
+              </p>
+            </div>
+            <div id="section4-content3" style="display: none">
+              <img
+                src="../resources/tailor4.jpeg"
+                alt=""
+                height="auto"
+                width="300px"
+              />
+              <p class="roboto-light">
+                Con el proyecto definido al completo se realizan los planos
+                adicionales y se cierra el presupuesto final. Es el momento de
+                comenzar la obra, acompañándote durante el proceso, desde su
+                inicio hasta la entrega, dónde hacemos un control de calidad con
+                el cliente.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+      <section id="form-section">
+        <div data-aos="fade-up">
+          <h3 class="cormorant-garamond-light">
+            Danos la oportunidad de explicarte nuestro modelo de negocio sin
+            ningún tipo de compromiso.
+          </h3>
+          <div id="form-div">
+            <div class="form-container">
+              <form
+                action="https://sig-api.chapnikandgiesen.com/api/leads/form"
+                method="post"
+                id="login"
+              >
+                <div id="form-name">
+                  <input
+                    id="name"
+                    type="text"
+                    name="full_name"
+                    placeholder="NOMBRE *"
+                    required
+                  />
+                </div>
+                <div id="form-tel">
+                  <input
+                    id="phone"
+                    type="tel"
+                    name="phone"
+                    onblur="process(event)"
+                    placeholder="TELEFONO *"
+                    required
+                  />
+                  <div
+                    class="alert alert-error roboto-regular"
+                    style="display: none"
+                  ></div>
+                </div>
+                <div id="form-email">
+                  <input
+                    id="email"
+                    type="email"
+                    name="email"
+                    placeholder="EMAIL *"
+                  />
+                </div>
+                <div id="form-check1">
+                  <input
+                    type="checkbox"
+                    name="accept_terms"
+                    id="privacy-checkbox"
+                    required
+                  />
+                  <label for="privacy-checkbox" class="roboto-regular"
+                    >He leído y acepto la política de
+                    <a href="../politicas/politica-privacidad.html"
+                      >privacidad</a
+                    >.</label
+                  >
+                </div>
+                <div id="form-check2">
+                  <input
+                    type="checkbox"
+                    name="receive_information"
+                    id="ad-checkbox"
+                  />
+                  <label for="ad-checkbox" class="roboto-regular"
+                    >Acepto recibir información de nuestros inmuebles, incluso
+                    por medios electrónicos.</label
+                  >
+                </div>
+                <div id="form-submit">
+                  <button type="button" id="submit">Enviar</button>
+                </div>
+                <div id="form-warn">
+                  <p class="roboto-regular">
+                    <b>Finalidades:</b> Responder a sus solicitudes y remitirle
+                    información comercial de nuestros productos y servicios
+                    inmobiliarios, incluso por medios electrónicos.
+                    <b>Derechos: </b>Puede retirar su consentimiento y acceder,
+                    rectificar, suprimir sus datos y demás derechos en
+                    chgg@delegado-datos.com. <b>Más Información </b>en
+                    <a href="../politicas/politica-privacidad.html"
+                      >Política de Privacidad.</a
+                    >
+                  </p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
     </section>
-  </section>
-  <footer id="footer">
-    <img src="../resources/logo-index.png" alt="logo-velzia" height="100" width="140" />
-    <nav class="menu-footer">
-      <ul>
-        <li class="nav-li">
-          <a href="../blog/" class="blank-link nav-link-white roboto-thin">Blog</a>
-        </li>
-        <li class="nav-li">
-          <a href="../politicas/politica-privacidad.html" class="blank-link nav-link-white roboto-thin">Política de
-            Privacidad</a>
-        </li>
-        <li class="nav-li">
-          <a href="../politicas/politica-cookies.html" class="blank-link nav-link-white roboto-thin">Política de
-            Cookies</a>
-        </li>
-        <li class="nav-li">
-          <a href="../politicas/aviso-legal.html" class="blank-link nav-link-white roboto-thin">Aviso legal</a>
-        </li>
-      </ul>
-    </nav>
-    <nav class="rrss">
-      <ul>
-        <li class="nav-li">
-          <a href="https://www.facebook.com/people/Velzia-by-ChapnikGiesen/100075860846740/?ref=pages_you_manage"
-            target="_blank" class="blank-link nav-link-white">
-            <img src="../resources/logo-de-facebook.png" alt="facebook" width="20" height="20" />
-          </a>
-        </li>
-        <li class="nav-li">
-          <a href="https://www.instagram.com/velzia.es/" target="_blank" class="blank-link nav-link-white">
-            <img src="../resources/instagram.png" alt="instagram" width="20" height="20" />
-          </a>
-        </li>
-        <li class="nav-li">
-          <a href="https://www.pinterest.es/velziabychapnikandgiesen/" target="_blank"
-            class="blank-link nav-link-white">
-            <img src="../resources/logotipo-de-pinterest.png" alt="pinterest" width="20" height="20" />
-          </a>
-        </li>
-        <li class="nav-li">
-          <a href="https://www.youtube.com/@velziabychapnikgiesen5789/videos" target="_blank"
-            class="blank-link nav-link-white">
-            <img src="../resources/youtube.png" alt="youtube" width="20" height="20" />
-          </a>
-        </li>
-        <li class="nav-li">
-          <a href="https://www.tiktok.com/@velzia" target="_blank" class="blank-link nav-link-white">
-            <img src="../resources/tiktok-64.png" alt="tiktok" width="20" height="20" />
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </footer>
-  <script src="../js/functions.js"></script>
-  <script src="../js/tailor.js"></script>
-  <script>
-    const submitBtn = document.getElementById("submit");
-    const phoneInputField = document.querySelector("#phone");
-    const phoneInput = window.intlTelInput(phoneInputField, {
-      initialCountry: "es",
-      utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/23.0.8/js/utils.js",
-    });
-
-    const error = document.querySelector(".alert-error");
-
-    function process(event) {
-      event.preventDefault();
-
-      const phoneNumber = phoneInput.getNumber();
-      if (!phoneInput.isValidNumber()) {
-        error.style.display = "";
-        error.innerHTML = `Número inválido.`;
-      } else {
-        error.style.display = "none";
-      }
-    }
-    submitBtn.addEventListener("click", function () {
-      event.preventDefault();
-      let name = document.getElementById("name");
-      let phone2 = document.getElementById("phone");
-      let email2 = document.getElementById("email");
-      let accept_terms2 = document.getElementById("privacy-checkbox");
-      let receive_information2 = document.getElementById("ad-checkbox");
-      fetch("https://sig-api.chapnikandgiesen.com/api/leads/form", {
-        method: "POST",
-        body: new URLSearchParams({
-          formTitle: window.location.search,
-          full_name: name.value,
-          phone: phone2.value,
-          email: email2.value,
-          accept_terms: accept_terms2.checked,
-          receive_information: receive_information2.checked,
-        }),
-      }).then((response) => {
-        console.log(response);
-        window.location.href = "../thank-you.html";
+    <footer id="footer">
+      <img
+        src="../resources/logo-index.png"
+        alt="logo-velzia"
+        height="100"
+        width="140"
+      />
+      <nav class="menu-footer">
+        <ul>
+          <li class="nav-li">
+            <a href="../blog/" class="blank-link nav-link-white roboto-thin"
+              >Blog</a
+            >
+          </li>
+          <li class="nav-li">
+            <a
+              href="../politicas/politica-privacidad.html"
+              class="blank-link nav-link-white roboto-thin"
+              >Política de Privacidad</a
+            >
+          </li>
+          <li class="nav-li">
+            <a
+              href="../politicas/politica-cookies.html"
+              class="blank-link nav-link-white roboto-thin"
+              >Política de Cookies</a
+            >
+          </li>
+          <li class="nav-li">
+            <a
+              href="../politicas/aviso-legal.html"
+              class="blank-link nav-link-white roboto-thin"
+              >Aviso legal</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <nav class="rrss">
+        <ul>
+          <li class="nav-li">
+            <a
+              href="https://www.facebook.com/people/Velzia-by-ChapnikGiesen/100075860846740/?ref=pages_you_manage"
+              target="_blank"
+              class="blank-link nav-link-white"
+            >
+              <img
+                src="../resources/logo-de-facebook.png"
+                alt="facebook"
+                width="20"
+                height="20"
+              />
+            </a>
+          </li>
+          <li class="nav-li">
+            <a
+              href="https://www.instagram.com/velzia.es/"
+              target="_blank"
+              class="blank-link nav-link-white"
+            >
+              <img
+                src="../resources/instagram.png"
+                alt="instagram"
+                width="20"
+                height="20"
+              />
+            </a>
+          </li>
+          <li class="nav-li">
+            <a
+              href="https://www.pinterest.es/velziabychapnikandgiesen/"
+              target="_blank"
+              class="blank-link nav-link-white"
+            >
+              <img
+                src="../resources/logotipo-de-pinterest.png"
+                alt="pinterest"
+                width="20"
+                height="20"
+              />
+            </a>
+          </li>
+          <li class="nav-li">
+            <a
+              href="https://www.youtube.com/@velziabychapnikgiesen5789/videos"
+              target="_blank"
+              class="blank-link nav-link-white"
+            >
+              <img
+                src="../resources/youtube.png"
+                alt="youtube"
+                width="20"
+                height="20"
+              />
+            </a>
+          </li>
+          <li class="nav-li">
+            <a
+              href="https://www.tiktok.com/@velzia"
+              target="_blank"
+              class="blank-link nav-link-white"
+            >
+              <img
+                src="../resources/tiktok-64.png"
+                alt="tiktok"
+                width="20"
+                height="20"
+              />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+    <script src="../js/functions.js"></script>
+    <script src="../js/tailor.js"></script>
+    <script>
+      const submitBtn = document.getElementById("submit");
+      const phoneInputField = document.querySelector("#phone");
+      const phoneInput = window.intlTelInput(phoneInputField, {
+        initialCountry: "es",
+        utilsScript:
+          "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/23.0.8/js/utils.js",
       });
-    });
-  </script>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-</body>
 
+      const error = document.querySelector(".alert-error");
+
+      function process(event) {
+        event.preventDefault();
+
+        const phoneNumber = phoneInput.getNumber();
+        if (!phoneInput.isValidNumber()) {
+          error.style.display = "";
+          error.innerHTML = `Número inválido.`;
+        } else {
+          error.style.display = "none";
+        }
+      }
+      submitBtn.addEventListener("click", function () {
+        event.preventDefault();
+        let name = document.getElementById("name");
+        let phone2 = document.getElementById("phone");
+        let email2 = document.getElementById("email");
+        let accept_terms2 = document.getElementById("privacy-checkbox");
+        let receive_information2 = document.getElementById("ad-checkbox");
+        fetch("https://sig-api.chapnikandgiesen.com/api/leads/form", {
+          method: "POST",
+          body: new URLSearchParams({
+            formTitle: window.location.search,
+            full_name: name.value,
+            phone: phone2.value,
+            email: email2.value,
+            accept_terms: accept_terms2.checked,
+            receive_information: receive_information2.checked,
+          }),
+        }).then((response) => {
+          console.log(response);
+          window.location.href = "../thank-you.html";
+        });
+      });
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>
