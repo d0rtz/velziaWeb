@@ -393,7 +393,7 @@ h1{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 5%;
+  margin: 5% 15%;
 }
 #section4-content1 img, #section4-content2 img, #section4-content3 img{
   width: 100%;
