@@ -318,9 +318,10 @@ button {
 #three-images{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
 }
 #three-images img{
-    width: 99%;
+    width: 100%;
     height: auto;
 }
 #section4 {
