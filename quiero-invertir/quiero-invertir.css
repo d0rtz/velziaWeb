@@ -201,6 +201,7 @@ button {
 /* MAIN */
 
 #sale {
+  height: 100vh;
   position: relative;
   overflow: hidden;
   object-fit: cover;
