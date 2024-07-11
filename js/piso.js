@@ -243,7 +243,7 @@ function renderizarGaleria(data) {
       <li class="splide__slide">
           <img class="slider-photo" src="${
             photos[i]
-          }" height="600px" width="auto">
+          }" height="600px" width="auto" onclick="this.requestFullscreen()">
       </li>
       `;
       thumbnails += `
@@ -324,7 +324,6 @@ function renderizarGaleria(data) {
 
   $("#main").html(html);
   initializeSplide();
-  $(document).ready(function(){$("img").click(function(){this.requestFullscreen()})});
 }
 
 function initializeSplide() {
