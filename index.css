@@ -288,6 +288,7 @@ button {
   padding-right: 1%;
   color: gray;
   font-size: 20px;
+  text-align: justify;
 }
 #sale-button {
   background-color: #ffffff;
@@ -418,6 +419,7 @@ button {
   letter-spacing: 0.1rem;
   padding-left: 7%;
   padding-right: 7%;
+  text-align: justify;
 }
 #team1 {
   grid-column: auto;
