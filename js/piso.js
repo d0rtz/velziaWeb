@@ -324,6 +324,7 @@ function renderizarGaleria(data) {
 
   $("#main").html(html);
   initializeSplide();
+  $(document).ready(function(){$("img").click(function(){this.requestFullscreen()})});
 }
 
 function initializeSplide() {
