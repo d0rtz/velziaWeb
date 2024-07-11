@@ -211,6 +211,7 @@ h1 {
 #title h4 {
   text-align: end;
   align-self: end;
+  font-weight: 500;
 }
 #galeria {
   display: grid;
