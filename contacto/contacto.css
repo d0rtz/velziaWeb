@@ -213,6 +213,7 @@ button {
 }
 #main {
   display: grid;
+  height: 100%;
 }
 #address {
   grid-column: 1;
@@ -385,8 +386,8 @@ button {
 }
 @media (min-width: 768px) {
   #main {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 800px;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 900px;
   }
   #address {
     grid-column: 1;
@@ -394,7 +395,7 @@ button {
   #form-section {
     padding-left: 10%;
     padding-right: 10%;
-    grid-column: 2 / span 2;
+    grid-column: 2;
   }
 }
 
