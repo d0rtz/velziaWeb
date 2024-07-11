@@ -232,6 +232,10 @@ button {
   text-align: center;
   z-index: 998;
 }
+.content img{
+  width: auto;
+  height: 70px;
+}
 .content h2 {
   font-size: 29px;
   padding-left: 30%;
@@ -252,7 +256,6 @@ button {
 }
 
 #section1 {
-  padding: 5% 25% 5% 25%;
   text-align: center;
 }
 #section1 h2 {
@@ -264,7 +267,6 @@ button {
 }
 #section2 {
   display: grid;
-  padding: 5%;
 }
 #section2 div {
   display: grid;
@@ -541,9 +543,13 @@ button {
     padding-left: 8%;
     padding-right: 8%;
   }
+  #section1{
+    padding: 5%;
+  }
   #section2 {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(1, 1fr);
+    padding: 5%;
   }
   #section3 {
     grid-template-columns: repeat(1, 1fr);
@@ -591,12 +597,17 @@ button {
     width: 300px;
     padding: 7%;
   }
+  #section1{
+    padding: 5% 25% 5% 25%;
+  }
   #section2 {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    padding: 5% 20%;
   }
   #section3 {
     grid-template-columns: repeat(2, 1fr);
+    padding: 0 10%;
   }
   #form-section {
     padding-left: 10%;

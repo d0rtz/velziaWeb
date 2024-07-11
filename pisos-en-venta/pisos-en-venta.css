@@ -249,8 +249,25 @@ button {
   padding-right: 40%;
   padding-top: 2%;
   padding-bottom: 2%;
+  width: max-content;
 }
 
+@media (max-width: 768px) {
+  #contact-button {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 25%;
+    padding-right: 25%;
+  }
+}
+@media (min-width: 768px) {
+  #contact-button {
+    padding-left: 40%;
+    padding-right: 40%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+  }
+}
 /*FORM*/
 
 :root {
@@ -376,7 +393,8 @@ form .page .btns button.next {
 }
 .container .progress-bar .step p {
   font-weight: 500;
-  font-size: 18px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
   color: #000;
   margin-bottom: 8px;
 }
@@ -410,7 +428,7 @@ form .page .btns button.next {
   content: "";
   bottom: 11px;
   right: -94px;
-  height: 3px;
+  height: 2px;
   width: 92px;
   background: #262626;
 }
@@ -478,7 +496,7 @@ form .page .btns button.next {
 }
 @media screen and (max-width: 490px) {
   :root {
-    --containerWidth: 100%;
+    --containerWidth: 97%;
   }
   .container {
     box-sizing: border-box;
