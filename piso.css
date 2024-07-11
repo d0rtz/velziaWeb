@@ -283,7 +283,7 @@ h2{
 
 #galeria {
   display: grid;
-  margin: 0% 6%;
+  margin: 1% 6%;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(auto, 100vh);
   gap: 20px;
