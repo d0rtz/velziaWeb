@@ -286,9 +286,7 @@ h2{
   margin: 0% 6%;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(auto, 100vh);
-}
-#galeria div {
-  margin: 1%;
+  gap: 20px;
 }
 
 @media (max-width: 768px) {
