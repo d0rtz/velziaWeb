@@ -329,14 +329,14 @@ function renderizarGaleria(data) {
 function initializeSplide() {
   var main = new Splide("#image-slider", {
     type: "slide",
-    perPage: 1,
+    perPage: 3,
     perMove: 1,
     height: "600px",
     focus: "center",
     pagination: false,
     arrows: true,
     autoWidth: true,
-    gap: 320,
+    gap: 100,
   });
 
   var thumbnails = new Splide("#thumbnail-slider", {
