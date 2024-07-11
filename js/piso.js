@@ -228,7 +228,7 @@ function renderizarGaleria(data) {
       <li class="splide__slide">
           <img class="slider-photo" src="${
             photos[i]
-          }" height="600px" width="auto">
+          }" height="600px" width="auto" onclick="this.requestFullscreen()">
       </li>
       `;
       thumbnails += `
