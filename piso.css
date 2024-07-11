@@ -283,7 +283,7 @@ h2{
 
 #galeria {
   display: grid;
-  margin: 1% 6%;
+  margin: 20px 6%;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(auto, 100vh);
   gap: 20px;
@@ -358,9 +358,9 @@ h2{
 }
 
 .slideshow-container {
-  max-width: 80vw;
+  max-width: 90vw;
   position: relative;
-  margin: auto;
+  margin: 0 6%;
   height: 700px;
 }
 
@@ -382,9 +382,9 @@ h2{
 }
 
 #related-projects{
-  max-width: 80vw;
+  max-width: 90vw;
   position: relative;
-  margin: auto;
+  margin: 0 6%;
   height: 500px;
 }
 #related-projects-title{
