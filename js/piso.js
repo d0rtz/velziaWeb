@@ -360,7 +360,7 @@ function initializeSplide() {
     },
   });
 
-  main.sync(thumbnails);
+  thumbnails.sync(main);
   main.mount();
   thumbnails.mount();
 }
