@@ -371,7 +371,6 @@ function initializeRelatedSplide() {
     perPage: 3,
     perMove: 3,
     height: "400px",
-    focus: "center",
     pagination: false,
     arrows: true,
     cover: true,
