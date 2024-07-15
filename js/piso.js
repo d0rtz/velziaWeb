@@ -336,7 +336,7 @@ function initializeSplide() {
     pagination: false,
     arrows: true,
     autoWidth: true,
-    gap: 100,
+    gap: 20,
   });
 
   var thumbnails = new Splide("#thumbnail-slider", {
