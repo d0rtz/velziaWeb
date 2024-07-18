@@ -362,7 +362,7 @@ function renderizarGaleria(data) {
 function initializeSplide() {
   var main = new Splide("#image-slider", {
     type: "slide",
-    perPage: 3,
+    perPage: 1,
     perMove: 1,
     height: "600px",
     focus: "center",
