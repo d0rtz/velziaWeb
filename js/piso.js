@@ -356,7 +356,33 @@ function renderizarGaleria(data) {
   `;
 
   $("#main").html(html);
-  initializeSplide();
+  waitForImagesToLoad(document.querySelectorAll('#image-slider img'), initializeSplide);
+}
+
+
+function waitForImagesToLoad(images, callback) {
+  let loadedImages = 0;
+  images.forEach(image => {
+    if (image.complete) {
+      loadedImages++;
+    } else {
+      image.addEventListener('load', () => {
+        loadedImages++;
+        if (loadedImages === images.length) {
+          callback();
+        }
+      });
+      image.addEventListener('error', () => {
+        loadedImages++;
+        if (loadedImages === images.length) {
+          callback();
+        }
+      });
+    }
+  });
+  if (loadedImages === images.length) {
+    callback();
+  }
 }
 
 function initializeSplide() {
