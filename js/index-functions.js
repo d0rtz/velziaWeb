@@ -142,14 +142,14 @@ function initializePartnersSplide() {
   console.log("Partners Slide Log");
   var partners = new Splide("#partners-slider", {
     type: "loop",
-    perPage: 5,
+    perPage: 1,
     perMove: 1,
     height: "150px",
     autoWidth: true,
     pagination: true,
     arrows: false,
     cover: true,
-    gap: 20,
+    gap: 40,
     breakpoints: {
       768: {
         perPage: 1,

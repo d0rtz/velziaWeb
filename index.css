@@ -489,9 +489,6 @@ button {
   font-size: 80px;
 }
 
-#partners-slider{
-  width: 830px;
-}
 .splide__slide{
   width: 150px;
 }
@@ -559,6 +556,9 @@ button {
   }
   #chateau-info p {
     font-size: 25px;
+  }
+  #partners-slider{
+    width: 340px;
   }
 }
 @media (min-width: 768px) {
@@ -631,6 +631,9 @@ button {
   #chateau-info {
     grid-column: 3 / span 2;
     grid-row: 2 / span 2;
+  }
+  #partners-slider{
+    width: 910px;
   }
 }
 /* FOOTER */
