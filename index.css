@@ -482,7 +482,7 @@ button {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 5%;
+  margin: 0% 5% 5% 5%;
 
 }
 #partners h1 {
