@@ -20,18 +20,23 @@ fetch(url, requestOptions)
       switch (gama) {
         case "riviera":
             htmlTitle = "<h1>RIVIERA</h1><h4>Lujo a precio asequible</h4>";
+            document.getElementById("li-riv").classList.add("subnav-li-active");
             break;
         case "emerald":
             htmlTitle = "<h1>EMERALD</h1><h4>El equilibrio perfecto entre elegancia y funcionalidad</h4>";
+            document.getElementById("li-eme").classList.add("subnav-li-active");
             break;
         case "grand-emerald":
             htmlTitle = "<h1>GRAND EMERALD</h1><h4>Máximo confort, sofisticación y diseño</h4>";
+            document.getElementById("li-gem").classList.add("subnav-li-active");
             break;
         case "milano":
             htmlTitle = "<h1>MILANO</h1><h4>Modernidad y alta decoración en perfecta armonía</h4>";
+            document.getElementById("li-mil").classList.add("subnav-li-active");
             break;
         case "palazzo":
             htmlTitle = "<h1>PALAZZO</h1><h4>El más exquisito lujo contemporáneo en los barrios más exclusivos de Madrid​</h4>";
+            document.getElementById("li-pal").classList.add("subnav-li-active");
             break;
       
         default:

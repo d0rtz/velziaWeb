@@ -86,6 +86,10 @@ h1 {
   margin: 5px; /* Añade un pequeño margen */
 }
 
+.subnav-li-active{
+  color: #bda76f;
+}
+
 .subnav-li:hover {
   background-color: rgb(53, 53, 53);
 }

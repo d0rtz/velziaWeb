@@ -149,18 +149,23 @@ function relatedProjects(pisos) {
   switch (data.house.gama) {
     case "riviera":
       relatedGama = ["emerald"];
+      document.getElementById("li-riv").classList.add("subnav-li-active");
       break;
     case "emerald":
       relatedGama = ["grand-emerald", "riviera"];
+      document.getElementById("li-eme").classList.add("subnav-li-active");
       break;
     case "grand-emerald":
       relatedGama = ["milano", "emerald"];
+      document.getElementById("li-gem").classList.add("subnav-li-active");
       break;
     case "milano":
       relatedGama = ["palazzo", "grand-emerald"];
+      document.getElementById("li-mil").classList.add("subnav-li-active");
       break;
     case "palazzo":
       relatedGama = ["milano"];
+      document.getElementById("li-pal").classList.add("subnav-li-active");
       break;
 
     default:
