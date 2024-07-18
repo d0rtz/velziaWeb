@@ -356,34 +356,38 @@ function renderizarGaleria(data) {
   `;
 
   $("#main").html(html);
-  waitForImagesToLoad(document.querySelectorAll('#image-slider img'), initializeSplide);
+  waitForImagesToLoad(document.querySelectorAll('#image-slider img'), 5, initializeSplide);
 }
 
 
-function waitForImagesToLoad(images, callback) {
+function waitForFirstImagesToLoad(images, count, callback) {
   let loadedImages = 0;
-  images.forEach(image => {
-    if (image.complete) {
+  for (let i = 0; i < count && i < images.length; i++) {
+    if (images[i].complete) {
       loadedImages++;
+      if (loadedImages === count) {
+        callback();
+      }
     } else {
-      image.addEventListener('load', () => {
+      images[i].addEventListener('load', () => {
         loadedImages++;
-        if (loadedImages === images.length) {
+        if (loadedImages === count) {
           callback();
         }
       });
-      image.addEventListener('error', () => {
+      images[i].addEventListener('error', () => {
         loadedImages++;
-        if (loadedImages === images.length) {
+        if (loadedImages === count) {
           callback();
         }
       });
     }
-  });
-  if (loadedImages === images.length) {
+  }
+  if (loadedImages === count) {
     callback();
   }
 }
+
 
 function initializeSplide() {
   var main = new Splide("#image-slider", {
