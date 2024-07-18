@@ -367,10 +367,10 @@ function initializeSplide() {
     height: "600px",
     focus: "center",
     trimSpace: false,
-    start: 1,
     pagination: false,
     arrows: true,
     autoWidth: true,
+    cover: true,
     gap: 20,
   });
 
