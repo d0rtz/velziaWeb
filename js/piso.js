@@ -369,7 +369,7 @@ function initializeSplide() {
     trimSpace: false,
     pagination: false,
     arrows: true,
-    cover: true,
+    autoWidth: true,
     gap: 20,
   });
 
@@ -394,9 +394,9 @@ function initializeSplide() {
     },
   });
 
+  thumbnails.mount();
   main.sync(thumbnails);
   main.mount();
-  thumbnails.mount();
 }
 
 function initializeRelatedSplide() {
