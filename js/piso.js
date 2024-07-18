@@ -369,7 +369,6 @@ function initializeSplide() {
     trimSpace: false,
     pagination: false,
     arrows: true,
-    autoWidth: true,
     cover: true,
     gap: 20,
   });
