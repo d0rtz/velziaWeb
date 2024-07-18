@@ -367,6 +367,7 @@ function initializeSplide() {
     height: "600px",
     focus: "center",
     trimSpace: false,
+    start: 0,
     pagination: false,
     arrows: true,
     autoWidth: true,
