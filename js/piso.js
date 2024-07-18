@@ -367,7 +367,7 @@ function initializeSplide() {
     height: "600px",
     focus: "center",
     trimSpace: false,
-    start: 0,
+    start: 1,
     pagination: false,
     arrows: true,
     autoWidth: true,
@@ -380,6 +380,7 @@ function initializeSplide() {
     fixedHeight: 58,
     isNavigation: true,
     gap: 10,
+    focus: "center",
     pagination: false,
     arrows: false,
     dragMinThreshold: {
