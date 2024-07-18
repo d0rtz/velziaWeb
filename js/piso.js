@@ -380,7 +380,6 @@ function initializeSplide() {
     fixedHeight: 58,
     isNavigation: true,
     gap: 10,
-    focus: "center",
     pagination: false,
     arrows: false,
     dragMinThreshold: {
