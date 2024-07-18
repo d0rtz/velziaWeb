@@ -241,18 +241,13 @@ h1{
 }
 .content h1 {
   font-size: 14px;
-  padding-left: 39%;
-  padding-right: 39%;
   letter-spacing: 0.2rem;
   line-height: 1.5;
 }
 .content p {
   font-size: 14px;
-  padding-left: 34%;
-  padding-right: 34%;
   line-height: 1.5;
   letter-spacing: 0.1rem;
-
 }
 #contact-button {
   margin-top: 3%;
@@ -542,6 +537,14 @@ h1{
 /*MEDIA QUERIES*/
 
 @media (max-width: 768px) {
+  .content h1 {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+  .content p {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
   #contact-button {
     padding-top: 5%;
     padding-bottom: 5%;
@@ -590,6 +593,14 @@ h1{
   }
 }
 @media (min-width: 768px) {
+  .content h1 {
+    padding-left: 39%;
+    padding-right: 39%;
+  }
+  .content p {
+    padding-left: 30%;
+    padding-right: 30%;
+  }
   #contact-button {
     padding: 7%;
     width: 300px;
