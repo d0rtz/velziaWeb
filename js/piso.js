@@ -397,6 +397,10 @@ function initializeSplide() {
   thumbnails.mount();
   main.sync(thumbnails);
   main.mount();
+
+  main.on('mounted', function() {
+    main.refresh();
+  });
 }
 
 function initializeRelatedSplide() {
