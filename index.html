@@ -29,6 +29,7 @@
       href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
     <title>Velzia - Luxury homes in Madrid</title>
   </head>
 
@@ -107,8 +108,8 @@
           <div class="nav-li">
             <a href="./contacto/" class="nav-link nav-link-white">Contacto</a>
           </div>
-          <div class="nav-li" style="font-size: 22px;">
-            <i id="phone-icon" class='bx bxs-phone' style='color:#f1f1f1;'></i>
+          <div class="nav-li" style="font-size: 22px">
+            <i id="phone-icon" class="bx bxs-phone" style="color: #f1f1f1"></i>
             <a
               href="tel:+34911989927"
               class="nav-link nav-link-white"
@@ -192,7 +193,9 @@
           </div>
           <hr />
           <div class="mobile-nav-item">
-            <a href="./tu-casa-a-medida/" class="blank-link nav-link-black">Reformas</a>
+            <a href="./tu-casa-a-medida/" class="blank-link nav-link-black"
+              >Reformas</a
+            >
           </div>
           <hr />
           <div class="mobile-nav-item">
@@ -212,7 +215,7 @@
           </div>
           <hr />
           <div class="mobile-nav-item">
-            <i class='bx bxs-phone'></i>
+            <i class="bx bxs-phone"></i>
             <a
               href="tel:+34911989927"
               class="blank-link nav-link-black"
@@ -460,12 +463,35 @@
 
       <section id="partners">
         <h1 class="cormorant-garamond-semibold">Partners</h1>
-        <div id="slider">
-          <img src="resources/LogoGooglebueno-01-150x150.png" alt="Google" />
-          <img src="resources/Diseno-sin-titulo-14-150x150.png" alt="KNAUF" />
-          <img src="resources/Diseno-sin-titulo-15-150x150.png" alt="Duval" />
-          <img src="resources/RocaLogo-150x150.png" alt="Roca" />
-          <img src="resources/BoschLogo-150x150.png" alt="Bosch" />
+        <div id="partners-slider" class="splide">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <img
+                  src="resources/LogoGooglebueno-01-150x150.png"
+                  alt="Google"
+                />
+              </li>
+              <li class="splide__slide">
+                <img
+                  src="resources/Diseno-sin-titulo-14-150x150.png"
+                  alt="KNAUF"
+                />
+              </li>
+              <li class="splide__slide">
+                <img
+                  src="resources/Diseno-sin-titulo-15-150x150.png"
+                  alt="Duval"
+                />
+              </li>
+              <li class="splide__slide">
+                <img src="resources/RocaLogo-150x150.png" alt="Roca" />
+              </li>
+              <li class="splide__slide">
+                <img src="resources/BoschLogo-150x150.png" alt="Bosch" />
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
     </section>
@@ -480,7 +506,9 @@
       <nav class="menu-footer">
         <ul>
           <li class="nav-li">
-            <a href="./blog/" class="blank-link nav-link-white roboto-thin">Blog</a>
+            <a href="./blog/" class="blank-link nav-link-white roboto-thin"
+              >Blog</a
+            >
           </li>
           <li class="nav-li">
             <a
@@ -570,6 +598,8 @@
         </ul>
       </nav>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
     <script src="./js/index-functions.js"></script>
+    <script>initializePartnersSplide();</script>
   </body>
 </html>

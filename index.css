@@ -392,6 +392,7 @@ button {
 }
 #palazzo2 {
   background-image: url(resources/VELZIA\ PINTOR\ ROSALES\ 70\ WEB_004.jpg);
+  background-position: center bottom;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.7);
   color: #f1f1f1;
   padding-top: 10%;
@@ -477,11 +478,23 @@ button {
 }
 #partners {
   text-align: center;
-  display: block;
-  margin-bottom: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 5%;
+
 }
 #partners h1 {
   font-size: 80px;
+}
+
+#partners-slider{
+  
+  width: 750px;
+}
+.splide__slide{
+  width: 150px;
 }
 
 @media (max-width: 768px) {
