@@ -231,9 +231,11 @@ button {
   align-items: center;
   justify-content: center;
   z-index: 998;
+  transition: all 0.3s ease-in;
 }
 #form-start-div{
   color: #f1f1f1;
+  transition: max-width 0.3s ease-in;
 }
 .main-container div h2 {
   font-size: 38px;
@@ -293,8 +295,11 @@ button {
   background: #fff;
   text-align: center;
   border-radius: 5px;
-  display: none;
-  padding: 0px 35px 10px 35px;
+  max-width: 0px;
+  visibility: hidden;
+  opacity: 0;
+  padding: 0px;
+  transition: all 0.3s ease-in;
 }
 .container header {
   font-size: 35px;

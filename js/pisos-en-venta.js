@@ -114,6 +114,11 @@ const container = document.getElementsByClassName("container")[0];
 
 
 contactBtn.addEventListener("click", () => {
-    formStartDiv.style.display = "none";
-    container.style.display = "block";
+    formStartDiv.style.maxWidth = "0px";
+    formStartDiv.style.visibility = "hidden";
+    formStartDiv.style.opacity = "0";
+    container.style.maxWidth = "1000px";
+    container.style.visibility = "visible";
+    container.style.opacity = "1";
+    container.style.padding = "0px 35px 10px 35px";
 });
