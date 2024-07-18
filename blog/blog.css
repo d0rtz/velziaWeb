@@ -178,11 +178,13 @@ button {
 
 #mobile-subnav {
   margin-left: 20px;
-  transition: all 0.2s ease-in-out;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
 }
 
 #mobile-subnav-image {
-  padding-left: 100px;
+  margin-left: 100px;
+  transition: all 0.3s ease-in-out;
 }
 
 .mobile-subnav-item {

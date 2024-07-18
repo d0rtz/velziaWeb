@@ -76,12 +76,14 @@ hamburguerIcon.addEventListener("click", (event) => {
 });
 
 mobileDropdownBtn.addEventListener("click", (event) => {
-  if (mobileSubnav.style.display == "none") {
-    mobileSubnav.style.display = "block";
-    mobileSubnavImage.src = "../resources/x.png";
+  if (mobileSubnav.style.maxHeight == "0px") {
+    mobileSubnavImage.style.transform = "rotate(45deg)";
+    mobileSubnav.style.maxHeight = "500px";
+    //mobileSubnavImage.src = "../resources/x.png";
   } else {
-    mobileSubnav.style.display = "none";
-    mobileSubnavImage.src = "../resources/plus.png";
+    mobileSubnavImage.style.transform = "rotate(-45deg)";
+    mobileSubnav.style.maxHeight = "0px";
+    //mobileSubnavImage.src = "../resources/plus.png";
   }
 });
 
