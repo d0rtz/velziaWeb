@@ -291,7 +291,7 @@ function renderizarGaleria(data) {
       </div>
     </div>
   `;
-
+  let mobile = screen.width <= 768? true: false;
   let html = `
     <section id="sale">
         <img src="${data.house.background}" alt="" id="background" />
@@ -317,7 +317,19 @@ function renderizarGaleria(data) {
     </section>
     ${
       data.house.sold
-        ? `
+        ? mobile?`
+          <section id="galeria">
+              <div id="img1-div"><img data-aos="fade-up" src="${photos[0]}" alt="img1" id="img1" width="100%" height="100%" /></div>
+              <div id="img2-div"><img data-aos="fade-up" src="${photos[1]}" alt="img2" id="img2" width="100%" height="100%" /></div>
+              <div id="img3-div"><img data-aos="fade-up" src="${photos[2]}" alt="img3" id="img3" width="100%" height="100%" /></div>
+              <div id="img4-div"><img data-aos="fade-up" src="${photos[3]}" alt="img4" id="img4" width="100%" height="100%" /></div>
+          </section>
+          <section class="slideshow-container">
+              ${splideHTML}
+          </section>
+          <section id="related-projects">
+
+          </section>`:`
           <section id="galeria">
               <div id="img1-div"><img data-aos="fade-up" src="${photos[0]}" alt="img1" id="img1" width="100%" height="100%" /></div>
               <div id="img2-div"><img data-aos="fade-right" src="${photos[1]}" alt="img2" id="img2" width="100%" height="100%" /></div>
