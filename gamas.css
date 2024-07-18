@@ -162,6 +162,7 @@ h1 {
   transition: all 0.3s ease-in-out;
 }
 #mobile-subnav-image {
+  transform: rotate(45deg);
   margin-left: 100px;
   transition: all 0.3s ease-in-out;
 }
