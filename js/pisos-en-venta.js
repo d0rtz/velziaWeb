@@ -55,6 +55,15 @@ function initMultiStepForm() {
     }
     submitBtn.addEventListener("click", function () {
         event.preventDefault();
+        let fechaActual = new Date();
+        let dia = fechaActual.getDate();
+        let mes = fechaActual.getMonth() + 1;
+        let anio = fechaActual.getFullYear();
+        let horas = fechaActual.getHours();
+        let minutos = fechaActual.getMinutes();
+        let segundos = fechaActual.getSeconds();
+        let fechaYHoraFormateada = `${dia}/${mes}/${anio} ${horas}:${minutos}:${segundos}`;
+        console.log(fechaYHoraFormateada);
         let budget2 = document.getElementById("budget");
         let zona = document.getElementById("zone");
         let area2 = document.getElementById("area");
@@ -65,6 +74,7 @@ function initMultiStepForm() {
         fetch('https://sig-api.chapnikandgiesen.com/api/leads/form', {
             method: 'POST',
             body: new URLSearchParams({
+              date: fechaYHoraFormateada,
               formTitle: window.location.search,
               budget: budget2.value,
               zone: zona.value,

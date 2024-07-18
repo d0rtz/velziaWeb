@@ -56,22 +56,37 @@
           <div class="nav-li subnava" id="collection-li">
             <a href="#" class="nav-link nav-link-white">Colecciones</a>
             <div class="subnav" id="subnav">
-              <a href="../gama.html?gama=riviera" class="blank-link nav-link-white">
+              <a
+                href="../gama.html?gama=riviera"
+                class="blank-link nav-link-white"
+              >
                 <div class="subnav-li">Riviera - Desde 300.000 €</div>
               </a>
-              <a href="../gama.html?gama=emerald" class="blank-link nav-link-white">
+              <a
+                href="../gama.html?gama=emerald"
+                class="blank-link nav-link-white"
+              >
                 <div class="subnav-li">Emerald - Desde 400.000 €</div>
               </a>
-              <a href="../gama.html?gama=grand-emerald" class="blank-link nav-link-white">
+              <a
+                href="../gama.html?gama=grand-emerald"
+                class="blank-link nav-link-white"
+              >
                 <div class="subnav-li">Grand Emerald - Desde 700.000 €</div>
               </a>
-              <a href="../gama.html?gama=milano" class="blank-link nav-link-white">
+              <a
+                href="../gama.html?gama=milano"
+                class="blank-link nav-link-white"
+              >
                 <div class="subnav-li">Milano - Desde 950.000 €</div>
               </a>
-              <a href="../gama.html?gama=palazzo" class="blank-link nav-link-white">
+              <a
+                href="../gama.html?gama=palazzo"
+                class="blank-link nav-link-white"
+              >
                 <div class="subnav-li">Palazzo - Desde 1.500.000 €</div>
               </a>
-            </div>            
+            </div>
           </div>
           <div class="nav-li">
             <a href="../pisos-en-venta/" class="nav-link nav-link-white"
@@ -79,7 +94,9 @@
             >
           </div>
           <div class="nav-li">
-            <a href="../tu-casa-a-medida/" class="nav-link nav-link-white">Reformas</a>
+            <a href="../tu-casa-a-medida/" class="nav-link nav-link-white"
+              >Reformas</a
+            >
           </div>
           <div class="nav-li">
             <a href="../quiero-invertir/" class="nav-link nav-link-white"
@@ -94,8 +111,8 @@
           <div class="nav-li">
             <a href="../contacto/" class="nav-link nav-link-white">Contacto</a>
           </div>
-          <div class="nav-li" style="font-size: 22px;">
-            <i id="phone-icon" class='bx bxs-phone' style='color:#f1f1f1;'></i>
+          <div class="nav-li" style="font-size: 22px">
+            <i id="phone-icon" class="bx bxs-phone" style="color: #f1f1f1"></i>
             <a
               href="tel:+34911989927"
               class="nav-link nav-link-white"
@@ -187,7 +204,9 @@
           </div>
           <hr />
           <div class="mobile-nav-item">
-            <a href="../tu-casa-a-medida/" class="blank-link nav-link-black">Reformas</a>
+            <a href="../tu-casa-a-medida/" class="blank-link nav-link-black"
+              >Reformas</a
+            >
           </div>
           <hr />
           <div class="mobile-nav-item">
@@ -209,7 +228,7 @@
           </div>
           <hr />
           <div class="mobile-nav-item">
-            <i class='bx bxs-phone'></i>
+            <i class="bx bxs-phone"></i>
             <a
               href="tel:+34911989927"
               class="blank-link nav-link-black"
@@ -257,9 +276,19 @@
           </h3>
           <div id="form-div">
             <div class="form-container">
-              <form action="https://sig-api.chapnikandgiesen.com/api/leads/form" method="post" id="login">
+              <form
+                action="https://sig-api.chapnikandgiesen.com/api/leads/form"
+                method="post"
+                id="login"
+              >
                 <div id="form-name">
-                  <input id="name" type="text" name="full_name" placeholder="NOMBRE *" required />
+                  <input
+                    id="name"
+                    type="text"
+                    name="full_name"
+                    placeholder="NOMBRE *"
+                    required
+                  />
                 </div>
                 <div id="form-tel">
                   <input
@@ -311,7 +340,11 @@
                   >
                 </div>
                 <div id="form-check2">
-                  <input type="checkbox" name="receive_information" id="ad-checkbox" />
+                  <input
+                    type="checkbox"
+                    name="receive_information"
+                    id="ad-checkbox"
+                  />
                   <label for="ad-checkbox" class="roboto-regular"
                     >Acepto recibir información de nuestros inmuebles, incluso
                     por medios electrónicos.</label
@@ -336,7 +369,9 @@
       <nav class="menu-footer">
         <ul>
           <li class="nav-li">
-            <a href="../blog/" class="blank-link nav-link-white roboto-thin">Blog</a>
+            <a href="../blog/" class="blank-link nav-link-white roboto-thin"
+              >Blog</a
+            >
           </li>
           <li class="nav-li">
             <a
@@ -451,28 +486,36 @@
 
       submitBtn.addEventListener("click", function () {
         event.preventDefault();
+        let fechaActual = new Date();
+        let dia = fechaActual.getDate();
+        let mes = fechaActual.getMonth() + 1;
+        let anio = fechaActual.getFullYear();
+        let horas = fechaActual.getHours();
+        let minutos = fechaActual.getMinutes();
+        let segundos = fechaActual.getSeconds();
+        let fechaYHoraFormateada = `${dia}/${mes}/${anio} ${horas}:${minutos}:${segundos}`;
+        console.log(fechaYHoraFormateada);
         let name = document.getElementById("name");
         let phone2 = document.getElementById("phone");
         let message2 = document.getElementById("message");
         let accept_terms2 = document.getElementById("privacy-checkbox");
         let receive_information2 = document.getElementById("ad-checkbox");
-        fetch('https://sig-api.chapnikandgiesen.com/api/leads/form', {
-            method: 'POST',
-            body: new URLSearchParams({
-              formTitle: window.location.search,
-              full_name: name.value,
-              phone: phone2.value,
-              message: message2.value,
-              accept_terms: accept_terms2.checked,
-              receive_information: receive_information2.checked
-            })
-          })
-            .then(response => {
-                console.log(response);
-                window.location.href = "../thank-you.html";
+        fetch("https://sig-api.chapnikandgiesen.com/api/leads/form", {
+          method: "POST",
+          body: new URLSearchParams({
+            date: fechaYHoraFormateada,
+            formTitle: window.location.search,
+            full_name: name.value,
+            phone: phone2.value,
+            message: message2.value,
+            accept_terms: accept_terms2.checked,
+            receive_information: receive_information2.checked,
+          }),
+        }).then((response) => {
+          console.log(response);
+          window.location.href = "../thank-you.html";
         });
-    });
-
+      });
     </script>
     <script
       type="text/javascript"
