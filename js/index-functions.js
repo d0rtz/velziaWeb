@@ -148,6 +148,7 @@ function initializePartnersSplide() {
     autoWidth: true,
     pagination: true,
     arrows: true,
+    focus: "center",
     gap: 40,
     breakpoints: {
       768: {
