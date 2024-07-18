@@ -395,7 +395,7 @@ function initializeSplide() {
     },
   });
 
-  thumbnails.sync(main);
+  main.sync(thumbnails);
   main.mount();
   thumbnails.mount();
 }
