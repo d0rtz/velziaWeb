@@ -393,9 +393,9 @@ function initializeSplide() {
     },
   });
 
-  //thumbnails.sync(main);
+  thumbnails.sync(main);
   main.mount();
-  //thumbnails.mount();
+  thumbnails.mount();
 }
 
 function initializeRelatedSplide() {
