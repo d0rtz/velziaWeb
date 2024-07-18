@@ -356,7 +356,7 @@ function renderizarGaleria(data) {
   `;
 
   $("#main").html(html);
-  waitForImagesToLoad(document.querySelectorAll('#image-slider img'), 5, initializeSplide);
+  waitForFirstImagesToLoad(document.querySelectorAll('#image-slider img'), 5, initializeSplide);
 }
 
 
