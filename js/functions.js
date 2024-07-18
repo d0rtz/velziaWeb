@@ -107,6 +107,26 @@ closeMobileHeaderButton.addEventListener("click", (event) => {
   mobileHeaderBackground.style.visibility = "hidden";
 });
 
+mobileHeaderBackground.addEventListener("click", (event) => {
+  if (event.target === mobileHeaderBackground) {
+    console.log(event + " Cierra menú movil");
+    //mobileHeader.style.left = "";
+    var pos = 0;
+    clearInterval(intervalId2);
+    id = setInterval(moveNav, 10);
+    function moveNav() {
+      if (pos == -300) {
+        clearInterval(intervalId2);
+      } else {
+        pos = pos - 20;
+        mobileHeader.style.right = pos + "px";
+      }
+    }
+    mobileHeaderBackground.style.opacity = "0";
+    mobileHeaderBackground.style.visibility = "hidden";
+  }
+});
+
 // Get the offset position of the navbar
 var sticky = header.offsetTop;
 

@@ -38,13 +38,12 @@ var subNav = document.getElementById("subnav");
 var number = document.getElementById("number");
 var mobileNumber = document.getElementById("mobile-number");
 
-if(utmSource == null){
-  number.href="tel:+34911989927";
+if (utmSource == null) {
+  number.href = "tel:+34911989927";
   number.innerHTML = "34 911 989 927";
-  mobileNumber.href="tel:+34911989927";
+  mobileNumber.href = "tel:+34911989927";
   mobileNumber.innerHTML = "34 911 989 927";
-}else{
-
+} else {
 }
 
 subNavA.addEventListener("mouseenter", (event) => {
@@ -56,7 +55,6 @@ subNavA.addEventListener("mouseleave", (event) => {
   console.log(event + " Cierra submenú");
   subNav.style.display = "none";
 });
-
 
 var intervalId = null;
 hamburguerIcon.addEventListener("click", (event) => {
@@ -106,6 +104,26 @@ closeMobileHeaderButton.addEventListener("click", (event) => {
   }
   mobileHeaderBackground.style.opacity = "0";
   mobileHeaderBackground.style.visibility = "hidden";
+});
+
+mobileHeaderBackground.addEventListener("click", (event) => {
+  if (event.target === mobileHeaderBackground) {
+    console.log(event + " Cierra menú movil");
+    //mobileHeader.style.left = "";
+    var pos = 0;
+    clearInterval(intervalId2);
+    id = setInterval(moveNav, 10);
+    function moveNav() {
+      if (pos == -300) {
+        clearInterval(intervalId2);
+      } else {
+        pos = pos - 20;
+        mobileHeader.style.right = pos + "px";
+      }
+    }
+    mobileHeaderBackground.style.opacity = "0";
+    mobileHeaderBackground.style.visibility = "hidden";
+  }
 });
 
 // Get the offset position of the navbar
