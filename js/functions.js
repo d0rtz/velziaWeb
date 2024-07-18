@@ -72,7 +72,8 @@ hamburguerIcon.addEventListener("click", (event) => {
     }
   }
 
-  mobileHeaderBackground.style.display = "block";
+  mobileHeaderBackground.style.opacity = "1";
+  mobileHeaderBackground.style.visibility = "visible";
 });
 
 mobileDropdownBtn.addEventListener("click", (event) => {
@@ -81,7 +82,7 @@ mobileDropdownBtn.addEventListener("click", (event) => {
     mobileSubnav.style.maxHeight = "500px";
     //mobileSubnavImage.src = "../resources/x.png";
   } else {
-    mobileSubnavImage.style.transform = "rotate(-45deg)";
+    mobileSubnavImage.style.transform = "rotate(0deg)";
     mobileSubnav.style.maxHeight = "0px";
     //mobileSubnavImage.src = "../resources/plus.png";
   }
@@ -98,11 +99,12 @@ closeMobileHeaderButton.addEventListener("click", (event) => {
     if (pos == -300) {
       clearInterval(intervalId2);
     } else {
-      pos = pos - 10;
+      pos = pos - 20;
       mobileHeader.style.right = pos + "px";
     }
   }
-  mobileHeaderBackground.style.display = "none";
+  mobileHeaderBackground.style.opacity = "0";
+  mobileHeaderBackground.style.visibility = "hidden";
 });
 
 // Get the offset position of the navbar
