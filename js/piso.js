@@ -11,15 +11,14 @@ var contactForm = `
             <div class="form-container">
             <form action="https://sig-api.chapnikandgiesen.com/api/leads/form" method="post" id="login">
                 <div id="form-name">
-                <p class="roboto-regular">Nombre *</p>
-                <input id="name" type="text" name="full_name" required/>
+                <input id="name" type="text" name="full_name" placeholder="NOMBRE *" required/>
                 </div>
                 <div id="form-tel">
-                <p class="roboto-regular">Teléfono *</p>
                 <input
                     id="phone"
                     type="tel"
                     name="phone"
+                    placeholder="TELÉFONO *"
                     onblur="process(event)"
                     required
                 />
