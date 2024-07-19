@@ -224,7 +224,7 @@ function relatedProjects(pisos) {
   `;
 
   $("#related-projects").html(relatedProjectsComplete);
-  initializeRelatedSplide();
+  waitForFirstImagesToLoad(document.querySelectorAll('#related-slider img'), 3, initializeRelatedSplide);
 }
 
 function renderizarGaleria(data) {
