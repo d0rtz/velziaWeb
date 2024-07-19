@@ -223,7 +223,7 @@ function relatedProjects(pisos) {
   `;
 
   $("#related-projects").html(relatedProjectsComplete);
-  waitForFirstImagesToLoad(document.querySelectorAll('#related-slider img'), 3, initializeRelatedSplide);
+  initializeRelatedSplide();
 }
 
 function renderizarGaleria(data) {
