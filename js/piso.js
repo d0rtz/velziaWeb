@@ -403,7 +403,6 @@ function initializeSplide() {
   var thumbnails = new Splide("#thumbnail-slider", {
     rewind: true,
     autoWidth: true,
-    fixedHeight: 58,
     isNavigation: true,
     gap: 10,
     focus: "center",
@@ -412,12 +411,6 @@ function initializeSplide() {
     dragMinThreshold: {
       mouse: 4,
       touch: 10,
-    },
-    breakpoints: {
-      640: {
-        fixedWidth: 66,
-        fixedHeight: 38,
-      },
     },
   });
 
