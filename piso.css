@@ -386,7 +386,15 @@ h2{
   height: 600px;
 }
 .slideshow-container:fullscreen .slider-photo {
-  height: 100vh;
+  height: 90vh;
+}
+
+.slider-thumbnail-img{
+  height: 60px;
+  width: auto;
+}
+.slideshow-container:fullscreen .slider-thumbnail-img {
+  height: 10vh;
 }
 
 .numbertext {

@@ -253,7 +253,7 @@ function renderizarGaleria(data) {
       `;
       thumbnails += `
       <li class="splide__slide">
-          <img class="slider-thumbnail-img" src="${photos[i]}" height="60px" width="auto">
+          <img class="slider-thumbnail-img" src="${photos[i]}">
       </li>
       `;
     }
@@ -268,7 +268,7 @@ function renderizarGaleria(data) {
       `;
       thumbnails += `
       <li class="splide__slide">
-          <img class="slider-thumbnail-img" src="${photos[i]}" height="60px" width="auto">
+          <img class="slider-thumbnail-img" src="${photos[i]}">
       </li>
       `;
     }
