@@ -385,7 +385,7 @@ h2{
   width: auto;
   height: 600px;
 }
-.slider-photo:fullscreen {
+.slideshow-container:fullscreen .slider-photo {
   height: 100vh;
 }
 
