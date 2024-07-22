@@ -248,7 +248,7 @@ function renderizarGaleria(data) {
       <li class="splide__slide">
           <img class="slider-photo" src="${
             photos[i]
-          }"  width="auto" onclick="document.getElementsByClassName('slideshow-container')[0].requestFullscreen()">
+          }" height="600px" width="auto" onclick="document.getElementsByClassName('slideshow-container')[0].requestFullscreen()">
       </li>
       `;
       thumbnails += `
@@ -263,7 +263,7 @@ function renderizarGaleria(data) {
       <li class="splide__slide">
           <img class="slider-photo" src="${
             photos[i]
-          }"  width="auto" onclick="document.getElementsByClassName('slideshow-container')[0].requestFullscreen()">
+          }" height="600px" width="auto" onclick="document.getElementsByClassName('slideshow-container')[0].requestFullscreen()">
       </li>
       `;
       thumbnails += `
@@ -393,7 +393,7 @@ function initializeSplide() {
     type: "slide",
     perPage: 1,
     perMove: 1,
-    height: "90vh",
+    height: "600px",
     focus: "center",
     pagination: false,
     arrows: true,
