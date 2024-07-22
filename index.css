@@ -469,7 +469,6 @@ button {
 }
 #chateau-info hr{
   width: 260px;
-  margin: 0;
   color: #b3aaa5;
 }
 #chateau-info h2,
@@ -631,6 +630,9 @@ button {
     grid-template-columns: 15% 35% 35% 15%;
     grid-template-rows: 10% 40% 40% 10%;
     height: 800px;
+  }
+  #chateau-info hr{
+    margin: 0;
   }
   #chateau-background {
     grid-column: 2 / span 3;
