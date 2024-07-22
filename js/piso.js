@@ -393,7 +393,7 @@ function initializeSplide() {
     type: "slide",
     perPage: 1,
     perMove: 1,
-    height: "600px",
+    height: "100vh",
     focus: "center",
     pagination: false,
     arrows: true,
