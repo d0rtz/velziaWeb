@@ -364,6 +364,9 @@ h2{
   #form-section {
     margin: 5% 20% 5% 20%;
   }
+  #related-projects-title{
+    margin-bottom: 60px;
+  }
 }
 
 /*SLIDER*/
@@ -404,7 +407,6 @@ h2{
 }
 #related-projects-title{
   text-align: center;
-  margin-bottom: 60px;
   font-size: 32px;
 }
 .galeria-container {
