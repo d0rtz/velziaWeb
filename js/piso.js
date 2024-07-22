@@ -248,7 +248,7 @@ function renderizarGaleria(data) {
       <li class="splide__slide">
           <img class="slider-photo" src="${
             photos[i]
-          }" onclick="document.getElementsByClassName('slideshow-container')[0].requestFullscreen()">
+          }" onclick="toggleFS()">
       </li>
       `;
       thumbnails += `
@@ -263,7 +263,7 @@ function renderizarGaleria(data) {
       <li class="splide__slide">
           <img class="slider-photo" src="${
             photos[i]
-          }" onclick="document.getElementsByClassName('slideshow-container')[0].requestFullscreen()">
+          }" onclick="toggleFS()">
       </li>
       `;
       thumbnails += `
@@ -387,6 +387,26 @@ function waitForFirstImagesToLoad(images, count, callback) {
   }
 }
 
+function toggleFS() {
+  var elem = document.getElementsByClassName('slideshow-container')[0];
+  if (!document.fullscreenElement) {
+    if(elem.requestFullscreen()){
+      elem.requestFullscreen();
+    } else if (elem.webkitRequestFullscreen) { /* Safari */
+      elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { /* IE11 */
+      elem.msRequestFullscreen();
+    }
+  }else{
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.webkitExitFullscreen) { /* Safari */
+      document.webkitExitFullscreen();
+    } else if (document.msExitFullscreen) { /* IE11 */
+      document.msExitFullscreen();
+    }
+  }
+} 
 
 function initializeSplide() {
   var main = new Splide("#image-slider", {
