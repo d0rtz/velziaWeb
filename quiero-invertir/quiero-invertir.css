@@ -294,6 +294,7 @@ button {
   grid-column: 2;
   grid-row: 2;
   font-size: 13px;
+  text-align: justify;
   letter-spacing: 0.1rem;
   line-height: 1.2rem;
 }
@@ -336,6 +337,7 @@ button {
   font-size: 22px;
 }
 #section3-right p {
+  text-align: justify;
   font-size: 13px;
   line-height: 1.5rem;
 }
