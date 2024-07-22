@@ -242,8 +242,6 @@ button {
 }
 .content h2 {
   font-size: 29px;
-  padding-left: 30%;
-  padding-right: 30%;
 }
 #contact-button {
   margin-top: 3%;
@@ -549,6 +547,10 @@ button {
     padding-left: 8%;
     padding-right: 8%;
   }
+  .content h2 {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
   #section1{
     padding: 5%;
   }
@@ -602,6 +604,10 @@ button {
   #contact-button {
     width: 300px;
     padding: 7%;
+  }
+  .content h2 {
+    padding-left: 30%;
+    padding-right: 30%;
   }
   #section1{
     padding: 5% 25% 5% 25%;
