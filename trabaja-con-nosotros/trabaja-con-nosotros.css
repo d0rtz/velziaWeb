@@ -68,6 +68,9 @@ button {
 .subnava {
   padding: 25px;
 }
+#collection-li a{
+  cursor: default;
+}
 .subnav {
   display: none;
   position: absolute;
