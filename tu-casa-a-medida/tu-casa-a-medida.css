@@ -594,12 +594,12 @@ h1{
 }
 @media (min-width: 768px) {
   .content h1 {
-    padding-left: 39%;
-    padding-right: 39%;
+    padding-left: 29%;
+    padding-right: 29%;
   }
   .content p {
-    padding-left: 30%;
-    padding-right: 30%;
+    padding-left: 20%;
+    padding-right: 20%;
   }
   #contact-button {
     padding: 7%;
