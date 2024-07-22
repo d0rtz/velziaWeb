@@ -285,7 +285,6 @@ button {
 }
 #description-text h1 {
   margin-bottom: 0;
-  padding-right: 10%;
   font-size: 70px;
 }
 #description-text p {
@@ -543,6 +542,9 @@ button {
   #team {
     grid-template-columns: repeat(1, 1fr);
   }
+  #team-section > p{
+    margin: 5% 20%;
+  }
   #chateau{
     display: block;
   }
@@ -588,6 +590,9 @@ button {
   #description {
     grid-template-columns: repeat(2, 50%);
     margin: 8%;
+  }
+  #description-text h1{
+    padding-right: 10%;
   }
   #description-images {
     grid-column: 2;
