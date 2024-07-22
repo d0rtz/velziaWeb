@@ -552,7 +552,7 @@ button {
   }
   #chateau-content {
     grid-template-columns: 100%;
-    grid-template-rows: 30% 70%;
+    grid-template-rows: 22% 78%;
   }
   #chateau-background {
     grid-column: 1;
@@ -561,11 +561,13 @@ button {
   #chateau-image {
     grid-column: 1;
     grid-row: 1;
+    background-position: center;
+    background-size: cover;
   }
   #chateau-info {
     grid-column: 1;
     grid-row: 2;
-    padding-bottom: 100%;
+    padding-bottom: 70%;
     text-align: center;
   }
   #chateau-info p {
