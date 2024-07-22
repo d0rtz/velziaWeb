@@ -311,12 +311,10 @@ button {
   border: 1px solid #bda76f;
 }
 #description-images {
-  margin: 5%;
-  padding: 5%;
   display: grid;
 }
 #description-images div {
-  padding: 2%;
+  margin: 2%;
 }
 .link {
   color: #bda76f;
@@ -528,6 +526,7 @@ button {
   #description-images {
     grid-column: 1;
     grid-template-columns: repeat(1, 1fr);
+    margin: 2%;
   }
   #description-images div {
     grid-column: 1;
@@ -594,6 +593,8 @@ button {
     grid-column: 2;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 0.5fr);
+    margin: 5%;
+    padding: 5%;
   }
   #description-image1 {
     grid-row: 1;
