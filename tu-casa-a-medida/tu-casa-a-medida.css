@@ -276,14 +276,10 @@ h1{
 }
 
 #section3 {
-  height: 900px;
-  margin: 5% 15%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
 }
 #section3-left {
   grid-column: auto;
-  padding: 15%;
   margin: 5%;
   display: flex;
   justify-content: center;
@@ -554,6 +550,9 @@ h1{
   #section3 {
     grid-template-columns: repeat(1, 1fr);
   }
+  #section3-left{
+    padding: 50% 0%;
+  }
   #section3-right {
     padding: 10%;
   }
@@ -606,7 +605,11 @@ h1{
     width: 300px;
   }
   #section3 {
+    margin: 5% 15%;
     grid-template-columns: repeat(2, 1fr);
+  }
+  #section3-left{
+    padding: 15%;
   }
   #form-section {
     padding-left: 10%;
