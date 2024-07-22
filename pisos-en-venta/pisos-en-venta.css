@@ -393,7 +393,7 @@ form .page .btns button.next {
 }
 .container .progress-bar {
   display: flex;
-  margin: 40px 0;
+  margin: 20px 0;
   user-select: none;
 }
 .container .progress-bar .step {
