@@ -381,8 +381,11 @@ h2{
   position: relative;
   margin: 0 6%;
 }
-img:fullscreen {
+.slider-photo {
   width: auto;
+  height: 600px;
+}
+.slider-photo:fullscreen {
   height: 100vh;
 }
 
