@@ -556,6 +556,9 @@ h1{
   #section3-right {
     padding: 10%;
   }
+  #section3-right h1{
+    margin: 2%;
+  }
   #form-section {
     padding-top: 15%;
   }
