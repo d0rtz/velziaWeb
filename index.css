@@ -237,11 +237,11 @@ button {
   height: 100%;
   text-align: center;
   z-index: 998;
-  display: flex; /* Añadido */
-  justify-content: center; /* Añadido */
+  display: flex; 
+  justify-content: center; 
 }
 
-.text-container { /* Nuevo contenedor */
+.text-container { 
   transform: translateY(20%); /* Ajustar según la altura del menú fijo */
 }
 #sl1 {
@@ -252,7 +252,7 @@ button {
   margin-left: 35%;
   margin-right: 35%;
 }
-#h2-video-index {
+#p-video-index {
   font-size: medium;
 }
 #h1-video-index {
@@ -283,7 +283,7 @@ button {
   padding-left: 7%;
   padding-right: 7%;
 }
-#description-text h1 {
+#description-text h2 {
   margin-bottom: 0;
   font-size: 70px;
 }
@@ -353,7 +353,7 @@ button {
   letter-spacing: 0.2rem;
   font-size: 18px;
 }
-.collection h1 {
+.collection h3 {
   font-size: 43px;
 }
 .collection h4 {
@@ -405,10 +405,10 @@ button {
 #team-section {
   text-align: center;
 }
-#team-section h1 {
+#team-section h2 {
   padding: 3%;
 }
-#team-section h4 {
+#team-section h3 {
   font-size: 24px;
   padding-left: 10%;
   padding-right: 10%;
@@ -417,7 +417,7 @@ button {
   display: grid;
   padding: 3%;
 }
-#team * h2 {
+#team * h4 {
   font-size: xx-large;
 }
 #team * p {
@@ -493,7 +493,7 @@ button {
   margin: 0% 5% 5% 5%;
 
 }
-#partners h1 {
+#partners h2 {
   font-size: 80px;
 }
 
@@ -534,10 +534,10 @@ button {
     grid-template-columns: repeat(1, 1fr);
   }
   #palazzo {
-    margin: 2%;
+    margin: 0% 2% 2% 2%;
   }
   #palazzo2 {
-    margin: 2%;
+    margin: 0% 2% 2% 2%;
   }
   #team {
     grid-template-columns: repeat(1, 1fr);
@@ -591,7 +591,7 @@ button {
     grid-template-columns: repeat(2, 50%);
     margin: 8%;
   }
-  #description-text h1{
+  #description-text h2{
     padding-right: 10%;
   }
   #description-images {
