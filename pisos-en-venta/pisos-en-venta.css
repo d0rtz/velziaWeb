@@ -307,6 +307,7 @@ button {
   margin: 0 0 30px 0;
 }
 .container .form-outer {
+  padding-top: 10%;
   width: 100%;
   overflow: hidden;
 }

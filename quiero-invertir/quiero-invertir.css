@@ -607,7 +607,7 @@ button {
   #section2 {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    padding: 5% 20%;
+    padding: 0% 20%;
   }
   #section3 {
     grid-template-columns: repeat(2, 1fr);
