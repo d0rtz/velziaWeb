@@ -78,7 +78,7 @@ button {
 .subnava {
   padding: 25px;
 }
-#collection-li a{
+#collection-li > a{
   cursor: default;
 }
 

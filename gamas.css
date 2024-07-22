@@ -69,10 +69,7 @@ h1 {
 .subnava {
   padding: 25px;
 }
-#collection-li a{
-  cursor: default;
-}
-#collection-li a{
+#collection-li > a{
   cursor: default;
 }
 .subnav {
