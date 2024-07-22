@@ -395,7 +395,6 @@ function initializeSplide() {
     perMove: 1,
     height: "600px",
     focus: "center",
-    start: 1,
     pagination: false,
     arrows: true,
     autoWidth: true,
@@ -445,6 +444,7 @@ function initializeRelatedSplide() {
     breakpoints: {
       768: {
         perPage: 1,
+        perMove: 1,
       },
     },
   });
