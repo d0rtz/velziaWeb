@@ -389,16 +389,16 @@ h2{
   height: 600px;
 }
 .slideshow-container:fullscreen .slider-photo {
-  height: 89vh;
+  height: 100vh;
 }
-
+/* 
 .slider-thumbnail-img{
   height: 60px;
   width: auto;
 }
 .slideshow-container:fullscreen .slider-thumbnail-img {
   height: 9vh;
-}
+} */
 .fullscreen-btn {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.5);

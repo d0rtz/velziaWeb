@@ -231,7 +231,7 @@ function renderizarGaleria(data) {
   console.log(data.house);
   let photos = data.house.photos.split(",");
   let slider = "";
-  let thumbnails = "";
+  //let thumbnails = "";
 
   // Create our number formatter.
   const formatter = new Intl.NumberFormat("es-ES", {
@@ -251,11 +251,11 @@ function renderizarGaleria(data) {
           }">
       </li>
       `;
-      thumbnails += `
-      <li class="splide__slide">
-          <img class="slider-thumbnail-img" src="${photos[i]}">
-      </li>
-      `;
+      // thumbnails += `
+      // <li class="splide__slide">
+      //     <img class="slider-thumbnail-img" src="${photos[i]}">
+      // </li>
+      // `;
     }
   } else {
     for (let i = 0; i < photos.length; i++) {
@@ -266,11 +266,11 @@ function renderizarGaleria(data) {
           }">
       </li>
       `;
-      thumbnails += `
-      <li class="splide__slide">
-          <img class="slider-thumbnail-img" src="${photos[i]}">
-      </li>
-      `;
+      // thumbnails += `
+      // <li class="splide__slide">
+      //     <img class="slider-thumbnail-img" src="${photos[i]}">
+      // </li>
+      // `;
     }
   }
 
@@ -285,14 +285,14 @@ function renderizarGaleria(data) {
         </div>
       </div>
     </div>
-    <div id="thumbnail-slider" class="splide">
-      <div class="splide__track">
-		    <ul class="splide__list">
-          ${thumbnails}
-        </ul>
-      </div>
-    </div>
-  `;
+    `;
+    // <div id="thumbnail-slider" class="splide">
+    //   <div class="splide__track">
+		//     <ul class="splide__list">
+    //       ${thumbnails}
+    //     </ul>
+    //   </div>
+    // </div>
   let mobile = screen.width <= 768? true: false;
   let html = `
     <section id="sale">
@@ -426,22 +426,22 @@ function initializeSplide() {
     gap: 20,
   });
 
-  var thumbnails = new Splide("#thumbnail-slider", {
-    rewind: true,
-    autoWidth: true,
-    isNavigation: true,
-    gap: 10,
-    focus: "center",
-    pagination: false,
-    arrows: false,
-    dragMinThreshold: {
-      mouse: 4,
-      touch: 10,
-    },
-  });
+  // var thumbnails = new Splide("#thumbnail-slider", {
+  //   rewind: true,
+  //   autoWidth: true,
+  //   isNavigation: true,
+  //   gap: 10,
+  //   focus: "center",
+  //   pagination: false,
+  //   arrows: false,
+  //   dragMinThreshold: {
+  //     mouse: 4,
+  //     touch: 10,
+  //   },
+  // });
 
-  thumbnails.mount();
-  main.sync(thumbnails);
+  // thumbnails.mount();
+  // main.sync(thumbnails);
   main.mount();
 
   main.on('mounted', function() {
