@@ -454,12 +454,15 @@ function initializeSplide() {
   });
 
   var isAutoplay = true;
+  var ap = document.getElementById('toggle-autoplay')
 
   document.getElementById('toggle-autoplay').addEventListener('click', function() {
     if (isAutoplay) {
+      ap.innerHTML = "<i class='bx bx-play-circle' style='color:#ffffff' ></i>";
       main.options = { autoplay: false };
       main.Components.Autoplay.pause();
     } else {
+      ap.innerHTML = "<i class='bx bx-pause-circle' style='color:#ffffff' ></i>";
       main.options = { autoplay: true };
       main.Components.Autoplay.play();
     }
