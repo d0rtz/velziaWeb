@@ -408,6 +408,13 @@ h2{
   right: 0;
   bottom: 0;
   z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fullscreen-btn i{
+  font-size: 30px;
 }
 
 .numbertext {
