@@ -1,4 +1,5 @@
 var piso = params.get("id");
+var fs = false;
 var url = "https://dev.velzia.es:4999/";
 var contactForm = `
 <section id="contact-form-section" class="cormorant-garamond-light">
@@ -281,7 +282,7 @@ function renderizarGaleria(data) {
           ${slider}
         </ul>
         <div class="fullscreen-btn" onclick="toggleFS()">
-          <i class='bx bx-fullscreen' style='color:#ffffff'  ></i>
+          ${fs?"<i class='bx bx-exit-fullscreen' style='color:#ffffff' ></i>":"<i class='bx bx-fullscreen' style='color:#ffffff'  ></i>"}
         </div>
       </div>
     </div>
@@ -393,6 +394,7 @@ function waitForFirstImagesToLoad(images, count, callback) {
 function toggleFS() {
   var elem = document.getElementsByClassName('slideshow-container')[0];
   if (!document.fullscreenElement) {
+    fs = false;
     if(elem.requestFullscreen()){
       elem.requestFullscreen();
     } else if (elem.webkitRequestFullscreen) { /* Safari */
@@ -401,6 +403,7 @@ function toggleFS() {
       elem.msRequestFullscreen();
     }
   }else{
+    fs = true;
     if (document.exitFullscreen) {
       document.exitFullscreen();
     } else if (document.webkitExitFullscreen) { /* Safari */

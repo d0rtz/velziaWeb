@@ -401,7 +401,7 @@ h2{
 }
 .fullscreen-btn {
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.5);
   height: 36px;
   width: 36px;
   margin: 8px;
