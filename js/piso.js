@@ -428,7 +428,7 @@ function initializeSplide() {
     autoWidth: true,
     gap: 20,
     autoplay: true,
-    interval: 3000, 
+    interval: 5000, 
   });
 
   // var thumbnails = new Splide("#thumbnail-slider", {
