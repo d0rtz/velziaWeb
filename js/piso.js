@@ -429,6 +429,7 @@ function initializeSplide() {
     gap: 20,
     autoplay: true,
     interval: 5000, 
+    keyboard: true,
   });
 
   // var thumbnails = new Splide("#thumbnail-slider", {
