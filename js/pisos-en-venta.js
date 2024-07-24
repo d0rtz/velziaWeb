@@ -33,9 +33,9 @@ function initMultiStepForm() {
                 slidePage.style.marginLeft = `-${
                     (100 / stepsNumber) * current
                 }%`;
-                bullet[current - 1].classList.add("active");
-                progressCheck[current - 1].classList.add("active");
-                progressText[current - 1].classList.add("active");
+                //bullet[current - 1].classList.add("active");
+                //progressCheck[current - 1].classList.add("active");
+                //progressText[current - 1].classList.add("active");
                 current += 1;
             }
         });
