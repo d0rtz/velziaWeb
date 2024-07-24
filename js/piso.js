@@ -248,7 +248,7 @@ function renderizarGaleria(data) {
       <li class="splide__slide">
           <img class="slider-photo" src="${
             photos[i]
-          }" onclick="toggleFS()">
+          }">
       </li>
       `;
       thumbnails += `
@@ -263,7 +263,7 @@ function renderizarGaleria(data) {
       <li class="splide__slide">
           <img class="slider-photo" src="${
             photos[i]
-          }" onclick="toggleFS()">
+          }">
       </li>
       `;
       thumbnails += `
@@ -280,6 +280,9 @@ function renderizarGaleria(data) {
         <ul class="splide__list">
           ${slider}
         </ul>
+        <div class="fullscreen-btn" onclick="toggleFS()">
+          <i class="fas fa-expand"></i>
+        </div>
       </div>
     </div>
     <div id="thumbnail-slider" class="splide">
