@@ -341,11 +341,11 @@ form .page .field .label {
   font-weight: 500;
 }
 form .page .field input {
+  border: 0;
+  border-bottom: 1px solid;
   box-sizing: border-box;
   height: 100%;
   width: 100%;
-  border: 1px solid var(--inputBorderColor);
-  border-radius: 5px;
   padding-left: 15px;
   margin: 0 1px;
   font-size: 18px;
@@ -407,7 +407,7 @@ form .page .btns button.next {
   position: relative;
 }
 .container .progress-bar .step p {
-  font-weight: 600;
+  font-weight: 300;
   font-family: "Cormorant Garamond", serif;
   font-size: 20px;
   color: #000;
