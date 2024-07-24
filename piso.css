@@ -402,10 +402,11 @@ h2{
 .fullscreen-btn {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.7);
-  height: 20px;
-  width: 20px;
-  right: 10;
-  bottom: 10;
+  height: 40px;
+  width: 40px;
+  margin: 10px;
+  right: 0;
+  bottom: 0;
   z-index: 999;
 }
 
