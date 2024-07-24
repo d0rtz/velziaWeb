@@ -281,7 +281,7 @@ function renderizarGaleria(data) {
           ${slider}
         </ul>
         <div class="fullscreen-btn" onclick="toggleFS()">
-          <i class="fas fa-expand"></i>
+          <i class='bx bx-fullscreen' style='color:#ffffff'  ></i>
         </div>
       </div>
     </div>
