@@ -283,6 +283,9 @@ function renderizarGaleria(data) {
         <div class="fullscreen-btn" onclick="toggleFS()">
           <i class='bx bx-fullscreen' style='color:#ffffff'  ></i>
         </div>
+        <div id="toggle-autoplay">
+          <i class='bx bx-pause-circle' style='color:#ffffff' ></i>
+        </div>
       </div>
     </div>
     `;
@@ -424,6 +427,8 @@ function initializeSplide() {
     arrows: true,
     autoWidth: true,
     gap: 20,
+    autoplay: true,
+    interval: 3000, 
   });
 
   // var thumbnails = new Splide("#thumbnail-slider", {
@@ -446,6 +451,19 @@ function initializeSplide() {
 
   main.on('mounted', function() {
     main.refresh();
+  });
+
+  var isAutoplay = true;
+
+  document.getElementById('toggle-autoplay').addEventListener('click', function() {
+    if (isAutoplay) {
+      main.options = { autoplay: false };
+      main.Components.Autoplay.pause();
+    } else {
+      main.options = { autoplay: true };
+      main.Components.Autoplay.play();
+    }
+    isAutoplay = !isAutoplay;
   });
 }
 

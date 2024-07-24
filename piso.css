@@ -412,8 +412,22 @@ h2{
   justify-content: center;
   align-items: center;
 }
+#toggle-autoplay {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 36px;
+  width: 36px;
+  margin-bottom: 8px;
+  margin-right: 52px;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-.fullscreen-btn i{
+.fullscreen-btn i, #toggle-autoplay i{
   font-size: 26px;
 }
 
