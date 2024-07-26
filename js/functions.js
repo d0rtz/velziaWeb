@@ -67,14 +67,10 @@ var subNav = document.getElementById("subnav");
 var number = document.getElementById("number");
 var mobileNumber = document.getElementById("mobile-number");
 
-if(utmSource == null){
-  number.href="tel:+34911989927";
-  number.innerHTML += "34 911 989 927";
-  mobileNumber.href="tel:+34911989927";
-  mobileNumber.innerHTML += "34 911 989 927";
-}else{
-
-}
+number.href="tel:+34911989927";
+number.innerHTML += "34 911 989 927";
+mobileNumber.href="tel:+34911989927";
+mobileNumber.innerHTML += "34 911 989 927";
 
 subNavA.addEventListener("mouseenter", (event) => {
   console.log(event + " Abre submenú");

@@ -138,8 +138,6 @@ const contactBtn = document.getElementById("contact-button");
 const formStartDiv = document.getElementById("form-start-div");
 const container = document.getElementsByClassName("container")[0];
 
-
-
 contactBtn.addEventListener("click", () => {
     formStartDiv.style.maxWidth = "0px";
     formStartDiv.style.visibility = "hidden";
