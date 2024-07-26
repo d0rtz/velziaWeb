@@ -31,8 +31,8 @@ window.onscroll = function () {
   }
 })();
 
-// const querystring = window.location.search;
-// const params = new URLSearchParams(querystring);
+const querystring = window.location.search;
+const params = new URLSearchParams(querystring);
 // var utmSource = params.get("utm_source");
 // var utmMedium = params.get("utm_medium");
 // var utmCampaign = params.get("utm_campaign");
