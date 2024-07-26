@@ -78,15 +78,37 @@ var contactForm = `
    const submitBtn = document.getElementById('submit');
     submitBtn.addEventListener("click", function () {
       event.preventDefault();
-        let fechaActual = new Date();
-        let dia = fechaActual.getDate();
-        let mes = fechaActual.getMonth() + 1;
-        let anio = fechaActual.getFullYear();
-        let horas = fechaActual.getHours();
-        let minutos = fechaActual.getMinutes();
-        let segundos = fechaActual.getSeconds();
-        let fechaYHoraFormateada = dia+'/'+mes+'/'+anio+' '+horas+':'+minutos+':'+segundos;
-        console.log(fechaYHoraFormateada);
+      let fechaActual = new Date();
+      let dia = fechaActual.getDate();
+      let mes = fechaActual.getMonth() + 1;
+      let anio = fechaActual.getFullYear();
+      let horas = fechaActual.getHours();
+      let minutos = fechaActual.getMinutes();
+      let segundos = fechaActual.getSeconds();
+      let fechaYHoraFormateada = dia+'/'+mes+'/'+anio+' '+horas+':'+minutos+':'+segundos;
+      console.log(fechaYHoraFormateada);
+      let utm_source2 = "";
+      let utm_medium2 = "";
+      let utm_campaign2 = "";
+      let utm_term2 = "";
+      let utm_content2 = "";
+      let utmParameters = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content"];
+      utmParameters.forEach(function(param) {
+          var value = localStorage.getItem(param);
+          if (value) {
+              if(param == "utm_source") {
+                  utm_source2 = value;
+              }else if(param == "utm_medium") {
+                  utm_medium2 = value;
+              }else if(param == "utm_campaign") {
+                  utm_campaign2 = value;
+              }else if(param == "utm_term") {
+                  utm_term2 = value;
+              }else if(param == "utm_content") {
+                  utm_content2 = value;
+              }
+          }
+      });
       let name = document.getElementById("name");
       let phone2 = document.getElementById("phone");
       let accept_terms2 = document.getElementById("privacy-checkbox");
@@ -95,6 +117,11 @@ var contactForm = `
         method: "POST",
         body: new URLSearchParams({
           date: fechaYHoraFormateada,
+          utm_source: utm_source2,
+          utm_medium: utm_medium2,
+          utm_campaign: utm_campaign2,
+          utm_term: utm_term2,
+          utm_content: utm_content2,
           formTitle: window.location.search,
           house: document.title,
           full_name: name.value,

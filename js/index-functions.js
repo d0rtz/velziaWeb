@@ -3,19 +3,49 @@ window.onscroll = function () {
   stickyHeader();
 };
 
-const querystring = window.location.search;
-const params = new URLSearchParams(querystring);
-var utmSource = params.get("utm_source");
-var utmMedium = params.get("utm_medium");
-var utmCampaign = params.get("utm_campaign");
-console.log(
-  "UTM Source " +
-    utmSource +
-    " campaign " +
-    utmCampaign +
-    " medium " +
-    utmMedium
-);
+(function() {
+  // Función para obtener el valor de un parámetro específico en la URL
+  function getParameterByName(name) {
+      name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+      var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+          results = regex.exec(location.search);
+      return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+  }
+
+  // Lista de parámetros UTM
+  var utmParameters = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content"];
+
+  // Verificar si los parámetros UTM ya están almacenados
+  var utmStored = utmParameters.every(function(param) {
+      return localStorage.getItem(param) !== null;
+  });
+
+  // Si no están almacenados, capturarlos de la URL y almacenarlos
+  if (!utmStored) {
+      utmParameters.forEach(function(param) {
+          var value = getParameterByName(param);
+          if (value) {
+              localStorage.setItem(param, value);
+          }
+      });
+  }
+})();
+
+
+// const querystring = window.location.search;
+// const params = new URLSearchParams(querystring);
+// var utmSource = params.get("utm_source");
+// var utmMedium = params.get("utm_medium");
+// var utmCampaign = params.get("utm_campaign");
+// console.log(
+//   "UTM Source " +
+//     utmSource +
+//     " campaign " +
+//     utmCampaign +
+//     " medium " +
+//     utmMedium
+// );
+
 
 // Get the header
 var header = document.getElementById("header");
