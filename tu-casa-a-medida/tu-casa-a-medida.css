@@ -562,6 +562,28 @@ h1{
   #section3-right h1{
     margin: 2%;
   }
+  #section4-main{
+    padding-left: 8% !important;
+    padding-right: 8% !important;
+  }
+  #section4-nav div h4 {
+    display: none !important;
+  }
+  .nav-line{
+    margin-top: 20px;
+  }
+  #section4-content1, #section4-content2, #section4-content3 {
+    grid-template-columns: 1fr !important;
+  }
+  #section4-content1 h4, #section4-content2 h4, #section4-content3 h4{
+    text-align: center;
+    margin: 0%;
+    font-size: 28px;
+  }
+  #section4-content1 p, #section4-content2 p, #section4-content3 p{
+    grid-row: 2;
+    margin: 5% 0%;
+  }
   #form-section {
     padding-top: 15%;
   }
@@ -616,6 +638,9 @@ h1{
   }
   #section3-left{
     padding: 15%;
+  }
+  #section4-content1 h4, #section4-content2 h4, #section4-content3 h4{
+    display: none;
   }
   #form-section {
     padding-left: 10%;
