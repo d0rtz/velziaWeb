@@ -139,7 +139,7 @@ function stickyHeader() {
     header.classList.remove("header-black");
     header.classList.add("header-white");
     hamburguerIcon.src = "../resources/hamburguesa.png";
-    navLogo.src = "../resources/logo-dark-def.png";
+    navLogo.src = "../resources/velzia-homes-negro.png";
     phoneIcon.style.color = "black";
     for (let index = 0; index < navLink.length; index++) {
       navLink[index].classList.remove("nav-link-white");
@@ -152,7 +152,7 @@ function stickyHeader() {
     header.classList.remove("header-white");
     header.classList.add("header-black");
     hamburguerIcon.src = "../resources/hamburguesa-blanco.png";
-    navLogo.src = "../resources/logo-index-def.png";
+    navLogo.src = "../resources/velzia-homes-blanco.png";
     phoneIcon.style.color = "#f1f1f1";
     for (let index = 0; index < navLink.length; index++) {
       navLink[index].classList.remove("nav-link-black");

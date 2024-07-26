@@ -22,16 +22,6 @@ button {
   z-index: 2999;
 }
 
-
-/* WSP */
-
-#wsp{
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  z-index: 2999;
-}
-
 /* HEADER */
 
 #header {
@@ -51,7 +41,7 @@ button {
   background-color: black;
 }
 #nav-logo {
-  margin-left: 3%;
+  margin-left: 10%;
   margin-top: 10%;
 }
 .nav1 {
