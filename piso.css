@@ -382,6 +382,9 @@ h2{
   #form-section {
     margin: 5% 20% 5% 20%;
   }
+  #form-div {
+    padding: 5% 20%;
+  }
   #related-projects-title{
     margin-bottom: 60px;
   }
