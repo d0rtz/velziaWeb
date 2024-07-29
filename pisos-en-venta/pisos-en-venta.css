@@ -240,13 +240,13 @@ button {
   color: #f1f1f1;
   transition: max-width 0.3s ease-in;
 }
-.main-container div h2 {
+.main-container div h1 {
   font-size: 38px;
 }
-.main-container div h3 {
+.main-container div h2 {
   font-size: 28px;
 }
-.main-container div h4 {
+.main-container div h3 {
   font-size: 20px;
 }
 #contact-button {

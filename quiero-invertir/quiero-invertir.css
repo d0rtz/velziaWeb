@@ -243,7 +243,7 @@ button {
   width: auto;
   height: 70px;
 }
-.content h2 {
+.content h1 {
   font-size: 29px;
 }
 #contact-button {
@@ -550,7 +550,7 @@ button {
     padding-left: 8%;
     padding-right: 8%;
   }
-  .content h2 {
+  .content h1 {
     padding-left: 10%;
     padding-right: 10%;
   }
@@ -608,7 +608,7 @@ button {
     width: 300px;
     padding: 7%;
   }
-  .content h2 {
+  .content h1 {
     padding-left: 30%;
     padding-right: 30%;
   }

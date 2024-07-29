@@ -330,18 +330,18 @@ function renderizarGaleria(data) {
         <div class="content">
             <div id="content-video-div">${data.house.videoURL}</div>
             <div id="content-text-div">
-                <h3>${
+                <h2>${
                   data.house.type != "apartment"
                     ? data.house.type == "conversion"? "CONVERSIÓN DE UN LOCAL A VIVIENDA" : "CHATEAU"
                     : "REFORMA INTEGRAL DE UN PISO"
-                }</h3>
-                <h2>${data.house.name}</h2>
+                }</h2>
+                <h1>${data.house.name}</h1>
                 ${
                   data.house.sold
                     ? "<br>"
-                    : `<h4 class="roboto-thin">${formatter.format(
+                    : `<h3 class="roboto-thin">${formatter.format(
                         data.house.price
-                      )}</h4>`
+                      )}</h3>`
                 }
                 <p class="roboto-thin" style="text-align: justify;">${data.house.description}</p>
             </div>

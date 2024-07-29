@@ -7,6 +7,9 @@ body {
 button {
   cursor: pointer;
 }
+h1{
+  font-weight: 400;
+}
 h2{
   font-weight: 400;
 }
@@ -278,15 +281,15 @@ h2{
   align-self: center;
   padding: 5%;
 }
-.content div h3 {
+.content div h2 {
   font-size: 16px;
   letter-spacing: 0.3rem;
 }
-.content div h2 {
+.content div h1 {
   font-size: 70px;
   margin: 2% 0% 2% 0%;
 }
-.content div h4 {
+.content div h3 {
   font-size: 20px;
 }
 .content div p {
@@ -319,7 +322,7 @@ h2{
     grid-row: 1;
     text-align: center;
   }
-  .content div h2 {
+  .content div h1 {
     font-size: 50px !important;
   }
   .content div p {
@@ -491,6 +494,7 @@ h2{
   display: hidden;
   color: transparent;
   font-size: 30px;
+  text-align: center;
 }
 .galeria-item:hover {
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);

@@ -299,9 +299,10 @@ h1{
 #section3-right div {
   padding: 1% 5% 1% 5%;
 }
-#section3-right h1 {
+#section3-right h2 {
   letter-spacing: 0.1rem;
   font-size: 64px;
+  margin: 0%;
 }
 #section3-right p {
   font-size: 15px;

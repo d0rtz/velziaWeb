@@ -219,10 +219,13 @@ h1 {
 #title h1 {
   margin: 0;
 }
-#title h4 {
+#title h2 {
   text-align: end;
   align-self: end;
   font-weight: 500;
+  font-size: medium;
+  margin-block-start: 1.33em;
+  margin-block-end: 1.33em;
 }
 #galeria {
   display: grid;
