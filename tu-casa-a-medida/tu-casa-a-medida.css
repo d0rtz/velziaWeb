@@ -555,9 +555,11 @@ h1{
     grid-template-columns: repeat(1, 1fr);
   }
   #section3-left{
+    grid-row: 2;
     padding: 50% 0%;
   }
   #section3-right {
+    grid-row: 1;
     padding: 10%;
   }
   #section3-right h1{
