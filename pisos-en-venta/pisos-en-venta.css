@@ -498,6 +498,9 @@ form .page .btns button.next {
   .progress-bar .step .bullet::before {
     display: none;
   }
+  .form-outer form .page .title {
+    font-size: 22px !important;
+  }
   .progress-bar .step .bullet {
     display: flex;
     align-items: center;
