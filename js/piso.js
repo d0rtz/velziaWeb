@@ -1,5 +1,5 @@
 var piso = params.get("id");
-var url = "https://dev.velzia.es:4999/";
+var url = "https://velzia.es:4999/";
 var contactForm = `
 <section id="contact-form-section" class="cormorant-garamond-light">
 <div id="form-section">

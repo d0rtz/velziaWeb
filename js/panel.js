@@ -1,4 +1,4 @@
-const url = "https://dev.velzia.es:4999/";
+const url = "https://velzia.es:4999/";
 const modal = document.getElementById("myModal");
 const span = document.getElementById("modal-close");
 const search = document.getElementById("input-search");

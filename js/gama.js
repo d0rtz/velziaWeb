@@ -1,6 +1,6 @@
 var gama = params.get("gama");
 
-var url = "https://dev.velzia.es:4999/gama/" + gama;
+var url = "https://velzia.es:4999/gama/" + gama;
 
 const requestOptions = {
   method: "GET",
