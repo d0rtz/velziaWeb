@@ -43,6 +43,12 @@
       href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/23.0.8/css/intlTelInput.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/23.0.8/js/intlTelInput.min.js"></script>
+
     <title>Pisos en venta</title>
   </head>
   <body>
@@ -316,8 +322,21 @@
                 <div class="page">
                   <div class="title">Teléfono*</div>
                   <div class="field">
-                    <input type="tel" name="phone" id="phone" required />
+                    <input
+                      id="phone"
+                      type="tel"
+                      name="phone"
+                      onblur="process(event)"
+                      required
+                    />
+                    <div
+                      class="alert alert-error roboto-regular"
+                      style="display: none"
+                    ></div>
                   </div>
+                  <!-- <div class="field">
+                    <input type="tel" name="phone" id="phone" required />
+                  </div> -->
                   <div class="field btns">
                     <button class="submit">Enviar →</button>
                   </div>
@@ -467,5 +486,28 @@
     </footer>
     <script src="../js/pisos-en-venta.js"></script>
     <script src="../js/functions.js"></script>
+    
+    <script>
+      const phoneInputField = document.querySelector("#phone");
+      const phoneInput = window.intlTelInput(phoneInputField, {
+        initialCountry: "es",
+        utilsScript:
+          "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/23.0.8/js/utils.js",
+      });
+
+      const error = document.querySelector(".alert-error");
+
+      function process(event) {
+        event.preventDefault();
+
+        const phoneNumber = phoneInput.getNumber();
+        if (!phoneInput.isValidNumber() && phoneNumber != "") {
+          error.style.display = "";
+          error.innerHTML = `Número inválido.`;
+        } else {
+          error.style.display = "none";
+        }
+      }
+      </script>
   </body>
 </html>
