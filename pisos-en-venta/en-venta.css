@@ -244,21 +244,23 @@ h1 {
   background-position: center;
   background-repeat: no-repeat;
   transition: all 0.5s ease-in-out;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
 }
 .galeria-item h3 {
-  display: hidden;
+  display: block;
   color: transparent;
   font-size: 50px;
   font-weight: 400;
   text-align: center;
+  color: white;
+  transition: all 0.5s ease-in-out;
 }
 .galeria-item:hover {
-  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0);
   transition: all 0.5s ease-in-out;
 }
 .galeria-item:hover h3 {
-  display: block;
-  color: white;
+  display: hidden;
   transition: all 0.5s ease-in-out;
 }
 .galeria-item-sold,

@@ -20,10 +20,15 @@ fetch(url, requestOptions)
       pisos.houses.reverse().forEach(function (piso) {
         if(!piso.sold){
             html += `
-            <a href="piso.html?id=${piso.id}" class="galeria-container">
+            <a href="../piso.html?id=${piso.id}" class="galeria-container">
                 <div class="galeria-item" style="background-image:url('${
                   "."+piso.background
                 }');">
+                ${
+                  piso.sold
+                    ? `<div class="galeria-item-sold roboto-light">VENDIDO</div>`
+                    : `<div class="galeria-item-on-sale roboto-light">EN VENTA</div>`
+                }
                     <h3>${piso.name}</h3>
                 </div>
             </a>
