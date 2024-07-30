@@ -307,7 +307,7 @@ h1 {
     margin: 10% 16% 1% 16%;
   }
   #title h1 {
-    font-size: 90px;
+    font-size: 70px;
   }
   #galeria {
     grid-template-columns: repeat(2, 1fr);
