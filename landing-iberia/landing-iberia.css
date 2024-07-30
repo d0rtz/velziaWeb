@@ -93,7 +93,7 @@ h1 {
   transition: all 0.3s ease-in-out;
 }
 #contact-button:hover {
-  margin-top: 2.7%;
+  margin-top: 10%;
   border: #f1f1f1 2px solid;
   background-color: transparent;
   color: #f1f1f1;
@@ -260,6 +260,21 @@ h1 {
   width: 100%;
   height: 50px;
   background-color: #b0aba5;
+}
+
+#velzia-btn{
+    margin-top: 8%;
+    background-color: white;
+    color: #101010;
+    width: 200px;
+    padding: 2%;
+    transition: all 0.3s ease-in;
+}
+#velzia-btn:hover{
+    background-color: #101010;
+    color: white;
+    width: 200px;
+    padding: 2%;
 }
 
 /* INFO */
