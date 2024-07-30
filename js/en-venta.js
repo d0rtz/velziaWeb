@@ -22,7 +22,7 @@ fetch(url, requestOptions)
             html += `
             <a href="piso.html?id=${piso.id}" class="galeria-container">
                 <div class="galeria-item" style="background-image:url('${
-                  piso.background
+                  "."+piso.background
                 }');">
                     <h3>${piso.name}</h3>
                 </div>
