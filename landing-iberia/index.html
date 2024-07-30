@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Contacta con Velzia para cualquier consulta o información sobre nuestras viviendas de lujo, proyectos de reformas o inversiones inmobiliarias en Madrid. Estamos aquí para ayudarte y responder a tus preguntas." />
+    <meta name="keywords" content="contacto Velzia, consultas inmobiliarias, información viviendas de lujo, proyectos de reformas, inversiones inmobiliarias, Madrid, contacto Velzia Homes" />
+    <link rel="stylesheet" href="landing-iberia.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../resources/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../resources/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../resources/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../resources/site.webmanifest" />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-M50K816P90"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-M50K816P90");
+    </script>
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/23.0.8/css/intlTelInput.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/23.0.8/js/intlTelInput.min.js"></script>
+
+    <title>Velzia Homes - Iberia</title>
+</head>
+<body>
+    <section id="sale">
+        <img
+          src="../resources/VELZIA-PINTOR-ROSALES-70-WEB_035-1200x800.jpg"
+          alt=""
+          id="background"
+        />
+
+        <div class="content">
+          <h1 class="cormorant-garamond-light">ATERRIZA EN VELZIA</h1>
+          <h2 class="cormorant-garamond-light">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit
+            alias architecto recusandae possimus incidunt culpa enim.
+          </h2>
+          <a href="https://api.whatsapp.com/send/?phone=34617020780">
+            <button id="contact-button" class="roboto-regular">
+              Contacto
+            </button>
+          </a>
+        </div>
+      </section>
+    <section id="contact-form-section" class="cormorant-garamond-light">
+        <div id="form-section">
+            <div>
+                <h3 class="cormorant-garamond-light">
+                    SOLICITA MÁS INFORMACIÓN
+                </h3>
+                <div id="form-div">
+                    <div class="form-container">
+                    <form action="https://sig-api.chapnikandgiesen.com/api/leads/form" method="post" id="login">
+                        <div id="form-name">
+                        <input id="name" type="text" name="full_name" placeholder="Nombre *" required/>
+                        </div>
+                        <div id="form-tel">
+                        <input
+                            id="phone"
+                            type="tel"
+                            name="phone"
+                            placeholder="Teléfono *"
+                            onblur="process(event)"
+                            required
+                        />
+                        <div
+                            class="alert alert-error roboto-regular"
+                            style="display: none"
+                        ></div>
+                        </div>
+                        <div id="form-warn">
+                        <p class="roboto-regular">
+                            <b>Finalidades:</b> Responder a sus solicitudes y remitirle
+                            información comercial de nuestros productos y servicios
+                            inmobiliarios, incluso por medios electrónicos.
+                            <b>Derechos: </b>Puede retirar su consentimiento y acceder,
+                            rectificar, suprimir sus datos y demás derechos en
+                            chgg@delegado-datos.com. <b>Más Información </b>en <a href="../politicas/politica-privacidad.html">Política
+                            de Privacidad.</a>
+                        </p>
+                        </div>
+                        <div id="form-check1">
+                            <input type="checkbox" name="accept_terms" id="privacy-checkbox" required>
+                            <label for="privacy-checkbox" class="roboto-regular">He leído y acepto la política de <a href="../politicas/politica-privacidad.html">privacidad</a>.</label>
+                        </div>
+                        <div id="form-check2">
+                            <input type="checkbox" name="receive_information" id="ad-checkbox" >
+                            <label for="ad-checkbox" class="roboto-regular">Acepto recibir información de nuestros inmuebles, incluso por medios electrónicos.</label>
+                        </div>
+                        <div id="form-submit">
+                        <button type="button" id="submit">Enviar</button>
+                        </div>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+    <section>
+        <div class="cormorant-garamond-light">
+            <h2>Descubre Velzia</h2>
+            <p>Somos diseño, tendencia y sofisticación. Somos artesanía e innovación. Somos emoción. Vendemos viviendas íntegramente rehabilitadas. Vendemos casas únicas e inspiradoras, listas para entrar a vivir.</p>
+            <p>Totalmente decoradas y equipadas. Donde cada detalle cuenta.</p>
+        </div>
+        <div>
+
+        </div>
+    </section>
+    <script>
+      const phoneInputField = document.querySelector("#phone");
+      const phoneInput = window.intlTelInput(phoneInputField, {
+        initialCountry: "es",
+        utilsScript:
+          "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/23.0.8/js/utils.js",
+      });
+    
+      const error = document.querySelector(".alert-error");
+    
+      function process(event) {
+        event.preventDefault();
+    
+        const phoneNumber = phoneInput.getNumber();
+        if (!phoneInput.isValidNumber() && phoneNumber != "") {
+          error.style.display = "";
+          error.innerHTML = "Número inválido.";
+        } else {
+          error.style.display = "none";
+        }
+      }
+       const submitBtn = document.getElementById('submit');
+        submitBtn.addEventListener("click", function () {
+          event.preventDefault();
+          let fechaActual = new Date();
+          let dia = fechaActual.getDate();
+          let mes = fechaActual.getMonth() + 1;
+          let anio = fechaActual.getFullYear();
+          let horas = fechaActual.getHours();
+          let minutos = fechaActual.getMinutes();
+          let segundos = fechaActual.getSeconds();
+          let fechaYHoraFormateada = dia+'/'+mes+'/'+anio+' '+horas+':'+minutos+':'+segundos;
+          console.log(fechaYHoraFormateada);
+          let utm_source2 = "";
+          let utm_medium2 = "";
+          let utm_campaign2 = "";
+          let utm_term2 = "";
+          let utm_content2 = "";
+          let utmParameters = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content"];
+          utmParameters.forEach(function(param) {
+              var value = localStorage.getItem(param);
+              if (value) {
+                  if(param == "utm_source") {
+                      utm_source2 = value;
+                  }else if(param == "utm_medium") {
+                      utm_medium2 = value;
+                  }else if(param == "utm_campaign") {
+                      utm_campaign2 = value;
+                  }else if(param == "utm_term") {
+                      utm_term2 = value;
+                  }else if(param == "utm_content") {
+                      utm_content2 = value;
+                  }
+              }
+          });
+          let name = document.getElementById("name");
+          let phone2 = document.getElementById("phone");
+          let accept_terms2 = document.getElementById("privacy-checkbox");
+          let receive_information2 = document.getElementById("ad-checkbox");
+          fetch("https://sig-api.chapnikandgiesen.com/api/leads/form", {
+            method: "POST",
+            body: new URLSearchParams({
+              date: fechaYHoraFormateada,
+              utm_source: utm_source2,
+              utm_medium: utm_medium2 || "WEB",
+              utm_campaign: utm_campaign2,
+              utm_term: utm_term2,
+              utm_content: utm_content2,
+              formTitle: window.location,
+              house: document.title,
+              full_name: name.value,
+              phone: phone2.value,
+              accept_terms: accept_terms2.checked,
+              receive_information: receive_information2.checked,
+            }),
+          }).then((response) => {
+            console.log(response);
+            window.location.href = "../thank-you.html";
+          });
+        });
+    </script>
+</body>
+</html>
