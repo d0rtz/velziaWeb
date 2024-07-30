@@ -1,4 +1,6 @@
 User-agent: *
 Disallow: /login/
+Disallow: /pisos-en-venta/en-venta.html
+Disallow: /landing-iberia/
 
 Sitemap: https://www.velzia.es/sitemap.xml

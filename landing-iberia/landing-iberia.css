@@ -30,11 +30,11 @@ h1 {
 
 /* MAIN */
 
-#logo{
-    position: absolute;
-    left: 30px;
-    top: 30px;
-    z-index: 1000;
+#logo {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  z-index: 1000;
 }
 
 #sale {
@@ -103,6 +103,10 @@ h1 {
 /*MEDIA QUERIES*/
 
 @media (max-width: 768px) {
+  .content h2 {
+    padding-left: 10% !important;
+    padding-right: 10% !important;
+  }
   #contact-button {
     padding-top: 5%;
     padding-bottom: 5%;
