@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Contacta con Velzia para cualquier consulta o información sobre nuestras viviendas de lujo, proyectos de reformas o inversiones inmobiliarias en Madrid. Estamos aquí para ayudarte y responder a tus preguntas." />
-    <meta name="keywords" content="contacto Velzia, consultas inmobiliarias, información viviendas de lujo, proyectos de reformas, inversiones inmobiliarias, Madrid, contacto Velzia Homes" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contacta con Velzia para cualquier consulta o información sobre nuestras viviendas de lujo, proyectos de reformas o inversiones inmobiliarias en Madrid. Estamos aquí para ayudarte y responder a tus preguntas."
+    />
+    <meta
+      name="keywords"
+      content="contacto Velzia, consultas inmobiliarias, información viviendas de lujo, proyectos de reformas, inversiones inmobiliarias, Madrid, contacto Velzia Homes"
+    />
     <link rel="stylesheet" href="landing-iberia.css" />
     <link
       rel="apple-touch-icon"
@@ -48,193 +55,234 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/23.0.8/js/intlTelInput.min.js"></script>
 
     <title>Velzia Homes - Iberia</title>
-</head>
-<body>
+  </head>
+  <body>
     <section id="sale">
-        <img src="../resources/velzia-homes-blanco.png" alt="logo velzia blanco" id="logo" height="50px" width="auto">
-        <img
-          src="../resources/iStock-520711223.png"
-          alt=""
-          id="background"
-        />
+      <img
+        src="../resources/velzia-homes-blanco.png"
+        alt="logo velzia blanco"
+        id="logo"
+        height="50px"
+        width="auto"
+      />
+      <img src="../resources/iStock-520711223.png" alt="" id="background" />
 
-        <div class="content">
-            <h1 class="cormorant-garamond-light">Bienvenido,</h1>
-            <h1 class="cormorant-garamond-light">contacta con nosotros</h1>
-            <h1 class="cormorant-garamond-light">y te ayudamos a encontrar tu casa única en Madrid</h1>
-            <a href="#contact-form-section" class="scroll-link">
-                <button id="contact-button">
-                    Contactar
-                </button>
-            </a>
-        </div>
-      </section>
+      <div class="content">
+        <h1 class="cormorant-garamond-light">Bienvenido,</h1>
+        <h1 class="cormorant-garamond-light">contacta con nosotros</h1>
+        <h1 class="cormorant-garamond-light">
+          y te ayudamos a encontrar tu casa única en Madrid
+        </h1>
+        <a href="#contact-form-section" class="scroll-link">
+          <button id="contact-button">Contactar</button>
+        </a>
+      </div>
+    </section>
     <section id="contact-form-section" class="cormorant-garamond-light">
-        <div id="form-section">
-            <div>
-                <h3 class="cormorant-garamond-light">
-                    SOLICITA MÁS INFORMACIÓN
-                </h3>
-                <div id="form-div">
-                    <div class="form-container">
-                    <form action="https://sig-api.chapnikandgiesen.com/api/leads/form" method="post" id="login">
-                        <div id="form-name">
-                        <input id="name" type="text" name="full_name" placeholder="Nombre *" required/>
-                        </div>
-                        <div id="form-tel">
-                        <input
-                            id="phone"
-                            type="tel"
-                            name="phone"
-                            placeholder="Teléfono *"
-                            onblur="process(event)"
-                            required
-                        />
-                        <div
-                            class="alert alert-error roboto-regular"
-                            style="display: none"
-                        ></div>
-                        </div>
-                        <div id="form-warn">
-                        <p class="roboto-regular">
-                            <b>Finalidades:</b> Responder a sus solicitudes y remitirle
-                            información comercial de nuestros productos y servicios
-                            inmobiliarios, incluso por medios electrónicos.
-                            <b>Derechos: </b>Puede retirar su consentimiento y acceder,
-                            rectificar, suprimir sus datos y demás derechos en
-                            chgg@delegado-datos.com. <b>Más Información </b>en <a href="../politicas/politica-privacidad.html">Política
-                            de Privacidad.</a>
-                        </p>
-                        </div>
-                        <div id="form-check1">
-                            <input type="checkbox" name="accept_terms" id="privacy-checkbox" required>
-                            <label for="privacy-checkbox" class="roboto-regular">He leído y acepto la política de <a href="../politicas/politica-privacidad.html">privacidad</a>.</label>
-                        </div>
-                        <div id="form-check2">
-                            <input type="checkbox" name="receive_information" id="ad-checkbox" >
-                            <label for="ad-checkbox" class="roboto-regular">Acepto recibir información de nuestros inmuebles, incluso por medios electrónicos.</label>
-                        </div>
-                        <div id="form-submit">
-                        <button type="button" id="submit">Enviar</button>
-                        </div>
-                    </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </section>
-    <section id="info">
-        <div class="cormorant-garamond-light">
-            <h2>Descubre Velzia</h2>
-            <p>Somos diseño, tendencia y sofisticación. Somos artesanía e innovación. Somos emoción. Vendemos viviendas íntegramente rehabilitadas. Vendemos casas únicas e inspiradoras, listas para entrar a vivir.</p>
-            <p>Totalmente decoradas y equipadas. Donde cada detalle cuenta.</p>
-        </div>
+      <div id="form-section">
         <div>
+          <h3 class="cormorant-garamond-light">SOLICITA MÁS INFORMACIÓN</h3>
+          <div id="form-div">
+            <div class="form-container">
+              <form
+                action="https://sig-api.chapnikandgiesen.com/api/leads/form"
+                method="post"
+                id="login"
+              >
+                <div id="form-name">
+                  <input
+                    id="name"
+                    type="text"
+                    name="full_name"
+                    placeholder="Nombre *"
+                    required
+                  />
+                </div>
+                <div id="form-tel">
+                  <input
+                    id="phone"
+                    type="tel"
+                    name="phone"
+                    placeholder="Teléfono *"
+                    onblur="process(event)"
+                    required
+                  />
+                  <div
+                    class="alert alert-error roboto-regular"
+                    style="display: none"
+                  ></div>
+                </div>
 
+                <div id="form-email">
+                  <input
+                    id="email"
+                    type="email"
+                    name="email"
+                    placeholder="Correo electrónico*"
+                    required
+                  />
+                </div>
+                <div id="form-warn">
+                  <p class="roboto-regular">
+                    <b>Finalidades:</b> Responder a sus solicitudes y remitirle
+                    información comercial de nuestros productos y servicios
+                    inmobiliarios, incluso por medios electrónicos.
+                    <b>Derechos: </b>Puede retirar su consentimiento y acceder,
+                    rectificar, suprimir sus datos y demás derechos en
+                    chgg@delegado-datos.com. <b>Más Información </b>en
+                    <a href="../politicas/politica-privacidad.html"
+                      >Política de Privacidad.</a
+                    >
+                  </p>
+                </div>
+                <div id="form-check1">
+                  <input
+                    type="checkbox"
+                    name="accept_terms"
+                    id="privacy-checkbox"
+                    required
+                  />
+                  <label for="privacy-checkbox" class="roboto-regular"
+                    >He leído y acepto la política de
+                    <a href="../politicas/politica-privacidad.html"
+                      >privacidad</a
+                    >.</label
+                  >
+                </div>
+                <div id="form-check2">
+                  <input
+                    type="checkbox"
+                    name="receive_information"
+                    id="ad-checkbox"
+                  />
+                  <label for="ad-checkbox" class="roboto-regular"
+                    >Acepto recibir información de nuestros inmuebles, incluso
+                    por medios electrónicos.</label
+                  >
+                </div>
+                <div id="form-submit">
+                  <button type="button" id="submit">Enviar</button>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
+    <section id="info">
+      <div class="cormorant-garamond-light">
+        <h2>Descubre Velzia</h2>
+        <p>
+          Somos diseño, tendencia y sofisticación. Somos artesanía e innovación.
+          Somos emoción. Vendemos viviendas íntegramente rehabilitadas. Vendemos
+          casas únicas e inspiradoras, listas para entrar a vivir.
+        </p>
+        <p>Totalmente decoradas y equipadas. Donde cada detalle cuenta.</p>
+      </div>
+      <div></div>
     </section>
     <footer id="footer">
-        <img
-          src="../resources/velzia-homes-blanco.png"
-          alt="logo-velzia"
-          height="48"
-          width="auto"
-        />
-        <nav class="menu-footer">
-          <ul>
-            <li class="nav-li">
-              <a href="../blog/" class="blank-link nav-link-white roboto-thin"
-                >Blog</a
-              >
-            </li>
-            <li class="nav-li">
-              <a
-                href="../politicas/politica-privacidad.html"
-                class="blank-link nav-link-white roboto-thin"
-                >Política de Privacidad</a
-              >
-            </li>
-            <li class="nav-li">
-              <a
-                href="../politicas/politica-cookies.html"
-                class="blank-link nav-link-white roboto-thin"
-                >Política de Cookies</a
-              >
-            </li>
-            <li class="nav-li">
-              <a
-                href="../politicas/aviso-legal.html"
-                class="blank-link nav-link-white roboto-thin"
-                >Aviso legal</a
-              >
-            </li>
-          </ul>
-        </nav>
-        <nav class="rrss">
-          <ul>
-            <li class="nav-li">
-              <a
-                href="https://www.facebook.com/people/Velzia-by-ChapnikGiesen/100075860846740/?ref=pages_you_manage"
-                target="_blank"
-                class="blank-link nav-link-white"
-                ><img
-                  src="../resources/logo-de-facebook.png"
-                  alt="facebook"
-                  width="20"
-                  height="20"
-              /></a>
-            </li>
-            <li class="nav-li">
-              <a
-                href="https://www.instagram.com/velzia.es/"
-                target="_blank"
-                class="blank-link nav-link-white"
-                ><img
-                  src="../resources/instagram.png"
-                  alt="instagram"
-                  width="20"
-                  height="20"
-              /></a>
-            </li>
-            <li class="nav-li">
-              <a
-                href="https://www.pinterest.es/velziabychapnikandgiesen/"
-                target="_blank"
-                class="blank-link nav-link-white"
-                ><img
-                  src="../resources/logotipo-de-pinterest.png"
-                  alt="pinterest"
-                  width="20"
-                  height="20"
-              /></a>
-            </li>
-            <li class="nav-li">
-              <a
-                href="https://www.youtube.com/@velziabychapnikgiesen5789/videos"
-                target="_blank"
-                class="blank-link nav-link-white"
-                ><img
-                  src="../resources/youtube.png"
-                  alt="youtube"
-                  width="20"
-                  height="20"
-              /></a>
-            </li>
-            <li class="nav-li">
-              <a
-                href="https://www.tiktok.com/@velzia"
-                target="_blank"
-                class="blank-link nav-link-white"
-                ><img
-                  src="../resources/tiktok-64.png"
-                  alt="tiktok"
-                  width="20"
-                  height="20"
-              /></a>
-            </li>
-          </ul>
-        </nav>
-      </footer>
+      <img
+        src="../resources/velzia-homes-blanco.png"
+        alt="logo-velzia"
+        height="48"
+        width="auto"
+      />
+      <nav class="menu-footer">
+        <ul>
+          <li class="nav-li">
+            <a href="../blog/" class="blank-link nav-link-white roboto-thin"
+              >Blog</a
+            >
+          </li>
+          <li class="nav-li">
+            <a
+              href="../politicas/politica-privacidad.html"
+              class="blank-link nav-link-white roboto-thin"
+              >Política de Privacidad</a
+            >
+          </li>
+          <li class="nav-li">
+            <a
+              href="../politicas/politica-cookies.html"
+              class="blank-link nav-link-white roboto-thin"
+              >Política de Cookies</a
+            >
+          </li>
+          <li class="nav-li">
+            <a
+              href="../politicas/aviso-legal.html"
+              class="blank-link nav-link-white roboto-thin"
+              >Aviso legal</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <nav class="rrss">
+        <ul>
+          <li class="nav-li">
+            <a
+              href="https://www.facebook.com/people/Velzia-by-ChapnikGiesen/100075860846740/?ref=pages_you_manage"
+              target="_blank"
+              class="blank-link nav-link-white"
+              ><img
+                src="../resources/logo-de-facebook.png"
+                alt="facebook"
+                width="20"
+                height="20"
+            /></a>
+          </li>
+          <li class="nav-li">
+            <a
+              href="https://www.instagram.com/velzia.es/"
+              target="_blank"
+              class="blank-link nav-link-white"
+              ><img
+                src="../resources/instagram.png"
+                alt="instagram"
+                width="20"
+                height="20"
+            /></a>
+          </li>
+          <li class="nav-li">
+            <a
+              href="https://www.pinterest.es/velziabychapnikandgiesen/"
+              target="_blank"
+              class="blank-link nav-link-white"
+              ><img
+                src="../resources/logotipo-de-pinterest.png"
+                alt="pinterest"
+                width="20"
+                height="20"
+            /></a>
+          </li>
+          <li class="nav-li">
+            <a
+              href="https://www.youtube.com/@velziabychapnikgiesen5789/videos"
+              target="_blank"
+              class="blank-link nav-link-white"
+              ><img
+                src="../resources/youtube.png"
+                alt="youtube"
+                width="20"
+                height="20"
+            /></a>
+          </li>
+          <li class="nav-li">
+            <a
+              href="https://www.tiktok.com/@velzia"
+              target="_blank"
+              class="blank-link nav-link-white"
+              ><img
+                src="../resources/tiktok-64.png"
+                alt="tiktok"
+                width="20"
+                height="20"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
     <script>
       const phoneInputField = document.querySelector("#phone");
       const phoneInput = window.intlTelInput(phoneInputField, {
@@ -242,12 +290,12 @@
         utilsScript:
           "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/23.0.8/js/utils.js",
       });
-    
+
       const error = document.querySelector(".alert-error");
-    
+
       function process(event) {
         event.preventDefault();
-    
+
         const phoneNumber = phoneInput.getNumber();
         if (!phoneInput.isValidNumber() && phoneNumber != "") {
           error.style.display = "";
@@ -256,76 +304,95 @@
           error.style.display = "none";
         }
       }
-       const submitBtn = document.getElementById('submit');
-        submitBtn.addEventListener("click", function () {
-          event.preventDefault();
-          let fechaActual = new Date();
-          let dia = fechaActual.getDate();
-          let mes = fechaActual.getMonth() + 1;
-          let anio = fechaActual.getFullYear();
-          let horas = fechaActual.getHours();
-          let minutos = fechaActual.getMinutes();
-          let segundos = fechaActual.getSeconds();
-          let fechaYHoraFormateada = dia+'/'+mes+'/'+anio+' '+horas+':'+minutos+':'+segundos;
-          console.log(fechaYHoraFormateada);
-          let utm_source2 = "";
-          let utm_medium2 = "";
-          let utm_campaign2 = "";
-          let utm_term2 = "";
-          let utm_content2 = "";
-          let utmParameters = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content"];
-          utmParameters.forEach(function(param) {
-              var value = localStorage.getItem(param);
-              if (value) {
-                  if(param == "utm_source") {
-                      utm_source2 = value;
-                  }else if(param == "utm_medium") {
-                      utm_medium2 = value;
-                  }else if(param == "utm_campaign") {
-                      utm_campaign2 = value;
-                  }else if(param == "utm_term") {
-                      utm_term2 = value;
-                  }else if(param == "utm_content") {
-                      utm_content2 = value;
-                  }
-              }
-          });
-          let name = document.getElementById("name");
-          let phone2 = document.getElementById("phone");
-          let accept_terms2 = document.getElementById("privacy-checkbox");
-          let receive_information2 = document.getElementById("ad-checkbox");
-          fetch("https://sig-api.chapnikandgiesen.com/api/leads/form", {
-            method: "POST",
-            body: new URLSearchParams({
-              date: fechaYHoraFormateada,
-              utm_source: utm_source2,
-              utm_medium: utm_medium2 || "WEB",
-              utm_campaign: utm_campaign2,
-              utm_term: utm_term2,
-              utm_content: utm_content2,
-              formTitle: window.location,
-              house: document.title,
-              full_name: name.value,
-              phone: phone2.value,
-              accept_terms: accept_terms2.checked,
-              receive_information: receive_information2.checked,
-            }),
-          }).then((response) => {
-            console.log(response);
-            window.location.href = "../thank-you.html";
-          });
+      const submitBtn = document.getElementById("submit");
+      submitBtn.addEventListener("click", function () {
+        event.preventDefault();
+        let fechaActual = new Date();
+        let dia = fechaActual.getDate();
+        let mes = fechaActual.getMonth() + 1;
+        let anio = fechaActual.getFullYear();
+        let horas = fechaActual.getHours();
+        let minutos = fechaActual.getMinutes();
+        let segundos = fechaActual.getSeconds();
+        let fechaYHoraFormateada =
+          dia +
+          "/" +
+          mes +
+          "/" +
+          anio +
+          " " +
+          horas +
+          ":" +
+          minutos +
+          ":" +
+          segundos;
+        console.log(fechaYHoraFormateada);
+        let utm_source2 = "";
+        let utm_medium2 = "";
+        let utm_campaign2 = "";
+        let utm_term2 = "";
+        let utm_content2 = "";
+        let utmParameters = [
+          "utm_source",
+          "utm_medium",
+          "utm_campaign",
+          "utm_term",
+          "utm_content",
+        ];
+        utmParameters.forEach(function (param) {
+          var value = localStorage.getItem(param);
+          if (value) {
+            if (param == "utm_source") {
+              utm_source2 = value;
+            } else if (param == "utm_medium") {
+              utm_medium2 = value;
+            } else if (param == "utm_campaign") {
+              utm_campaign2 = value;
+            } else if (param == "utm_term") {
+              utm_term2 = value;
+            } else if (param == "utm_content") {
+              utm_content2 = value;
+            }
+          }
         });
+        let name = document.getElementById("name");
+        let phone2 = document.getElementById("phone");
+        let email2 = document.getElementById("email");
+        let accept_terms2 = document.getElementById("privacy-checkbox");
+        let receive_information2 = document.getElementById("ad-checkbox");
+        fetch("https://sig-api.chapnikandgiesen.com/api/leads/form", {
+          method: "POST",
+          body: new URLSearchParams({
+            date: fechaYHoraFormateada,
+            utm_source: utm_source2,
+            utm_medium: utm_medium2 || "WEB",
+            utm_campaign: utm_campaign2,
+            utm_term: utm_term2,
+            utm_content: utm_content2,
+            formTitle: window.location,
+            house: document.title,
+            full_name: name.value,
+            phone: phone2.value,
+            email: email2.value,
+            accept_terms: accept_terms2.checked,
+            receive_information: receive_information2.checked,
+          }),
+        }).then((response) => {
+          console.log(response);
+          window.location.href = "../thank-you.html";
+        });
+      });
     </script>
     <script>
-        document.querySelectorAll('a.scroll-link').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
+      document.querySelectorAll("a.scroll-link").forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
 
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
         });
+      });
     </script>
-</body>
+  </body>
 </html>
