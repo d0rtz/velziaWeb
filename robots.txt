@@ -1,4 +1,4 @@
 User-agent: *
-Disallow: 
+Disallow: /login/
 
 Sitemap: https://www.velzia.es/sitemap.xml
