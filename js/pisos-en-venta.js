@@ -98,16 +98,16 @@ function initMultiStepForm() {
             body: new URLSearchParams({
               date: fechaYHoraFormateada,
               utm_source: utm_source2,
-              utm_medium: utm_medium2,
+              type: utm_medium2 || "WEB",
               utm_campaign: utm_campaign2,
               utm_term: utm_term2,
               utm_content: utm_content2,
-              formTitle: window.location.search,
-              budget: budget2.value,
-              zone: zona.value,
-              area: area2.value,
+              formTitle: window.location,
+              q4_tuPresupuesto: budget2.value,
+              q11_zona: zona.value,
+              q12_cuantosM2: area2.value,
               full_name: full_name2,
-              phone: phone2.value
+              q6_Telefono: phone2.value
             })
           })
             .then(response => {
