@@ -118,11 +118,11 @@ var contactForm = `
         body: new URLSearchParams({
           date: fechaYHoraFormateada,
           utm_source: utm_source2,
-          utm_medium: utm_medium2,
+          utm_medium: utm_medium2 || "WEB",
           utm_campaign: utm_campaign2,
           utm_term: utm_term2,
           utm_content: utm_content2,
-          formTitle: window.location.search,
+          formTitle: window.location,
           house: document.title,
           full_name: name.value,
           phone: phone2.value,
