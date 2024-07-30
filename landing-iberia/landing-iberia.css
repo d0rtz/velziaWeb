@@ -284,6 +284,18 @@ h1 {
   margin: 2% 20% 10% 20%;
 }
 
+#info h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  letter-spacing: 0.15rem;
+}
+
+#info p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
 /* FOOTER */
 #footer {
   background-color: #101010;
