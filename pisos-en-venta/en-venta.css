@@ -248,7 +248,6 @@ h1 {
 }
 .galeria-item h3 {
   display: block;
-  color: transparent;
   font-size: 50px;
   font-weight: 400;
   text-align: center;
@@ -261,6 +260,7 @@ h1 {
 }
 .galeria-item:hover h3 {
   display: hidden;
+  color: transparent;
   transition: all 0.5s ease-in-out;
 }
 .galeria-item-sold,
