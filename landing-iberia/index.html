@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -58,18 +58,21 @@
   </head>
   <body>
     <section id="sale">
-      <a href="../"><img
-        src="../resources/velzia-homes-blanco.png"
-        alt="logo velzia blanco"
-        id="logo"
-        height="50px"
-        width="auto"
+      <a href="../"
+        ><img
+          src="../resources/velzia-homes-blanco.png"
+          alt="logo velzia blanco"
+          id="logo"
+          height="50px"
+          width="auto"
       /></a>
       <img src="../resources/iStock-520711223.avif" alt="" id="background" />
 
       <div class="content">
         <h1>¡Bienvenido a <span>Madrid</span>!</h1>
-        <h2>Contáctanos y te ayudamos a encontrar tu <span>casa única</span></h2>
+        <h2>
+          Contáctanos y te ayudamos a encontrar tu <span>casa única</span>
+        </h2>
         <a href="#contact-form-section" class="scroll-link">
           <button id="contact-button"><b>Contactar</b></button>
         </a>
@@ -176,28 +179,26 @@
       <nav class="menu-footer">
         <ul>
           <li class="nav-li">
-            <a href="../blog/" class="blank-link nav-link-white "
-              >Blog</a
-            >
+            <a href="../blog/" class="blank-link nav-link-white">Blog</a>
           </li>
           <li class="nav-li">
             <a
               href="../politicas/politica-privacidad.html"
-              class="blank-link nav-link-white "
+              class="blank-link nav-link-white"
               >Política de Privacidad</a
             >
           </li>
           <li class="nav-li">
             <a
               href="../politicas/politica-cookies.html"
-              class="blank-link nav-link-white "
+              class="blank-link nav-link-white"
               >Política de Cookies</a
             >
           </li>
           <li class="nav-li">
             <a
               href="../politicas/aviso-legal.html"
-              class="blank-link nav-link-white "
+              class="blank-link nav-link-white"
               >Aviso legal</a
             >
           </li>
@@ -293,91 +294,91 @@
       const submitBtn = document.getElementById("submit");
       submitBtn.addEventListener("click", function () {
         event.preventDefault();
-         // Verificar si el formulario es válido
-    if (form.checkValidity()) {
-        submitBtn.disabled = true;
-        let fechaActual = new Date();
-        let dia = fechaActual.getDate();
-        let mes = fechaActual.getMonth() + 1;
-        let anio = fechaActual.getFullYear();
-        let horas = fechaActual.getHours();
-        let minutos = fechaActual.getMinutes();
-        let segundos = fechaActual.getSeconds();
-        let fechaYHoraFormateada =
-          dia +
-          "/" +
-          mes +
-          "/" +
-          anio +
-          " " +
-          horas +
-          ":" +
-          minutos +
-          ":" +
-          segundos;
-        console.log(fechaYHoraFormateada);
-        let utm_source2 = "";
-        let utm_medium2 = "";
-        let utm_campaign2 = "";
-        let utm_term2 = "";
-        let utm_content2 = "";
-        let utmParameters = [
-          "utm_source",
-          "utm_medium",
-          "utm_campaign",
-          "utm_term",
-          "utm_content",
-        ];
-        utmParameters.forEach(function (param) {
-          var value = localStorage.getItem(param);
-          if (value) {
-            if (param == "utm_source") {
-              utm_source2 = value;
-            } else if (param == "utm_medium") {
-              utm_medium2 = value;
-            } else if (param == "utm_campaign") {
-              utm_campaign2 = value;
-            } else if (param == "utm_term") {
-              utm_term2 = value;
-            } else if (param == "utm_content") {
-              utm_content2 = value;
+        // Verificar si el formulario es válido
+        if (form.checkValidity()) {
+          submitBtn.disabled = true;
+          let fechaActual = new Date();
+          let dia = fechaActual.getDate();
+          let mes = fechaActual.getMonth() + 1;
+          let anio = fechaActual.getFullYear();
+          let horas = fechaActual.getHours();
+          let minutos = fechaActual.getMinutes();
+          let segundos = fechaActual.getSeconds();
+          let fechaYHoraFormateada =
+            dia +
+            "/" +
+            mes +
+            "/" +
+            anio +
+            " " +
+            horas +
+            ":" +
+            minutos +
+            ":" +
+            segundos;
+          console.log(fechaYHoraFormateada);
+          let utm_source2 = "";
+          let utm_medium2 = "";
+          let utm_campaign2 = "";
+          let utm_term2 = "";
+          let utm_content2 = "";
+          let utmParameters = [
+            "utm_source",
+            "utm_medium",
+            "utm_campaign",
+            "utm_term",
+            "utm_content",
+          ];
+          utmParameters.forEach(function (param) {
+            var value = localStorage.getItem(param);
+            if (value) {
+              if (param == "utm_source") {
+                utm_source2 = value;
+              } else if (param == "utm_medium") {
+                utm_medium2 = value;
+              } else if (param == "utm_campaign") {
+                utm_campaign2 = value;
+              } else if (param == "utm_term") {
+                utm_term2 = value;
+              } else if (param == "utm_content") {
+                utm_content2 = value;
+              }
             }
-          }
-        });
-        let name = document.getElementById("name");
-        let phone2 = document.getElementById("phone");
-        let email2 = document.getElementById("email");
-        let accept_terms2 = document.getElementById("privacy-checkbox");
-        let receive_information2 = document.getElementById("ad-checkbox");
-        fetch("https://sig-api.chapnikandgiesen.com/api/leads/form", {
-          method: "POST",
-          body: new URLSearchParams({
-            date: fechaYHoraFormateada,
-            utm_source: utm_source2 || "Iberia",
-            utm_medium: utm_medium2 || "WEB",
-            utm_campaign: utm_campaign2,
-            utm_term: utm_term2,
-            utm_content: utm_content2,
-            formTitle: window.location,
-            full_name: name.value,
-            phone: phone2.value,
-            email: email2.value,
-            accept_terms: accept_terms2.checked || " ",
-            receive_information: receive_information2.checked || " ",
-          }),
-        }).then((response) => {
-          console.log(response);
-          window.location.href = "../thank-you.html";
-        });
-      // Simular una función que se ejecuta después de un tiempo
-      setTimeout(() => {
-        // Re-habilitar el botón después de completar la función
-        submitBtn.disabled = false;
-      }, 2000);
-    } else {
-      // Si el formulario no es válido, mostrar mensajes de error
-      form.reportValidity();
-    } // Ejemplo de 3 segundos de espera
+          });
+          let name = document.getElementById("name");
+          let phone2 = document.getElementById("phone");
+          let email2 = document.getElementById("email");
+          let accept_terms2 = document.getElementById("privacy-checkbox");
+          let receive_information2 = document.getElementById("ad-checkbox");
+          fetch("https://sig-api.chapnikandgiesen.com/api/leads/form", {
+            method: "POST",
+            body: new URLSearchParams({
+              date: fechaYHoraFormateada,
+              utm_source: utm_source2 || "Iberia",
+              utm_medium: utm_medium2 || "WEB",
+              utm_campaign: utm_campaign2,
+              utm_term: utm_term2,
+              utm_content: utm_content2,
+              formTitle: window.location,
+              full_name: name.value,
+              phone: phone2.value,
+              email: email2.value,
+              accept_terms: accept_terms2.checked || " ",
+              receive_information: receive_information2.checked || " ",
+            }),
+          }).then((response) => {
+            console.log(response);
+            window.location.href = "../thank-you.html";
+          });
+          // Simular una función que se ejecuta después de un tiempo
+          setTimeout(() => {
+            // Re-habilitar el botón después de completar la función
+            submitBtn.disabled = false;
+          }, 2000);
+        } else {
+          // Si el formulario no es válido, mostrar mensajes de error
+          form.reportValidity();
+        } // Ejemplo de 3 segundos de espera
       });
     </script>
     <script>

@@ -1,10 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Contacta con Velzia para cualquier consulta o información sobre nuestras viviendas de lujo, proyectos de reformas o inversiones inmobiliarias en Madrid. Estamos aquí para ayudarte y responder a tus preguntas." />
-    <meta name="keywords" content="contacto Velzia, consultas inmobiliarias, información viviendas de lujo, proyectos de reformas, inversiones inmobiliarias, Madrid, contacto Velzia Homes" />
+    <meta
+      name="description"
+      content="Contacta con Velzia para cualquier consulta o información sobre nuestras viviendas de lujo, proyectos de reformas o inversiones inmobiliarias en Madrid. Estamos aquí para ayudarte y responder a tus preguntas."
+    />
+    <meta
+      name="keywords"
+      content="contacto Velzia, consultas inmobiliarias, información viviendas de lujo, proyectos de reformas, inversiones inmobiliarias, Madrid, contacto Velzia Homes"
+    />
     <link rel="stylesheet" href="contacto.css" />
     <link
       rel="apple-touch-icon"
@@ -173,7 +179,7 @@
           <div
             id="mobile-subnav"
             class="cormorant-garamond-medium"
-            style="max-height: 0px;"
+            style="max-height: 0px"
           >
             <hr />
             <div class="mobile-subnav-item">
@@ -516,22 +522,28 @@
         let utm_campaign2 = "";
         let utm_term2 = "";
         let utm_content2 = "";
-        let utmParameters = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content"];
-        utmParameters.forEach(function(param) {
-            var value = localStorage.getItem(param);
-            if (value) {
-                if(param == "utm_source") {
-                    utm_source2 = value;
-                }else if(param == "utm_medium") {
-                    utm_medium2 = value;
-                }else if(param == "utm_campaign") {
-                    utm_campaign2 = value;
-                }else if(param == "utm_term") {
-                    utm_term2 = value;
-                }else if(param == "utm_content") {
-                    utm_content2 = value;
-                }
+        let utmParameters = [
+          "utm_source",
+          "utm_medium",
+          "utm_campaign",
+          "utm_term",
+          "utm_content",
+        ];
+        utmParameters.forEach(function (param) {
+          var value = localStorage.getItem(param);
+          if (value) {
+            if (param == "utm_source") {
+              utm_source2 = value;
+            } else if (param == "utm_medium") {
+              utm_medium2 = value;
+            } else if (param == "utm_campaign") {
+              utm_campaign2 = value;
+            } else if (param == "utm_term") {
+              utm_term2 = value;
+            } else if (param == "utm_content") {
+              utm_content2 = value;
             }
+          }
         });
         let name = document.getElementById("name");
         let phone2 = document.getElementById("phone");

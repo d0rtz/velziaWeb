@@ -1,10 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Transforma tu casa en un hogar de ensueño con Velzia Tailor. Ofrecemos servicios integrales de reformas y diseño de interiores en Madrid. Contacta con nosotros para empezar tu proyecto de reforma con un estilo único y personalizado." />
-    <meta name="keywords" content="reformas integrales, diseño de interiores, Velzia Tailor, hogar de ensueño, servicios de reforma, arquitectura, interiores exclusivos, proyectos personalizados, Madrid, reformas llave en mano" />
+    <meta
+      name="description"
+      content="Transforma tu casa en un hogar de ensueño con Velzia Tailor. Ofrecemos servicios integrales de reformas y diseño de interiores en Madrid. Contacta con nosotros para empezar tu proyecto de reforma con un estilo único y personalizado."
+    />
+    <meta
+      name="keywords"
+      content="reformas integrales, diseño de interiores, Velzia Tailor, hogar de ensueño, servicios de reforma, arquitectura, interiores exclusivos, proyectos personalizados, Madrid, reformas llave en mano"
+    />
     <link rel="stylesheet" href="tu-casa-a-medida.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link
@@ -175,7 +181,7 @@
           <div
             id="mobile-subnav"
             class="cormorant-garamond-medium"
-            style="max-height: 0px;"
+            style="max-height: 0px"
           >
             <hr />
             <div class="mobile-subnav-item">
@@ -646,22 +652,28 @@
         let utm_campaign2 = "";
         let utm_term2 = "";
         let utm_content2 = "";
-        let utmParameters = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content"];
-        utmParameters.forEach(function(param) {
-            var value = localStorage.getItem(param);
-            if (value) {
-                if(param == "utm_source") {
-                    utm_source2 = value;
-                }else if(param == "utm_medium") {
-                    utm_medium2 = value;
-                }else if(param == "utm_campaign") {
-                    utm_campaign2 = value;
-                }else if(param == "utm_term") {
-                    utm_term2 = value;
-                }else if(param == "utm_content") {
-                    utm_content2 = value;
-                }
+        let utmParameters = [
+          "utm_source",
+          "utm_medium",
+          "utm_campaign",
+          "utm_term",
+          "utm_content",
+        ];
+        utmParameters.forEach(function (param) {
+          var value = localStorage.getItem(param);
+          if (value) {
+            if (param == "utm_source") {
+              utm_source2 = value;
+            } else if (param == "utm_medium") {
+              utm_medium2 = value;
+            } else if (param == "utm_campaign") {
+              utm_campaign2 = value;
+            } else if (param == "utm_term") {
+              utm_term2 = value;
+            } else if (param == "utm_content") {
+              utm_content2 = value;
             }
+          }
         });
         let name = document.getElementById("name");
         let phone2 = document.getElementById("phone");
@@ -673,7 +685,7 @@
           body: new URLSearchParams({
             date: fechaYHoraFormateada,
             utm_source: utm_source2,
-            utm_medium: utm_medium2 ||"WEB",
+            utm_medium: utm_medium2 || "WEB",
             utm_campaign: utm_campaign2,
             utm_term: utm_term2,
             utm_content: utm_content2,

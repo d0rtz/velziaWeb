@@ -1,10 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Invierte en proyectos inmobiliarios exclusivos en Madrid con Velzia. Ofrecemos oportunidades de alta rentabilidad y bajo riesgo, gestionadas por expertos con más de 30 años de experiencia. Contacta con nosotros para conocer más sobre nuestras opciones de inversión." />
-    <meta name="keywords" content="inversiones inmobiliarias, alta rentabilidad, bajo riesgo, proyectos exclusivos, Velzia, Madrid, inversiones seguras, diversificación de inversiones, expertos inmobiliarios, oportunidades de inversión" />
+    <meta
+      name="description"
+      content="Invierte en proyectos inmobiliarios exclusivos en Madrid con Velzia. Ofrecemos oportunidades de alta rentabilidad y bajo riesgo, gestionadas por expertos con más de 30 años de experiencia. Contacta con nosotros para conocer más sobre nuestras opciones de inversión."
+    />
+    <meta
+      name="keywords"
+      content="inversiones inmobiliarias, alta rentabilidad, bajo riesgo, proyectos exclusivos, Velzia, Madrid, inversiones seguras, diversificación de inversiones, expertos inmobiliarios, oportunidades de inversión"
+    />
     <link rel="stylesheet" href="quiero-invertir.css" />
     <link
       rel="apple-touch-icon"
@@ -118,7 +124,9 @@
             >
           </div>
           <div class="nav-li">
-            <a href="../tu-casa-a-medida/" class="nav-link nav-link-white">Reformas</a>
+            <a href="../tu-casa-a-medida/" class="nav-link nav-link-white"
+              >Reformas</a
+            >
           </div>
           <div class="nav-li">
             <a href="../quiero-invertir/" class="nav-link nav-link-white"
@@ -179,7 +187,7 @@
           <div
             id="mobile-subnav"
             class="cormorant-garamond-medium"
-            style="max-height: 0px;"
+            style="max-height: 0px"
           >
             <hr />
             <div class="mobile-subnav-item">
@@ -226,7 +234,9 @@
           </div>
           <hr />
           <div class="mobile-nav-item">
-            <a href="../tu-casa-a-medida/" class="blank-link nav-link-black">Reformas</a>
+            <a href="../tu-casa-a-medida/" class="blank-link nav-link-black"
+              >Reformas</a
+            >
           </div>
           <hr />
           <div class="mobile-nav-item">
@@ -410,7 +420,13 @@
                 id="login"
               >
                 <div id="form-name">
-                  <input id="name" type="text" name="full_name" placeholder="Nombre *" required />
+                  <input
+                    id="name"
+                    type="text"
+                    name="full_name"
+                    placeholder="Nombre *"
+                    required
+                  />
                 </div>
                 <div id="form-tel">
                   <input
@@ -427,7 +443,12 @@
                   ></div>
                 </div>
                 <div id="form-email">
-                  <input id="email" type="email" name="email" placeholder="Email *"/>
+                  <input
+                    id="email"
+                    type="email"
+                    name="email"
+                    placeholder="Email *"
+                  />
                 </div>
                 <div id="form-check1">
                   <input
@@ -542,7 +563,9 @@
       <nav class="menu-footer">
         <ul>
           <li class="nav-li">
-            <a href="../blog/" class="blank-link nav-link-white roboto-thin">Blog</a>
+            <a href="../blog/" class="blank-link nav-link-white roboto-thin"
+              >Blog</a
+            >
           </li>
           <li class="nav-li">
             <a
@@ -691,22 +714,28 @@
         let utm_campaign2 = "";
         let utm_term2 = "";
         let utm_content2 = "";
-        let utmParameters = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content"];
-        utmParameters.forEach(function(param) {
-            var value = localStorage.getItem(param);
-            if (value) {
-                if(param == "utm_source") {
-                    utm_source2 = value;
-                }else if(param == "utm_medium") {
-                    utm_medium2 = value;
-                }else if(param == "utm_campaign") {
-                    utm_campaign2 = value;
-                }else if(param == "utm_term") {
-                    utm_term2 = value;
-                }else if(param == "utm_content") {
-                    utm_content2 = value;
-                }
+        let utmParameters = [
+          "utm_source",
+          "utm_medium",
+          "utm_campaign",
+          "utm_term",
+          "utm_content",
+        ];
+        utmParameters.forEach(function (param) {
+          var value = localStorage.getItem(param);
+          if (value) {
+            if (param == "utm_source") {
+              utm_source2 = value;
+            } else if (param == "utm_medium") {
+              utm_medium2 = value;
+            } else if (param == "utm_campaign") {
+              utm_campaign2 = value;
+            } else if (param == "utm_term") {
+              utm_term2 = value;
+            } else if (param == "utm_content") {
+              utm_content2 = value;
             }
+          }
         });
         let name = document.getElementById("name");
         let phone2 = document.getElementById("phone");
