@@ -14,6 +14,13 @@
   font-weight: light;
   font-style: light;
 }
+@font-face {
+  font-family: 'Giga';
+  src: url('../fonts/Fonts/Giga Site/WOFF2/KHGiga-Regular.woff2') format('woff2'),
+       url('../fonts/Fonts/Giga Site/WOFF/KHGiga-Regular.woff') format('woff');
+  font-weight: light;
+  font-style: light;
+}
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 body {
