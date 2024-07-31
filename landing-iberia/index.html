@@ -306,9 +306,13 @@
           error.style.display = "none";
         }
       }
+      const form = document.getElementById("login");
       const submitBtn = document.getElementById("submit");
       submitBtn.addEventListener("click", function () {
         event.preventDefault();
+         // Verificar si el formulario es válido
+    if (form.checkValidity()) {
+        submitBtn.disabled = true;
         let fechaActual = new Date();
         let dia = fechaActual.getDate();
         let mes = fechaActual.getMonth() + 1;
@@ -366,7 +370,7 @@
           method: "POST",
           body: new URLSearchParams({
             date: fechaYHoraFormateada,
-            utm_source: utm_source2,
+            utm_source: utm_source2 || "Iberia",
             utm_medium: utm_medium2 || "WEB",
             utm_campaign: utm_campaign2,
             utm_term: utm_term2,
@@ -375,13 +379,22 @@
             full_name: name.value,
             phone: phone2.value,
             email: email2.value,
-            accept_terms: accept_terms2.checked,
-            receive_information: receive_information2.checked,
+            accept_terms: accept_terms2.checked || " ",
+            receive_information: receive_information2.checked || " ",
           }),
         }).then((response) => {
           console.log(response);
           window.location.href = "../thank-you.html";
         });
+      // Simular una función que se ejecuta después de un tiempo
+      setTimeout(() => {
+        // Re-habilitar el botón después de completar la función
+        submitBtn.disabled = false;
+      }, 2000);
+    } else {
+      // Si el formulario no es válido, mostrar mensajes de error
+      form.reportValidity();
+    } // Ejemplo de 3 segundos de espera
       });
     </script>
     <script>
