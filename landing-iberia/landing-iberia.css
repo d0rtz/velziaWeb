@@ -117,8 +117,9 @@ h1 {
   margin-top: 10%;
   font-size: 18px;
   letter-spacing: 0.1rem;
-  background-color: #f1f1f1;
-  border: 0;
+  background-color: #000000;
+  color: #fff;
+  border: #000000 2px solid;
   transition: all 0.3s ease-in-out;
 }
 #contact-button:hover {
