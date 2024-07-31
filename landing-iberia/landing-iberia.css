@@ -22,6 +22,12 @@
   font-weight: light;
   font-style: light;
 }
+@font-face {
+  font-family: 'GigaItalic';
+  src: url('../fonts/KHGigaTRIAL-LightItalic.otf') format('opentype');
+  font-weight: light;
+  font-style: light;
+}
 
 body {
   margin: 0;
@@ -30,7 +36,7 @@ body {
 
 }
 span{
-  font-family: 'Giga', sans-serif;
+  font-family: 'GigaItalic', sans-serif;
 }
 
 h1 {
