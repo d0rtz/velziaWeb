@@ -277,12 +277,12 @@ h1 {
   border: 0;
   width: 100%;
   height: 50px;
-  background-color: #FF851B;
+  background-color: #bda76f;
   color: #fff;
   transition: all 0.3s ease;
 }
 #submit:hover {
-  background-color: #cc670f;
+  background-color: #9b8755;
 }
 
 #velzia-btn{
