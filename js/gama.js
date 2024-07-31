@@ -20,28 +20,28 @@ fetch(url, requestOptions)
       switch (gama) {
         case "riviera":
             htmlTitle = "<h1>RIVIERA</h1><h2>Lujo a precio asequible</h2>";
-            document.getElementById("li-riv").classList.add("subnav-li-active");
-            document.getElementById("mobile-li-riv").style.color = "#bda76f";
+            // document.getElementById("li-riv").classList.add("subnav-li-active");
+            // document.getElementById("mobile-li-riv").style.color = "#bda76f";
             break;
         case "emerald":
             htmlTitle = "<h1>EMERALD</h1><h2>El equilibrio perfecto entre elegancia y funcionalidad</h2>";
-            document.getElementById("li-eme").classList.add("subnav-li-active");
-            document.getElementById("mobile-li-eme").style.color = "#bda76f";
+            // document.getElementById("li-eme").classList.add("subnav-li-active");
+            // document.getElementById("mobile-li-eme").style.color = "#bda76f";
             break;
         case "grand-emerald":
             htmlTitle = "<h1>GRAND EMERALD</h1><h2>Máximo confort, sofisticación y diseño</h2>";
-            document.getElementById("li-gem").classList.add("subnav-li-active");
-            document.getElementById("mobile-li-gem").style.color = "#bda76f";
+            // document.getElementById("li-gem").classList.add("subnav-li-active");
+            // document.getElementById("mobile-li-gem").style.color = "#bda76f";
             break;
         case "milano":
             htmlTitle = "<h1>MILANO</h1><h2>Modernidad y alta decoración en perfecta armonía</h2>";
-            document.getElementById("li-mil").classList.add("subnav-li-active");
-            document.getElementById("mobile-li-mil").style.color = "#bda76f";
+            // document.getElementById("li-mil").classList.add("subnav-li-active");
+            // document.getElementById("mobile-li-mil").style.color = "#bda76f";
             break;
         case "palazzo":
             htmlTitle = "<h1>PALAZZO</h1><h2>El más exquisito lujo contemporáneo en los barrios más exclusivos de Madrid​</h2>";
-            document.getElementById("li-pal").classList.add("subnav-li-active");
-            document.getElementById("mobile-li-pal").style.color = "#bda76f";
+            // document.getElementById("li-pal").classList.add("subnav-li-active");
+            // document.getElementById("mobile-li-pal").style.color = "#bda76f";
             break;
       
         default:
