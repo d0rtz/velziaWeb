@@ -281,6 +281,7 @@ button {
 }
 #contact-button {
   font-size: 20px;
+  border: 0;
   background-color: #f1f1f1;
   color: #000;
   letter-spacing: 0.15rem;
