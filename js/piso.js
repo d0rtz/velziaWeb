@@ -75,9 +75,15 @@ var contactForm = `
       error.style.display = "none";
     }
   }
+   const form = document.getElementById("login");
    const submitBtn = document.getElementById('submit');
     submitBtn.addEventListener("click", function () {
-      event.preventDefault();
+      event.preventDefault();    
+      // Verificar si el formulario es válido
+      if (form.checkValidity()) {
+      // Deshabilitar el botón
+      submitBtn.disabled = true;
+
       let fechaActual = new Date();
       let dia = fechaActual.getDate();
       let mes = fechaActual.getMonth() + 1;
@@ -133,6 +139,15 @@ var contactForm = `
         console.log(response);
         window.location.href = "../thank-you.html";
       });
+      // Simular una función que se ejecuta después de un tiempo
+      setTimeout(() => {
+        // Re-habilitar el botón después de completar la función
+        submitBtn.disabled = false;
+      }, 3000); // Ejemplo de 3 segundos de espera
+    } else {
+      // Si el formulario no es válido, mostrar mensajes de error
+      form.reportValidity();
+    }
     });
 </script>
 </section>`;
@@ -158,7 +173,7 @@ fetch(url + "houses", requestOptions)
   .then((result) => {
     console.log(result);
     pisos = JSON.parse(result);
-    relatedProjects(pisos)
+    relatedProjects(pisos);
   })
   .catch((error) => console.error(error));
 
@@ -167,7 +182,11 @@ function relatedProjects(pisos) {
   let relatedProjectsHtml = "";
   var relatedProjectsComplete = "";
   pisos.houses.reverse().forEach(function (piso) {
-    if (piso.gama == data.house.gama && !piso.sold && piso.id != data.house.id) {
+    if (
+      piso.gama == data.house.gama &&
+      !piso.sold &&
+      piso.id != data.house.id
+    ) {
       relatedProjectsArray.push(piso);
     }
   });
@@ -204,7 +223,11 @@ function relatedProjects(pisos) {
   }
   pisos.houses.reverse().forEach(function (piso) {
     for (let index = 0; index < relatedGama.length; index++) {
-      if (piso.gama == relatedGama[index] && !piso.sold && piso.id != data.house.id) {
+      if (
+        piso.gama == relatedGama[index] &&
+        !piso.sold &&
+        piso.id != data.house.id
+      ) {
         relatedProjectsArray.push(piso);
       }
     }
@@ -273,9 +296,7 @@ function renderizarGaleria(data) {
     for (let i = 4; i < photos.length; i++) {
       slider += `
       <li class="splide__slide">
-          <img class="slider-photo" src="${
-            photos[i]
-          }">
+          <img class="slider-photo" src="${photos[i]}">
       </li>
       `;
       // thumbnails += `
@@ -288,9 +309,7 @@ function renderizarGaleria(data) {
     for (let i = 0; i < photos.length; i++) {
       slider += `
       <li class="splide__slide">
-          <img class="slider-photo" src="${
-            photos[i]
-          }">
+          <img class="slider-photo" src="${photos[i]}">
       </li>
       `;
       // thumbnails += `
@@ -316,14 +335,14 @@ function renderizarGaleria(data) {
       </div>
     </div>
     `;
-    // <div id="thumbnail-slider" class="splide">
-    //   <div class="splide__track">
-		//     <ul class="splide__list">
-    //       ${thumbnails}
-    //     </ul>
-    //   </div>
-    // </div>
-  let mobile = screen.width <= 768? true: false;
+  // <div id="thumbnail-slider" class="splide">
+  //   <div class="splide__track">
+  //     <ul class="splide__list">
+  //       ${thumbnails}
+  //     </ul>
+  //   </div>
+  // </div>
+  let mobile = screen.width <= 768 ? true : false;
   let html = `
     <section id="sale">
         <img src="${data.house.background}" alt="" id="background" />
@@ -332,7 +351,9 @@ function renderizarGaleria(data) {
             <div id="content-text-div">
                 <h2>${
                   data.house.type != "apartment"
-                    ? data.house.type == "conversion"? "CONVERSIÓN DE UN LOCAL A VIVIENDA" : "CHATEAU"
+                    ? data.house.type == "conversion"
+                      ? "CONVERSIÓN DE UN LOCAL A VIVIENDA"
+                      : "CHATEAU"
                     : "REFORMA INTEGRAL DE UN PISO"
                 }</h2>
                 <h1>${data.house.name}</h1>
@@ -343,13 +364,16 @@ function renderizarGaleria(data) {
                         data.house.price
                       )}</h3>`
                 }
-                <p class="roboto-thin" style="text-align: justify;">${data.house.description}</p>
+                <p class="roboto-thin" style="text-align: justify;">${
+                  data.house.description
+                }</p>
             </div>
         </div>
     </section>
     ${
       data.house.sold
-        ? mobile?`
+        ? mobile
+          ? `
           <section id="galeria">
               <div id="img1-div"><img data-aos="fade-up" src="${photos[0]}" alt="img1" id="img1" width="100%" height="100%" /></div>
               <div id="img2-div"><img data-aos="fade-up" src="${photos[1]}" alt="img2" id="img2" width="100%" height="100%" /></div>
@@ -361,7 +385,8 @@ function renderizarGaleria(data) {
           </section>
           <section id="related-projects">
 
-          </section>`:`
+          </section>`
+          : `
           <section id="galeria">
               <div id="img1-div"><img data-aos="fade-up" src="${photos[0]}" alt="img1" id="img1" width="100%" height="100%" /></div>
               <div id="img2-div"><img data-aos="fade-right" src="${photos[1]}" alt="img2" id="img2" width="100%" height="100%" /></div>
@@ -388,9 +413,12 @@ function renderizarGaleria(data) {
   `;
 
   $("#main").html(html);
-  waitForFirstImagesToLoad(document.querySelectorAll('#image-slider img'), 5, initializeSplide);
+  waitForFirstImagesToLoad(
+    document.querySelectorAll("#image-slider img"),
+    5,
+    initializeSplide
+  );
 }
-
 
 function waitForFirstImagesToLoad(images, count, callback) {
   let loadedImages = 0;
@@ -401,13 +429,13 @@ function waitForFirstImagesToLoad(images, count, callback) {
         callback();
       }
     } else {
-      images[i].addEventListener('load', () => {
+      images[i].addEventListener("load", () => {
         loadedImages++;
         if (loadedImages === count) {
           callback();
         }
       });
-      images[i].addEventListener('error', () => {
+      images[i].addEventListener("error", () => {
         loadedImages++;
         if (loadedImages === count) {
           callback();
@@ -421,28 +449,34 @@ function waitForFirstImagesToLoad(images, count, callback) {
 }
 
 function toggleFS() {
-  var fsBtn = document.getElementsByClassName('fullscreen-btn')[0];
-  var elem = document.getElementsByClassName('slideshow-container')[0];
+  var fsBtn = document.getElementsByClassName("fullscreen-btn")[0];
+  var elem = document.getElementsByClassName("slideshow-container")[0];
   if (!document.fullscreenElement) {
-    fsBtn.innerHTML = "<i class='bx bx-exit-fullscreen' style='color:#ffffff' ></i>";
-    if(elem.requestFullscreen()){
+    fsBtn.innerHTML =
+      "<i class='bx bx-exit-fullscreen' style='color:#ffffff' ></i>";
+    if (elem.requestFullscreen()) {
       elem.requestFullscreen();
-    } else if (elem.webkitRequestFullscreen) { /* Safari */
+    } else if (elem.webkitRequestFullscreen) {
+      /* Safari */
       elem.webkitRequestFullscreen();
-    } else if (elem.msRequestFullscreen) { /* IE11 */
+    } else if (elem.msRequestFullscreen) {
+      /* IE11 */
       elem.msRequestFullscreen();
     }
-  }else{
-    fsBtn.innerHTML = "<i class='bx bx-fullscreen' style='color:#ffffff'  ></i>";
+  } else {
+    fsBtn.innerHTML =
+      "<i class='bx bx-fullscreen' style='color:#ffffff'  ></i>";
     if (document.exitFullscreen) {
       document.exitFullscreen();
-    } else if (document.webkitExitFullscreen) { /* Safari */
+    } else if (document.webkitExitFullscreen) {
+      /* Safari */
       document.webkitExitFullscreen();
-    } else if (document.msExitFullscreen) { /* IE11 */
+    } else if (document.msExitFullscreen) {
+      /* IE11 */
       document.msExitFullscreen();
     }
   }
-} 
+}
 
 function initializeSplide() {
   var main = new Splide("#image-slider", {
@@ -455,7 +489,7 @@ function initializeSplide() {
     autoWidth: true,
     gap: 20,
     autoplay: true,
-    interval: 5000, 
+    interval: 5000,
     keyboard: true,
   });
 
@@ -477,25 +511,29 @@ function initializeSplide() {
   // main.sync(thumbnails);
   main.mount();
 
-  main.on('mounted', function() {
+  main.on("mounted", function () {
     main.refresh();
   });
 
   var isAutoplay = true;
-  var ap = document.getElementById('toggle-autoplay')
+  var ap = document.getElementById("toggle-autoplay");
 
-  document.getElementById('toggle-autoplay').addEventListener('click', function() {
-    if (isAutoplay) {
-      ap.innerHTML = "<i class='bx bx-play-circle' style='color:#ffffff' ></i>";
-      main.options = { autoplay: false };
-      main.Components.Autoplay.pause();
-    } else {
-      ap.innerHTML = "<i class='bx bx-pause-circle' style='color:#ffffff' ></i>";
-      main.options = { autoplay: true };
-      main.Components.Autoplay.play();
-    }
-    isAutoplay = !isAutoplay;
-  });
+  document
+    .getElementById("toggle-autoplay")
+    .addEventListener("click", function () {
+      if (isAutoplay) {
+        ap.innerHTML =
+          "<i class='bx bx-play-circle' style='color:#ffffff' ></i>";
+        main.options = { autoplay: false };
+        main.Components.Autoplay.pause();
+      } else {
+        ap.innerHTML =
+          "<i class='bx bx-pause-circle' style='color:#ffffff' ></i>";
+        main.options = { autoplay: true };
+        main.Components.Autoplay.play();
+      }
+      isAutoplay = !isAutoplay;
+    });
 }
 
 function initializeRelatedSplide() {

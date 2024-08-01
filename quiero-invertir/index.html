@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -117,7 +117,7 @@
                 <div class="subnav-li">Palazzo - Desde 1.500.000 €</div>
               </a>
             </div>
-          </div> 
+          </div>
           <div class="nav-li">
             <a href="../pisos-en-venta/" class="nav-link nav-link-white"
               >Pisos en venta</a
@@ -141,7 +141,10 @@
           <div class="nav-li">
             <a href="../contacto/" class="nav-link nav-link-white">Contacto</a>
           </div>
-          <div class="nav-li" style="font-size: 20px; font-family: 'Giga', sans-serif;">
+          <div
+            class="nav-li"
+            style="font-size: 20px; font-family: 'Giga', sans-serif"
+          >
             <i id="phone-icon" class="bx bxs-phone" style="color: #f1f1f1"></i>
             <a
               href="tel:+34911989927"
@@ -257,7 +260,7 @@
             >
           </div>
           <hr />
-          <div class="mobile-nav-item" style="font-family: 'Giga', sans-serif;">
+          <div class="mobile-nav-item" style="font-family: 'Giga', sans-serif">
             <i class="bx bxs-phone"></i>
             <a
               href="tel:+34911989927"
@@ -501,9 +504,12 @@
           <div class="testi-content swiper-wrapper">
             <div class="slide swiper-slide">
               <img src="../resources/Trustpilot.png" alt="" class="image" />
-              <h3 style="margin-bottom: 0;">5 ventas</h3>
+              <h3 style="margin-bottom: 0">5 ventas</h3>
               <p>
-                Ya llevo cerca de un año invirtiendo con Velzia y ya són 5 ventas de piso, siendo muy atractivas las inversiones, debo de destacar que con Leticia detras te sientes comodo , siempre está para despejar cualquier duda o aconsejarte
+                Ya llevo cerca de un año invirtiendo con Velzia y ya són 5
+                ventas de piso, siendo muy atractivas las inversiones, debo de
+                destacar que con Leticia detras te sientes comodo , siempre está
+                para despejar cualquier duda o aconsejarte
               </p>
               <i class="bx bxs-quote-alt-left quote-icon"></i>
               <div class="details">
@@ -709,70 +715,85 @@
         },
       });
 
+      const form = document.getElementById("login");
       submitBtn.addEventListener("click", function () {
         event.preventDefault();
-        let fechaActual = new Date();
-        let dia = fechaActual.getDate();
-        let mes = fechaActual.getMonth() + 1;
-        let anio = fechaActual.getFullYear();
-        let horas = fechaActual.getHours();
-        let minutos = fechaActual.getMinutes();
-        let segundos = fechaActual.getSeconds();
-        let fechaYHoraFormateada = `${dia}/${mes}/${anio} ${horas}:${minutos}:${segundos}`;
-        console.log(fechaYHoraFormateada);
-        let utm_source2 = "";
-        let utm_medium2 = "";
-        let utm_campaign2 = "";
-        let utm_term2 = "";
-        let utm_content2 = "";
-        let utmParameters = [
-          "utm_source",
-          "utm_medium",
-          "utm_campaign",
-          "utm_term",
-          "utm_content",
-        ];
-        utmParameters.forEach(function (param) {
-          var value = localStorage.getItem(param);
-          if (value) {
-            if (param == "utm_source") {
-              utm_source2 = value;
-            } else if (param == "utm_medium") {
-              utm_medium2 = value;
-            } else if (param == "utm_campaign") {
-              utm_campaign2 = value;
-            } else if (param == "utm_term") {
-              utm_term2 = value;
-            } else if (param == "utm_content") {
-              utm_content2 = value;
+        // Verificar si el formulario es válido
+        if (form.checkValidity()) {
+          // Deshabilitar el botón
+          submitBtn.disabled = true;
+
+          let fechaActual = new Date();
+          let dia = fechaActual.getDate();
+          let mes = fechaActual.getMonth() + 1;
+          let anio = fechaActual.getFullYear();
+          let horas = fechaActual.getHours();
+          let minutos = fechaActual.getMinutes();
+          let segundos = fechaActual.getSeconds();
+          let fechaYHoraFormateada = `${dia}/${mes}/${anio} ${horas}:${minutos}:${segundos}`;
+          console.log(fechaYHoraFormateada);
+          let utm_source2 = "";
+          let utm_medium2 = "";
+          let utm_campaign2 = "";
+          let utm_term2 = "";
+          let utm_content2 = "";
+          let utmParameters = [
+            "utm_source",
+            "utm_medium",
+            "utm_campaign",
+            "utm_term",
+            "utm_content",
+          ];
+          utmParameters.forEach(function (param) {
+            var value = localStorage.getItem(param);
+            if (value) {
+              if (param == "utm_source") {
+                utm_source2 = value;
+              } else if (param == "utm_medium") {
+                utm_medium2 = value;
+              } else if (param == "utm_campaign") {
+                utm_campaign2 = value;
+              } else if (param == "utm_term") {
+                utm_term2 = value;
+              } else if (param == "utm_content") {
+                utm_content2 = value;
+              }
             }
-          }
-        });
-        let name = document.getElementById("name");
-        let phone2 = document.getElementById("phone");
-        let email2 = document.getElementById("email");
-        let accept_terms2 = document.getElementById("privacy-checkbox");
-        let receive_information2 = document.getElementById("ad-checkbox");
-        fetch("https://sig-api.chapnikandgiesen.com/api/leads/form", {
-          method: "POST",
-          body: new URLSearchParams({
-            date: fechaYHoraFormateada,
-            utm_source: utm_source2,
-            utm_medium: utm_medium2 || "WEB",
-            utm_campaign: utm_campaign2,
-            utm_term: utm_term2,
-            utm_content: utm_content2,
-            formTitle: window.location,
-            full_name: name.value,
-            phone: phone2.value,
-            email: email2.value,
-            accept_terms: accept_terms2.checked,
-            receive_information: receive_information2.checked,
-          }),
-        }).then((response) => {
-          console.log(response);
-          window.location.href = "../thank-you.html";
-        });
+          });
+          let name = document.getElementById("name");
+          let phone2 = document.getElementById("phone");
+          let email2 = document.getElementById("email");
+          let accept_terms2 = document.getElementById("privacy-checkbox");
+          let receive_information2 = document.getElementById("ad-checkbox");
+          fetch("https://sig-api.chapnikandgiesen.com/api/leads/form", {
+            method: "POST",
+            body: new URLSearchParams({
+              date: fechaYHoraFormateada,
+              utm_source: utm_source2,
+              utm_medium: utm_medium2 || "WEB",
+              utm_campaign: utm_campaign2,
+              utm_term: utm_term2,
+              utm_content: utm_content2,
+              formTitle: window.location,
+              full_name: name.value,
+              phone: phone2.value,
+              email: email2.value,
+              accept_terms: accept_terms2.checked,
+              receive_information: receive_information2.checked,
+            }),
+          }).then((response) => {
+            console.log(response);
+            window.location.href = "../thank-you.html";
+          });
+          // Simular una función que se ejecuta después de un tiempo
+          setTimeout(() => {
+            // Re-habilitar el botón después de completar la función
+            submitBtn.disabled = false;
+          }, 3000); // Ejemplo de 3 segundos de espera
+        } else {
+          // Si el formulario no es válido, mostrar mensajes de error
+          form.reportValidity();
+        }
       });
     </script>
     <script src="../js/functions.js"></script>
