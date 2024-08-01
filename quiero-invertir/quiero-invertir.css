@@ -509,6 +509,12 @@ button {
   font-weight: 400;
   color: #333;
 }
+.slide h3 {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+}
 .slide .quote-icon {
   font-size: 30px;
   color: #00b67a;
@@ -532,7 +538,6 @@ button {
 .nav-btn {
   height: 40px;
   width: 40px;
-  border-radius: 50%;
   transform: translateY(30px);
   background-color: rgba(0, 0, 0, 0.1);
   transition: 0.2s;
@@ -553,7 +558,7 @@ button {
 }
 @media screen and (max-width: 768px) {
   .slide p {
-    padding: 0 20px;
+    padding: 0 40px;
   }
   .nav-btn {
     display: none;
