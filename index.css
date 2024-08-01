@@ -312,7 +312,8 @@ button {
   text-align: justify;
 }
 #sale-button {
-  background-color: #ffffff;
+  background-color: #f1f1f1;
+  color: #000;
   font-size: 20px;
   margin-top: 5%;
   padding-top: 5%;
