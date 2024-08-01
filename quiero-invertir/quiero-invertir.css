@@ -87,7 +87,7 @@ button {
 .nav-li {
   position: relative; /* Necesario para que el submenú se posicione correctamente */
   list-style-type: none;
-  padding: 1.5%;
+  padding: 25px 1.5%;
   font-size: medium;
 }
 .subnava {
@@ -270,6 +270,9 @@ button {
 }
 #contact-button {
   margin-top: 3%;
+  background-color: #000;
+  border: #000 2px solid;
+  color: #f1f1f1;
   font-size: 13px;
   letter-spacing: 0.1rem;
   transition: all 0.3s ease-in-out;

@@ -83,7 +83,7 @@ button {
 .nav-li {
   position: relative; /* Necesario para que el submenú se posicione correctamente */
   list-style-type: none;
-  padding: 1.5%;
+  padding: 25px 1.5%;
   font-size: medium;
 }
 .subnava {
@@ -281,6 +281,8 @@ button {
 }
 #contact-button {
   font-size: 20px;
+  background-color: #f1f1f1;
+  color: #000;
   letter-spacing: 0.15rem;
 }
 .vl {
@@ -528,7 +530,7 @@ button {
     transform: translateY(10%); /* Ajustar para dispositivos móviles */
   }
   #contact-button {
-    padding: 1.5em 2.5em;
+    padding: 1.5rem 2.5rem;
     width: 290px;
   }
   #description {

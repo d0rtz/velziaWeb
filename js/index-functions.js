@@ -60,11 +60,11 @@ var mobileHeader = document.getElementById("mobile-header");
 var mobileHeaderBackground = document.getElementById(
   "mobile-header-background"
 );
-//var mobileSubnavImage = document.getElementById("mobile-subnav-image");
-//var mobileDropdownBtn = document.getElementById("mobile-dropdown-btn");
-//var mobileSubnav = document.getElementById("mobile-subnav");
-//var subNavA = document.getElementById("collection-li");
-//var subNav = document.getElementById("subnav");
+var mobileSubnavImage = document.getElementById("mobile-subnav-image");
+var mobileDropdownBtn = document.getElementById("mobile-dropdown-btn");
+var mobileSubnav = document.getElementById("mobile-subnav");
+var subNavA = document.getElementById("collection-li");
+var subNav = document.getElementById("subnav");
 var number = document.getElementById("number");
 var mobileNumber = document.getElementById("mobile-number");
 
@@ -73,7 +73,7 @@ number.innerHTML = "34 911 989 927";
 mobileNumber.href = "tel:+34911989927";
 mobileNumber.innerHTML = "34 911 989 927";
 
-/* subNavA.addEventListener("mouseenter", (event) => {
+subNavA.addEventListener("mouseenter", (event) => {
   console.log(event + " Abre submenú");
   subNav.style.display = "block";
 });
@@ -81,7 +81,7 @@ mobileNumber.innerHTML = "34 911 989 927";
 subNavA.addEventListener("mouseleave", (event) => {
   console.log(event + " Cierra submenú");
   subNav.style.display = "none";
-}); */
+}); 
 
 var intervalId = null;
 hamburguerIcon.addEventListener("click", (event) => {
@@ -102,7 +102,7 @@ hamburguerIcon.addEventListener("click", (event) => {
   mobileHeaderBackground.style.visibility = "visible";
 });
 
-/* mobileDropdownBtn.addEventListener("click", (event) => {
+mobileDropdownBtn.addEventListener("click", (event) => {
   if (mobileSubnav.style.maxHeight == "0px") {
     mobileSubnavImage.style.transform = "rotate(45deg)";
     mobileSubnav.style.maxHeight = "500px";
@@ -112,7 +112,7 @@ hamburguerIcon.addEventListener("click", (event) => {
     mobileSubnav.style.maxHeight = "0px";
     //mobileSubnavImage.src = "./resources/plus.png";
   }
-}); */
+});
 
 var intervalId2 = null;
 closeMobileHeaderButton.addEventListener("click", (event) => {

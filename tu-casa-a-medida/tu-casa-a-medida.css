@@ -89,7 +89,7 @@ h1{
 .nav-li {
   position: relative; /* Necesario para que el submenú se posicione correctamente */
   list-style-type: none;
-  padding: 1.5%;
+  padding: 25px 1.5%;
   font-size: medium;
 }
 .subnava {
@@ -276,15 +276,17 @@ h1{
 }
 #contact-button {
   margin-top: 3%;
+  background-color: #000;
+  border: #000 2px solid;
+  color: #f1f1f1;
   font-size: 13px;
   letter-spacing: 0.1rem;
   transition: all 0.3s ease-in-out;
 }
 #contact-button:hover {
-  margin-top: 2.7%;
-  background-color: rgba(37, 41, 48, 0.94);
+  border: #f1f1f1 2px solid;
+  background-color: transparent;
   color: #f1f1f1;
-  transition: all 0.3s ease-in-out;
 }
 #contact-button2 {
   padding: 20px 25px;

@@ -93,7 +93,7 @@ button {
   position: relative;
   /* Necesario para que el submenú se posicione correctamente */
   list-style-type: none;
-  padding: 1.5%;
+  padding: 25px 1.5%;
   font-size: medium;
 }
 
