@@ -278,11 +278,6 @@ button {
   transition: all 0.3s ease-in-out;
 }
 #contact-button:hover {
-  margin-top: 2.7%;
-  border: #f1f1f1 2px solid;
-  background-color: transparent;
-  color: #f1f1f1;
-  transition: all 0.3s ease-in-out;
 }
 
 #section1 {
