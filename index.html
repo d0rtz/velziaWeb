@@ -51,6 +51,7 @@
       href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css"
@@ -133,12 +134,13 @@
           <div class="nav-li">
             <a href="./contacto/" class="nav-link nav-link-white">Contacto</a>
           </div>
-          <div class="nav-li" style="font-size: 20px; font-family: 'Giga', sans-serif;">
+          <div class="nav-li" style="font-family: 'Giga', sans-serif;">
             <i id="phone-icon" class="bx bxs-phone" style="color: #f1f1f1"></i>
             <a
               href="tel:+34911989927"
               class="nav-link nav-link-white"
               id="number"
+              style="font-size: 20px"
             ></a>
           </div>
         </div>
@@ -262,13 +264,16 @@
             <p id="p-video-index" class="roboto-regular">VELZIA</p>
             <hr id="sl1" />
             <h1 id="h1-video-index" class="cormorant-garamond-regular">
-              Casas de revista, listas para disfrutar
+              Casas de revista,
             </h1>
-            <a href="./contacto/">
+            <h1 id="h1-video-index" class="cormorant-garamond-regular">
+              listas para disfrutar
+            </h1>
+            <!-- <a href="./contacto/">
               <button id="contact-button" class="roboto-regular">
                 CONTACTA CON NOSOTROS ➞
               </button>
-            </a>
+            </a> -->
             <div class="vl"></div>
           </div>
         </div>
@@ -292,11 +297,11 @@
             Para que no tengas que preocuparte de nada. Sólo de disfrutar de tu
             nuevo hogar. Descubre las casas más deseadas de Madrid.
           </p>
-          <a href="./pisos-en-venta/">
+          <!-- <a href="./pisos-en-venta/">
             <button id="sale-button" class="roboto-regular">
               PISOS EN VENTA
             </button>
-          </a>
+          </a> -->
         </div>
         <div id="description-images">
           <div id="description-image1">
@@ -333,7 +338,7 @@
           </div>
         </div>
       </section>
-
+      <section id="on-sale"></section>
       <section id="collections">
         <div id="riviera" class="collection cormorant-garamond-light">
           <p>Diseño, calidad y estilo a precio asequible.</p>
@@ -390,6 +395,7 @@
           >
         </div>
       </section>
+      <section id="sold"></section>
       <section id="team-section">
         <p class="roboto-regular">
           Diseñamos y construimos los espacios de tus sueños
@@ -629,6 +635,7 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
     <script src="./js/index-functions.js"></script>
+    <script src="./js/index-functions2.js"></script>
     <script>
       initializePartnersSplide();
     </script>
