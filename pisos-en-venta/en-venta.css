@@ -36,6 +36,9 @@ h1 {
   background-color: #101010;
   color: #f1f1f1;
 }
+span {
+  
+}
 
 /* WSP */
 
@@ -188,7 +191,6 @@ h1 {
   transition: all 0.3s ease-in-out;
 }
 #mobile-subnav-image {
-  transform: rotate(45deg);
   margin-left: 100px;
   transition: all 0.3s ease-in-out;
 }
@@ -271,6 +273,7 @@ h1 {
 }
 .galeria-item h3 {
   display: block;
+  margin: 20px;
   font-size: 50px;
   font-weight: 400;
   text-align: center;
