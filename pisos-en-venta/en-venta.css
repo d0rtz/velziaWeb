@@ -329,7 +329,7 @@ h1 {
 @media (min-width: 768px) {
   #title {
     grid-template-columns: 1fr;
-    margin: 10% 16% 1% 16%;
+    margin: 120px 16% 45px 16%;
   }
   #title h1 {
     font-size: 50px;
