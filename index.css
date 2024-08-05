@@ -301,6 +301,7 @@ button {
 }
 #description-text h2 {
   font-size: 70px;
+  margin: 20px 0;
 }
 #description-text p {
   padding-right: 1%;
