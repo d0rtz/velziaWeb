@@ -527,6 +527,7 @@
       });
 
       const error = document.querySelector(".alert-error");
+      var phone2 = "";
 
       function process(event) {
         event.preventDefault();
@@ -537,6 +538,7 @@
           error.innerHTML = `Número inválido.`;
         } else {
           error.style.display = "none";
+          phone2 = phoneNumber;
         }
       }
 
@@ -585,7 +587,6 @@
             }
           });
           let name = document.getElementById("name");
-          let phone2 = document.getElementById("phone");
           let email2 = document.getElementById("email");
           let message2 = document.getElementById("message");
           let accept_terms2 = document.getElementById("privacy-checkbox");
@@ -601,7 +602,7 @@
               utm_content: utm_content2,
               formTitle: window.location,
               full_name: name.value,
-              phone: phone2.value,
+              phone: phone2,
               email: email2.value,
               message: message2.value,
               accept_terms: accept_terms2.checked,

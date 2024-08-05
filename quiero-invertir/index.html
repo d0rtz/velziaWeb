@@ -643,6 +643,7 @@ https://es.trustpilot.com/review/velzia.es"
       });
 
       const error = document.querySelector(".alert-error");
+      var phone2 = "";
 
       function process(event) {
         event.preventDefault();
@@ -653,6 +654,7 @@ https://es.trustpilot.com/review/velzia.es"
           error.innerHTML = `Número inválido.`;
         } else {
           error.style.display = "none";
+          phone2 = phoneNumber;
         }
       }
 
@@ -702,7 +704,6 @@ https://es.trustpilot.com/review/velzia.es"
             }
           });
           let name = document.getElementById("name");
-          let phone2 = document.getElementById("phone");
           let email2 = document.getElementById("email");
           let accept_terms2 = document.getElementById("privacy-checkbox");
           let receive_information2 = document.getElementById("ad-checkbox");
@@ -717,7 +718,7 @@ https://es.trustpilot.com/review/velzia.es"
               utm_content: utm_content2,
               formTitle: window.location,
               full_name: name.value,
-              phone: phone2.value,
+              phone: phone2,
               email: email2.value,
               accept_terms: accept_terms2.checked,
               receive_information: receive_information2.checked,
