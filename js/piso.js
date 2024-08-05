@@ -73,7 +73,8 @@ var contactForm = `
   });
 
   const error = document.querySelector(".alert-error");
-
+  var phone2 = "";
+  
   function process(event) {
     event.preventDefault();
 
@@ -83,6 +84,7 @@ var contactForm = `
       error.innerHTML = "Número inválido.";
     } else {
       error.style.display = "none";
+      phone2 = phoneNumber;
     }
   }
    const form = document.getElementById("login");
@@ -126,7 +128,6 @@ var contactForm = `
           }
       });
       let name = document.getElementById("name");
-      let phone2 = document.getElementById("phone");
       let email2 = document.getElementById("email");
       let accept_terms2 = document.getElementById("privacy-checkbox");
       let receive_information2 = document.getElementById("ad-checkbox");
@@ -142,7 +143,7 @@ var contactForm = `
           formTitle: window.location,
           house: document.title,
           full_name: name.value,
-          phone: phone2.value,
+          phone: phone2,
           email: email2.value,
           accept_terms: accept_terms2.checked,
           receive_information: receive_information2.checked,
