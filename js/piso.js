@@ -473,6 +473,9 @@ function toggleFS() {
     } else if (elem.msRequestFullscreen) {
       /* IE11 */
       elem.msRequestFullscreen();
+    } else if (elem.webkitEnterFullscreen) {
+      /* Safari */
+      elem.webkitEnterFullscreen();
     }
   } else {
     fsBtn.innerHTML =
