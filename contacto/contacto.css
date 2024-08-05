@@ -424,6 +424,9 @@ button {
     grid-column: 1;
     grid-row: 2;
   }
+  #address-desktop {
+    display: none;
+  }
   #form-section {
     padding-top: 15%;
     grid-column: 1;
@@ -437,6 +440,9 @@ button {
   }
   #address {
     grid-column: 1;
+  }
+  #address-mobile {
+    display: none;
   }
   #form-section {
     padding-left: 10%;
