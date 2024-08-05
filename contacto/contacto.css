@@ -336,9 +336,25 @@ button {
   background-color: #f2dede;
   border-color: #ebccd1;
 }
-#form-message {
+#form-email {
   grid-column: 1 / span 2;
   grid-row: 2;
+}
+#email {
+  border: 0;
+  border-bottom: 1px solid white;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  width: 98%;
+  height: 40px;
+  padding: 1%;
+}
+#email::placeholder{
+  color: white ;
+}
+#form-message {
+  grid-column: 1 / span 2;
+  grid-row: 3;
 }
 #message {
   border: 0;
@@ -354,7 +370,7 @@ button {
 }
 #form-warn {
   grid-column: 1 / span 2;
-  grid-row: 3;
+  grid-row: 7;
 }
 #form-warn p {
   font-size: 11px;
@@ -366,14 +382,14 @@ button {
   align-items: center;
   align-self: center;
   grid-column: 1 / span 2;
-  grid-row: 4;
+  grid-row: 5;
 }
 #form-check2 {
   display: flex;
   align-items: center;
   align-self: center;
   grid-column: 1 / span 2;
-  grid-row: 5;
+  grid-row: 6;
 }
 #privacy-checkbox,
 #ad-checkbox {
@@ -388,7 +404,7 @@ button {
 
 #form-submit {
   grid-column: 1 / span 2;
-  grid-row: 6;
+  grid-row: 4;
 }
 #submit {
   border-radius: 3px;

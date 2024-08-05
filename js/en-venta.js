@@ -14,7 +14,7 @@ fetch(url, requestOptions)
       console.log(pisos);
       console.log(pisos.gama);
       let html = "";
-      let htmlTitle = "<h1>EN VENTA</h1><h2>Descubre nuestros pisos.</h2>";
+      let htmlTitle = "<h1>Descubre nuestras casas en venta</h1>";
       $("#title").html(htmlTitle);
     
       pisos.houses.reverse().forEach(function (piso) {

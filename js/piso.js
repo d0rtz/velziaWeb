@@ -27,6 +27,16 @@ var contactForm = `
                     style="display: none"
                 ></div>
                 </div>
+                
+                <div id="form-email">
+                  <input
+                    id="email"
+                    type="email"
+                    name="email"
+                    placeholder="Correo electrónico *"
+                    required
+                  />
+                </div>
                 <div id="form-warn">
                 <p class="roboto-regular">
                     <b>Finalidades:</b> Responder a sus solicitudes y remitirle
@@ -117,6 +127,7 @@ var contactForm = `
       });
       let name = document.getElementById("name");
       let phone2 = document.getElementById("phone");
+      let email2 = document.getElementById("email");
       let accept_terms2 = document.getElementById("privacy-checkbox");
       let receive_information2 = document.getElementById("ad-checkbox");
       fetch("https://sig-api.chapnikandgiesen.com/api/leads/form", {
@@ -132,6 +143,7 @@ var contactForm = `
           house: document.title,
           full_name: name.value,
           phone: phone2.value,
+          email: email2.value,
           accept_terms: accept_terms2.checked,
           receive_information: receive_information2.checked,
         }),
@@ -183,7 +195,6 @@ function relatedProjects(pisos) {
   var relatedProjectsComplete = "";
   pisos.houses.reverse().forEach(function (piso) {
     if (
-      piso.gama == data.house.gama &&
       !piso.sold &&
       piso.id != data.house.id
     ) {
@@ -221,17 +232,17 @@ function relatedProjects(pisos) {
     default:
       break;
   }
-  pisos.houses.reverse().forEach(function (piso) {
-    for (let index = 0; index < relatedGama.length; index++) {
-      if (
-        piso.gama == relatedGama[index] &&
-        !piso.sold &&
-        piso.id != data.house.id
-      ) {
-        relatedProjectsArray.push(piso);
-      }
-    }
-  });
+  // pisos.houses.reverse().forEach(function (piso) {
+  //   for (let index = 0; index < relatedGama.length; index++) {
+  //     if (
+  //       piso.gama == relatedGama[index] &&
+  //       !piso.sold &&
+  //       piso.id != data.house.id
+  //     ) {
+  //       relatedProjectsArray.push(piso);
+  //     }
+  //   }
+  // });
   pisos.houses.reverse().forEach(function (piso) {
     if (piso.gama == data.house.gama && piso.sold && piso.id != data.house.id) {
       relatedProjectsArray.push(piso);
