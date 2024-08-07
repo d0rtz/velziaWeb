@@ -244,16 +244,15 @@ function relatedProjects(pisos) {
   //     }
   //   }
   // });
+  var maxHouses = relatedProjectsArray.length;
   pisos.houses.reverse().forEach(function (piso) {
-    if (piso.gama == data.house.gama && piso.sold && piso.id != data.house.id) {
+    if (piso.gama == data.house.gama && piso.sold && piso.id != data.house.id && maxHouses < 9) {
       relatedProjectsArray.push(piso);
+      maxHouses++;
     }
   });
-  var max = 9;
-  if (relatedProjectsArray.length < 9) {
-    max = relatedProjectsArray.length;
-  }
-  for (let i = 0; i < max; i++) {
+  console.log("RelatedProjectsArray: "+ relatedProjectsArray);
+  for (let i = 0; i < relatedProjectsArray.length; i++) {
     relatedProjectsHtml += `
       <li class="splide__slide">
         <a href="piso.html?id=${

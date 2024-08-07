@@ -345,7 +345,7 @@ h1{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
-#section4-nav div h4{
+#section4-nav div h3{
   margin: 20px 0;
   font-size:22px;
 }
@@ -591,7 +591,7 @@ h1{
     padding-left: 8% !important;
     padding-right: 8% !important;
   }
-  #section4-nav div h4 {
+  #section4-nav div h3 {
     display: none !important;
   }
   .nav-line{
@@ -600,7 +600,7 @@ h1{
   #section4-content1, #section4-content2, #section4-content3 {
     grid-template-columns: 1fr !important;
   }
-  #section4-content1 h4, #section4-content2 h4, #section4-content3 h4{
+  #section4-content1 h3, #section4-content2 h3, #section4-content3 h3{
     text-align: center;
     margin: 0%;
     font-size: 28px;
@@ -664,7 +664,7 @@ h1{
   #section3-left{
     padding: 15%;
   }
-  #section4-content1 h4, #section4-content2 h4, #section4-content3 h4{
+  #section4-content1 h3, #section4-content2 h3, #section4-content3 h3{
     display: none;
   }
   #form-section {
